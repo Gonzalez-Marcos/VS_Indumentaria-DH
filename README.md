@@ -1,9 +1,7 @@
-! (./equipo.jpg)
-
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/25423296/163456776-7f95b81a-f1ed-45f7-b7ab-8fa810d529fa.png">
-  <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png">
-  <img alt="Shows an illustrated sun in light color mode and a moon with stars in dark color mode." src="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png">
+  <source media="(prefers-color-scheme: dark)" srcset="https://cdn-ehomb.nitrocdn.com/XtluxembKNihXqCmHJzRBghDXGQQNHaS/assets/static/optimized/wp-content/uploads/2021/07/4b459ffd010729adf983e2cacf06798e.imagenes-de-trabajo-en-equipo-en-caricatura.jpg">
+  <source media="(prefers-color-scheme: light)" srcset="https://cdn-ehomb.nitrocdn.com/XtluxembKNihXqCmHJzRBghDXGQQNHaS/assets/static/optimized/wp-content/uploads/2021/07/4b459ffd010729adf983e2cacf06798e.imagenes-de-trabajo-en-equipo-en-caricatura.jpg">
+  <img alt="Shows an illustrated sun in light color mode and a moon with stars in dark color mode." src="https://cdn-ehomb.nitrocdn.com/XtluxembKNihXqCmHJzRBghDXGQQNHaS/assets/static/optimized/wp-content/uploads/2021/07/4b459ffd010729adf983e2cacf06798e.imagenes-de-trabajo-en-equipo-en-caricatura.jpg">
 </picture>
 
 # ***¿Quienes somos?***
