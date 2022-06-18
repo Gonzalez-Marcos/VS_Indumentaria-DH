@@ -1,6 +1,6 @@
-
+<picture>
 <img src="D:\DIGITAL HOUSE\Proyecto Grupo 8\Equipo.jpg">
-
+</picture>
 
 # ***¿Quienes somos?***
 #### **Somos un grupo de emprendedores, dedicados a la venta de indumentaria unisex, que busca posicionarse como marca lider a nivel mundial, creada en el 2022.** 
