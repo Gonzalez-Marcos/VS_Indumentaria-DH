@@ -1,8 +1,6 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://cdn-ehomb.nitrocdn.com/XtluxembKNihXqCmHJzRBghDXGQQNHaS/assets/static/optimized/wp-content/uploads/2021/07/4b459ffd010729adf983e2cacf06798e.imagenes-de-trabajo-en-equipo-en-caricatura.jpg">
-  <source media="(prefers-color-scheme: light)" srcset="https://cdn-ehomb.nitrocdn.com/XtluxembKNihXqCmHJzRBghDXGQQNHaS/assets/static/optimized/wp-content/uploads/2021/07/4b459ffd010729adf983e2cacf06798e.imagenes-de-trabajo-en-equipo-en-caricatura.jpg">
-  <img alt="Shows an illustrated sun in light color mode and a moon with stars in dark color mode." src="https://cdn-ehomb.nitrocdn.com/XtluxembKNihXqCmHJzRBghDXGQQNHaS/assets/static/optimized/wp-content/uploads/2021/07/4b459ffd010729adf983e2cacf06798e.imagenes-de-trabajo-en-equipo-en-caricatura.jpg">
-</picture>
+
+<img src="D:\DIGITAL HOUSE\Proyecto Grupo 8\Equipo.jpg">
+
 
 # ***¿Quienes somos?***
 #### **Somos un grupo de emprendedores, dedicados a la venta de indumentaria unisex, que busca posicionarse como marca lider a nivel mundial, creada en el 2022.** 
