@@ -8,3 +8,13 @@
 #### - **Gonzalez Marcos.** Gral. San Martin, Buenos Aires. Conductor de transporte público.
 #### - **Soto Nicole.**
 #### - **Zuviria Alejo.** Floresta, CABA. Estudiante de comercio internacional.
+
+# ***Nuestros referentes***
+
+### Todos estos sitios fueron ideas que implementamos en nuestro trabajo.
+
+#### https://www.sportline.com.ar/ (Nos basamos en el diseño de su Home).
+#### https://www.dexter.com.ar/carrito (Construccion del carrito de compras).
+#### https://ringostore.ar/login (Formulario de login).
+#### https://ringostore.ar/signup (Formulario de registro).
+#### https://www.sportline.com.ar/boca-4-004670000gk3333/p (Detalle de producto).
