@@ -13,8 +13,8 @@ app.get('/', (req,res)=>{
     res.sendFile(__dirname + '/views/home.html');
 });
 
-app.get('/register', (req,res)=>{
-    res.sendFile(__dirname + '/views/register.html');
+app.get('/productDetail', (req,res)=>{
+    res.sendFile(__dirname + '/views/productDetail.html');
 });
 
 app.listen (8080, () => {
