@@ -16,6 +16,16 @@ app.get('/', (req,res)=>{
 app.get('/productDetail', (req,res)=>{
     res.sendFile(__dirname + '/views/productDetail.html');
 });
+app.get('/productCart', (req,res)=>{
+    res.sendFile(__dirname + '/views/productCart.html');
+});
+app.get('/register', (req,res)=>{
+    res.sendFile(__dirname + '/views/register.html');
+});
+app.get('/login', (req,res)=>{
+    res.sendFile(__dirname + '/views/login.html');
+});
+
 
 app.listen (8080, () => {
     console.log('Servidor iniciado en: http://localhost:8080');
