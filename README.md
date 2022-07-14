@@ -9,10 +9,10 @@
 
 # ***Nuestro equipo.***
 
-#### - **Colato Gonzalo.**
+#### - **Colato Gonzalo.** Capital Federal. Estudiante de Ingeniería Informática
 #### - **Giuseppe Pasian.** Corrientes Capital. Analista de datos (Data Analyst).
 #### - **Gonzalez Marcos.** Gral. San Martin, Buenos Aires. Conductor de transporte público.
-#### - **Soto Nicole.**
+#### - **Soto Nicole.** Estudiante de Ingenieria Informática.
 #### - **Zuviria Alejo.** Floresta, CABA. Estudiante de comercio internacional.
 
 # ***Nuestros referentes***
