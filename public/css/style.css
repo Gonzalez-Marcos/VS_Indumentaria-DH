@@ -924,3 +924,90 @@ div.cont-productDetail {
 .container-sub #hide{
   display: none;
 } 
+/*styles register and login*/
+.registration-form{
+    padding: 50px 0;
+  }
+  
+  .registration-form form{
+      background-color: rgba(102, 155, 247, 0.326);
+      max-width: 600px;
+      margin: auto;
+      padding: 50px 70px;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+  }
+  
+  .registration-form .form-icon{
+    text-align: center;
+      background-color: #5891ff;
+      border-radius: 50%;
+      font-size: 40px;
+      color: white;
+      width: 100px;
+      height: 100px;
+      margin: auto;
+      margin-bottom: 50px;
+      line-height: 100px;
+  }
+  
+  .registration-form .item{
+    border-radius: 20px;
+      margin-bottom: 25px;
+      padding: 10px 20px;
+  }
+  
+  .registration-form .create-account{
+      border-radius: 30px;
+      padding: 10px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      background-color: #5791ff;
+      border: none;
+      color: white;
+      margin-top: 20px;
+  }
+  
+  .registration-form a:hover{
+      text-decoration: none;
+      opacity: 0.6;
+  }
+  
+  article div.main-article {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 15px;
+  }
+  
+  .btn,
+  .btn-secondary {
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 8px;
+  }
+  .btn {
+    background-color: #3d8bf2;
+  }
+  
+  .btn-secondary {
+    background-color: #a1a1a1;
+  }
+  
+  .form-register,
+  .form-login {
+    padding-top: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-login input,
+  .form-register input,
+  .form-register .btn {
+    margin-bottom: 4px;
+  }
