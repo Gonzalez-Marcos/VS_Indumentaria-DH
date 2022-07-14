@@ -17,6 +17,18 @@ app.get('/productDetail', (req,res)=>{
     res.sendFile(__dirname + '/views/productDetail.html');
 });
 
+app.get('/product', (req,res)=>{
+    res.sendFile(__dirname + '/views/productCard.html');
+});
+
+app.get('/login', (req,res)=>{
+    res.sendFile(__dirname + '/views/login.html');
+});
+
+app.get('/register', (req,res)=>{
+    res.sendFile(__dirname + '/views/register.html');
+});
+
 app.listen (8080, () => {
     console.log('Servidor iniciado en: http://localhost:8080');
 });
