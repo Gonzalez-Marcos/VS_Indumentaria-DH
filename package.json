@@ -1,0 +1,27 @@
+{
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "name": "grupo_8_fullstack",
+  "description": "<picture>\r   <source media=\"(prefers-color-scheme: dark)\" srcset=\"https://cdn-ehomb.nitrocdn.com/XtluxembKNihXqCmHJzRBghDXGQQNHaS/assets/static/optimized/wp-content/uploads/2021/07/4b459ffd010729adf983e2cacf06798e.imagenes-de-trabajo-en-equipo-en-caricatura.jpg\">\r   <source media=\"(prefers-color-scheme: light)\" srcset=\"https://cdn-ehomb.nitrocdn.com/XtluxembKNihXqCmHJzRBghDXGQQNHaS/assets/static/optimized/wp-content/uploads/2021/07/4b459ffd010729adf983e2cacf06798e.imagenes-de-trabajo-en-equipo-en-caricatura.jpg\">\r   <img src=\"https://cdn-ehomb.nitrocdn.com/XtluxembKNihXqCmHJzRBghDXGQQNHaS/assets/static/optimized/wp-content/uploads/2021/07/4b459ffd010729adf983e2cacf06798e.imagenes-de-trabajo-en-equipo-en-caricatura.jpg\">\r </picture>",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gonzalez-Marcos/Grupo_8_FullStack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gonzalez-Marcos/Grupo_8_FullStack/issues"
+  },
+  "homepage": "https://github.com/Gonzalez-Marcos/Grupo_8_FullStack#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
