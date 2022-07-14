@@ -67,7 +67,7 @@ ul {
     overflow: hidden;
     position: relative;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
     .container .open-search {
         margin: 0;
         position: static;
@@ -88,7 +88,7 @@ ul {
 .container .open-search .input-open-search:checked ~ .search {
     display: block;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
     .container .search {
         display: none;
         position: absolute;
@@ -142,7 +142,7 @@ ul {
     position: relative;
     transition: 100ms all linear 0s;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
     .container .nav-content .nav-content-list .nav-content-item {
         padding: 0 5px;
    }
@@ -205,7 +205,7 @@ ul {
     font-size: 12px;
     margin-left: 5px;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
     .container .nav-content .nav-content-list .account-login .login-text {
         display: none;
    }
@@ -219,7 +219,7 @@ ul {
     padding: 10px 15px;
     transition: 100ms all linear 0s;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
     .container .nav-content .nav-content-list .nav-content-link {
         padding: 0;
    }
@@ -239,7 +239,7 @@ ul {
     margin: 0;
     padding: 0;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
     .nav-container .nav-row {
         display: none;
    }
@@ -262,7 +262,7 @@ ul {
     flex: auto;
     margin: 0 15px 0 0;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
     .nav-container .featured-category {
         display: none;
    }
@@ -276,7 +276,7 @@ ul {
     padding: 0 25px;
     width: 100%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
     .nav-container .all-navigator {
         margin-right: 0;
    }
@@ -301,7 +301,7 @@ ul {
     position: relative;
     width: 100%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
     .nav-container .all-category-nav {
         max-width: 100%;
    }
@@ -337,7 +337,7 @@ ul {
     width: 300px;
     z-index: 90;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
     .nav-container .all-category-list {
         min-width: 100%;
    }
@@ -376,7 +376,7 @@ ul {
     visibility: hidden;
     width: auto;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
     .nav-container .category-second-list {
         display: none;
    }
@@ -555,6 +555,181 @@ section.banner img {
 
 /* // card product */
 
+/* card productDetails */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,800&display=swap');
+
+div.cont-productDetail {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-proDet {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 900px;
+    height: 600px;
+    background: #fff;
+    margin: 20px;
+    left: 290px;
+}
+
+.container-proDet .imgBx {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    background: #212121;
+    transition: .3s linear;
+}
+
+.container-proDet .imgBx:before {
+    content: 'NIKE';
+    position: absolute;
+    top: 0px;
+    left: 24px;
+    color: #000;
+    opacity: 0.2;
+    font-size: 8em;
+    font-weight: 800;
+}
+
+.container-proDet .imgBx img {
+    position: relative;
+    width: 240px;
+    left: -10px;
+    transition: .9s linear;
+}
+
+.container-proDet .details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 40px;
+}
+
+.container-proDet .details h2{
+    margin: 0;
+    padding: 0;
+    font-size: 2.4em;
+    line-height: 1em;
+    color: #444;
+}
+
+.container-proDet .details h2 span {
+    font-size: 0.4em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999;
+}
+
+.container-proDet .details p {
+    max-width: 85%;
+    margin-left: 15%;
+    color: #333;
+    font-size: 15px;
+    margin-bottom: 36px;
+}
+
+.container-proDet .details h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 2.5em;
+    color: #a2a2a2;
+    float: left;
+}
+.container-proDet .details button {
+    background: #000;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    margin-top: 5px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 40px;
+    float: right;
+}
+
+.product-colors span {
+    width: 26px;
+    height: 26px;
+    top: 7px;
+    margin-right: 12px;
+    left: 10px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.black {
+    background: #000;
+}
+
+.red {
+    background: #D5212E;
+}
+
+.orange {
+    background: #F18557;
+}
+
+.product-colors .active:after{
+    content: "";
+    width: 36px;
+    height: 36px;
+    border: 2px solid #000;
+    position: absolute;
+    border-radius: 50%;
+    box-sizing: border-box;
+    left: -5px;
+    top: -5px;
+}
+
+/* responsive */
+@media (max-width: 992px) {
+    .container-proDet {
+        height: auto;
+    }
+    .container-proDet .imgBx {
+        padding: 40px;
+        box-sizing: border-box;
+        width: 100% !important;
+        height: auto;
+        text-align: center;
+        overflow: hidden;
+    }
+    .container-proDet .imgBx img {
+        left: initial;
+        max-width: 100%;
+        transform: rotate(0deg);
+    }
+    .details {
+        width: 100% !important;
+        height: auto;
+        padding: 20px;
+    }
+    .container-proDet .details p {
+        margin-left: 0;
+        max-width: 100%;
+    }
+}
+
+
 /* footer */
 
   .dummy_page {
@@ -572,7 +747,7 @@ section.banner img {
     width: 100%;
     position: relative;
     height: auto;
-    background-color: #070617;
+    background-color: #000000;
   }
   .footer .col {
     width: 190px;
@@ -590,7 +765,7 @@ section.banner img {
     font-size: 12px;
     line-height: 17px;
     padding: 20px 0px 5px 0px;
-    color: rgba(255, 255, 255, 0.59);
+    color: rgb(255, 255, 255);
     font-weight: normal;
     text-transform: uppercase;
     letter-spacing: 0.250em;
@@ -621,22 +796,7 @@ section.banner img {
   .clearfix {
     clear: both;
   }
-  @media only screen and (min-width: 1280px) {
-    .contain {
-      width: 1200px;
-      margin: 0 auto;
-    }
-  }
-  @media only screen and (max-width: 1139px) {
-    .contain .social {
-      width: 1000px;
-      display: block;
-    }
-    .social h1 {
-      margin: 0px;
-    }
-  }
-  @media only screen and (max-width: 950px) {
+  @media only screen and (max-width: 992px) {
     .footer .col {
       width: 33%;
     }
