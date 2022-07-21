@@ -1,32 +1,53 @@
 const express = require ('express');
-const path = require('path');
+
+//Trear rutas en constantes//
+const mainRouter = require('./src/routers/main');
+
+const productsRouter = require('./src/routers/products');
+
+const usersRouter = require('./src/routers/users')
+//Hasta aca todas las rutas//
+
 const app = express();
 
-app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+const path = require('path');
 
 const pathPublic = path.resolve(__dirname, './public');
+
 app.use(express.static(pathPublic));
 
+//Llamamos todas las rutas en la app//
+app.use('/', mainRouter);
 
-app.get('/', (req,res)=>{
-    res.sendFile(__dirname + '/views/home.html');
-});
+app.use('/', productsRouter);
 
-app.get('/productDetail', (req,res)=>{
-    res.sendFile(__dirname + '/views/productDetail.html');
-});
-app.get('/productCart', (req,res)=>{
-    res.sendFile(__dirname + '/views/productCart.html');
-});
-app.get('/register', (req,res)=>{
-    res.sendFile(__dirname + '/views/register.html');
-});
-app.get('/login', (req,res)=>{
-    res.sendFile(__dirname + '/views/login.html');
-});
+app.use('/', usersRouter);
+//Hasta aca rutas//
+
+app.use(express.json());
+
+app.use(express.urlencoded({extended: false}));
+
+
+
+
+// app.get('/', (req,res)=>{
+//     res.sendFile(__dirname + '/views/home.html');
+// });
+
+// app.get('/productDetail', (req,res)=>{
+//     res.sendFile(__dirname + '/views/productDetail.html');
+// });
+// app.get('/productCart', (req,res)=>{
+//     res.sendFile(__dirname + '/views/productCart.html');
+// });
+// app.get('/register', (req,res)=>{
+//     res.sendFile(__dirname + '/views/register.html');
+// });
+// app.get('/login', (req,res)=>{
+//     res.sendFile(__dirname + '/views/login.html');
+// });
 
 app.listen (8080, () => {
     console.log('Servidor iniciado en: http://localhost:8080');
-});
-
+}); 
