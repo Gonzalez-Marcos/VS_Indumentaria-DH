@@ -1,193 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VS Indumentaria</title>
+    <title>Login</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estiloslogin.css">
     <link rel="stylesheet" href="/css/style.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/af562a2a63.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+    <!-- Script -->
+    <link rel="preconectar" href="https://fonts.googleapis.com">
+    <enlace rel="preconectar" href="https://fonts.gstatic.com" crossorigin>
+    <enlace href="https: //fonts.googleapis.com/css2? familia = Arenas movedizas: peso @ 400; 700 & display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-    <header>
-        <!-- contact content -->
-        <div class="header-content-top">
-            <div class="content">
-                <span><i class="fas fa-phone-square-alt"></i> (+54)911-42523-2424</span>
-                <span><i class="fas fa-envelope-square"></i>vsIndumentaria@gmail.com.br</span>
+
+    <%- include('./partials/header.ejs') %>
+    <div class="contenedor-formulario contenedor-login">
+        <form class="formulario">
+            <div class="texto-formulario">
+                <p>inicia sesion con tu cuenta</p>
             </div>
-        </div>
-        <!-- / contact content -->
-        <div class="container">
-            <!-- logo -->
-            <strong class="logo"><i>VS Indumentaria</i></strong>
-            <!-- open nav mobile -->
-            <!--search -->
-            <label class="open-search" for="open-search">
-                <i class="fas fa-search"></i>
-                <input class="input-open-search" id="open-search" type="checkbox" name="menu" />
-                <div class="search">
-                    <button class="button-search"><i class="fas fa-search"></i></button>
-                    <input type="text" placeholder="Encontrá lo que buscás" class="input-search" />
-                </div>
-            </label>
-            <!-- // search -->
-            <nav class="nav-content">
-                <!-- nav -->
-                <ul class="nav-content-list">
-                    <li class="nav-content-item account-login">
-                        <label class="open-menu-login-account" for="open-menu-login-account">
-
-                            <input class="input-menu" id="open-menu-login-account" type="checkbox" name="menu" />
-
-                            <i class="fas fa-user-circle"></i> <span class="item-arrow"></span>
-
-                            <!-- submenu -->
-                            <ul class="login-list">
-                                <li class="login-list-item"><a href="/login">My account</a></li>
-                                <li class="login-list-item"><a href="/register">Create account</a></li>
-                                <li class="login-list-item"><a href="/home">logout</a></li>
-                                </label>
-                            </ul>
-                </li>
-                <li class="nav-content-item"><a class="nav-content-link" href="...."><i
-                            class="fas fa-shopping-cart"></i></a></li>
-                <!-- call to action -->
-                </ul>
-            </nav>
-        </div>
-        <!-- nav navigation -->
-        <div class="nav-container">
-            <nav class="all-category-nav">
-                <label class="open-menu-all" for="open-menu-all">
-                    <input class="input-menu-all" id="open-menu-all" type="checkbox" name="menu-open" />
-                    <span class="all-navigator"><i class="fas fa-bars"></i> <span>Category</span> <i
-                            class="fas fa-angle-down"></i>
-                        <i class="fas fa-angle-up"></i>
-                    </span>
-
-                    <ul class="all-category-list">
-                        <li class="all-category-list-item"><a href="..." class="all-category-list-link">Calzado<i
-                                    class="fas fa-angle-right"></i></a>
-                            <div class="category-second-list">
-                                <ul class="category-second-list-ul">
-                                    <li class="category-second-item"><a href="....">Botines</a></li>
-                                    <li class="category-second-item"><a href="....">Zapatillas</a></li>
-                                    <li class="category-second-item"><a href="....">Ojotas</a></li>
-                                    <li class="category-second-item"><a href="....">Ver todos</a></li>
-                                </ul>
-
-                                <div class="img-product-menu"><img src="/images/category-zap-logo.jpg"></div>
-                            </div>
-                        </li>
-                        <li class="all-category-list-item"><a href="..." class="all-category-list-link">Indumentaria<i
-                                    class="fas fa-angle-right"></i></a>
-                            <div class="category-second-list">
-                                <ul class="category-second-list-ul">
-                                    <li class="category-second-item"><a href="....">Remeras</a></li>
-                                    <li class="category-second-item"><a href="....">Camisetas de Futbol</a></li>
-                                    <li class="category-second-item"><a href="....">Buzos</a></li>
-                                    <li class="category-second-item"><a href="....">Ver todos</a></li>
-                                </ul>
-
-                                <div class="img-product-menu"><img src="/images/category-indu-logo.jpg"></div>
-                            </div>
-                        </li>
-                        <li class="all-category-list-item"><a href="..." class="all-category-list-link">Accesorios<i
-                                    class="fas fa-angle-right"></i></a>
-                            <div class="category-second-list">
-                                <ul class="category-second-list-ul">
-                                    <li class="category-second-item"><a href="....">Mochilas</a></li>
-                                    <li class="category-second-item"><a href="....">Bolsos</a></li>
-                                    <li class="category-second-item"><a href="....">Gorras</a></li>
-                                    <li class="category-second-item"><a href="....">Ver todos</a></li>
-                                </ul>
-
-                                <div class="img-product-menu"><img src="/images/category-acc-logo.png"></div>
-                            </div>
-                        </li>
-                    </ul>
-                </label>
-
-            </nav>
-            <nav class="featured-category">
-                <ul class="nav-row">
-                    <li class="nav-row-list"><a href="..." class="nav-row-list-link">Mujer</a></li>
-                    <li class="nav-row-list"><a href="..." class="nav-row-list-link">Hombre</a></li>
-                    <li class="nav-row-list"><a href="..." class="nav-row-list-link">Lanzamientos</a></li>
-                    <li class="nav-row-list"><a href="..." class="nav-row-list-link">Ofertas</a></li>
-                </ul>
-            </nav>
-        </div>
-        
-    </header>
-    <!--Formulario-->
-    <div class="registration-form">
-        <form action="/" method="POST" >
-            <div class="form-icon">
-                <span><i class="icon icon-user"></i></span>
+            <div class="input">
+                <label for="usuario">Usuario</label>
+                <input placeholder="ingresa tu nombre" type="text" id="usuario">
             </div>
-            <div class="form-group">
-                <input type="text" class="form-control item" id="username" placeholder="Username"  required autofocus>
+            <div class="input">
+                <label for="contraseña">Contraseña</label>
+                <input placeholder="ingresa tu contraseña" type="password" id="contraseña">
             </div>
-            <div class="form-group">
-                <input type="password" class="form-control item" id="password" placeholder="Password"  required autofocus>
+            <div class="contraseña-olvidada">
+                <a href="#">¿Olvidaste tu contraseña?</a>
             </div>
-            <div class="form-group-button">
-                <button type="button" class="btn btn-block ">Create Account</button>
+            <div class="input">
+                <input type="submit" value="Entrar">
+                <a href="#"></a>
             </div>
-        </form>
+            <div class="recordar-contraseña">
+                <a href="#">Recordarme</a>
+            </div>
+
     </div>
-    
-    
-    <!-- footer -->
-    <footer>
-        <div class="footer">
-            <div class="contain">
-                <div class="col">
-                    <h1>Sportline</h1>
-                    <ul>
-                        <li>Quiénes Somos</li>
-                        <li>Sucursales</li>
-                        <li>Terminos y Condiciones</li>
-                        <li>Políticas de Privacidad</li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <h1>¿NECESITÁS AYUDA?</h1>
-                    <ul>
-                        <li>Preguntas Frecuentes</li>
-                        <li>Venta Corporativo</li>
-                        <li>Formas de envío</li>
-                        <li>Cambios</li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <h1>Atención al Cliente</h1>
-                    <ul>
-                        <li>Contacto</li>
-                        <li><span><i class="fas fa-phone-square-alt"></i> (+54)911-42523-2424</span></li>
-                        <li>Lunes a Viernes de 9 a 20hs.</li>
-                        <li>Sábado de 9 a 14hs.</li>
-                    </ul>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </footer>
-    <!--Logo de whatsapp-->
-    <div style="position:fixed; right:10px; bottom:10px; text-align:center; padding:3px">
-        <a href="https://api.whatsapp.com/send?phone=">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/240px-WhatsApp.svg.png"
-                width="50" height="50"></a>
+    </form>
     </div>
+
+    <%- include('partials/footer.ejs') %>
 </body>
 
 </html>

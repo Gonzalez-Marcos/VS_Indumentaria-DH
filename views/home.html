@@ -56,7 +56,26 @@
                     </label>
                   </ul>
               </li>
-              <li class="nav-content-item"><a class="nav-content-link" href="/productCart"><i class="fas fa-shopping-cart"></i></a></li>
+              <li class="submenu">
+                <img src="/img/cart.png" alt="">
+                <div id="carrito">
+                    <p class="vacio">carrito vacio</p>
+                    <table id="lista-carrito" class="u-full-width">
+                        <thead>
+                            <tr>
+                                <th>Imagen</th>
+                                <th>Platillos</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <a href="#" id="vaciar-carrito" 
+                    class="button u-full-width">vaciar carrito</a>
+                </div>
+            </li>
               <!-- call to action -->
             </ul>
           </nav>
@@ -167,7 +186,7 @@
       <!-- card products -->
     <h3>Ultimos productos navegados</h3>
 
-        <div class="CONT_GRID">
+        <div id="lista-platillos" class="CONT_GRID">
             
             <div class="card">
                 <img src="/images/category-indu-logo.jpg" alt="Denim Jeans" style="width:100%">
@@ -190,8 +209,8 @@
                 <h3>Tailored Jeans</h3>
                 <p class="price">$19.99</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam perspiciatis</p>
-                <p><button onClick="parent.location='/productCart'">Comprar</button></p>
-                <p><button onClick="parent.location='/productDetail'">Detalles</button></p>
+                <p><button class=" agregar-carrito"data-id="1">Agregar a carrito</button></p>
+                <p><button class=" agregar-carrito"onClick="parent.location='#'">Detalles</button></p>
             </div>
             <div class="card">
                 <img src="/images/category-indu-logo.jpg" alt="Denim Jeans" style="width:100%">
@@ -296,5 +315,6 @@
         <a href="https://api.whatsapp.com/send?phone=">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/240px-WhatsApp.svg.png" width="50" height="50"></a>
     </div>
+
 </body>
 </html>

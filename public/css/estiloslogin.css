@@ -1,0 +1,71 @@
+:root{
+    --azul:#1958a0;
+    --azulOscuro:#0b2545c7;
+    --azulGris:#0DA9C4;
+    --blanco:#ffff;
+    --fuente:"Quicksand", sans-serif;
+
+}
+.contenedor-login{
+    padding: 30px;
+    margin: 0 auto;
+    max-width:  1200px;
+    width: 95%;
+}
+
+@media(min-width:768px){
+    .contenedor-formulario {
+        display:flex;
+        justify-content: center;
+        padding: auto;
+    }
+}
+.formulario{
+    padding: 50px;
+    background-color:black;
+    
+}
+.texto-formulario h2, p, .input label, .contraseña-olvidada a, .recordar-contraseña a{
+    color: white;
+}
+.texto-formulario h2{
+    font-size:  40px; 
+    text-align: center;
+}
+.texto-formulario p{
+    font-size: 22px;
+    text-align: center;
+}
+input label{
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px, 0;
+}
+.contraseña-olvidada a{
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 18px;
+}
+.input input{
+    width: 100%;
+    padding: 10px, 16px ;
+    border-radius:5px;
+    outline: none;
+}
+.input input[type="submit"]{
+    font-size: 22px;
+    font-weight: bold;
+    border: none;
+    margin-top: 20px;
+    transition: background-color .3s ease-in-out;  
+}
+.input input[type="submit"]:hover{ 
+    cursor: pointer;
+    background-color: var(--azul);
+}
+.recordar-contraseña{
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 18px;
+}
