@@ -14,6 +14,11 @@ const path = require('path');
 
 const pathPublic = path.resolve(__dirname, '../public');
 
+//Uso de Templates Engines//
+app.set('view engine', 'ejs')
+
+app.set('views', path.join(__dirname, '/views'))
+
 app.use(express.static(pathPublic));
 
 //Llamamos todas las rutas en la app//
@@ -27,6 +32,20 @@ app.use('/', usersRouter);
 app.use(express.json());
 
 app.use(express.urlencoded({extended: false}));
+
+app.listen (8080, () => {
+    console.log('Servidor iniciado en: http://localhost:8080');
+}); 
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -48,6 +67,4 @@ app.use(express.urlencoded({extended: false}));
 //     res.sendFile(__dirname + '/views/login.html');
 // });
 
-app.listen (8080, () => {
-    console.log('Servidor iniciado en: http://localhost:8080');
-}); 
+
