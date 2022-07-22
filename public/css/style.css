@@ -405,6 +405,42 @@ ul {
 .fa-bars {
     font-size: 28px;
 }
+<<<<<<< HEAD
+=======
+.submenu {
+    position: relative;
+}
+.submenu #carrito{
+    display: none;
+}
+.submenu:hover #carrito{
+    display: block;
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+    background: #17181b;
+    padding: 20px;
+}
+.vacio {
+    padding: 10px;
+    background-color: #fbaf32;
+    text-align: center;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+}
+.button {
+    background-color: #fbaf32;
+    color: rgb(255, 255, 255);
+}
+#lista-platillos .row {
+    margin-bottom: 20px;
+}
+.agregar-carrito{
+    margin: 10px 0;
+}
+>>>>>>> 103232e6f4322aef93328ddc54afdebf9c62ca1e
 
 /* slider */
 .slide {
