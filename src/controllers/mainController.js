@@ -2,7 +2,7 @@ const path = require('path');
 
 const controller = {
     home: (req, res) => {
-        res.render('home');
+        res.render('products/home');
     },
 }
 
