@@ -405,6 +405,8 @@ ul {
 .fa-bars {
     font-size: 28px;
 }
+<<<<<<< HEAD
+=======
 .submenu {
     position: relative;
 }
@@ -438,6 +440,7 @@ ul {
 .agregar-carrito{
     margin: 10px 0;
 }
+>>>>>>> 103232e6f4322aef93328ddc54afdebf9c62ca1e
 
 /* slider */
 .slide {
