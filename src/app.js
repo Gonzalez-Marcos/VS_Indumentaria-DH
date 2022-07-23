@@ -1,4 +1,11 @@
 const express = require ('express');
+const app = express();
+
+const path = require('path');
+
+const pathPublic = path.resolve(__dirname, '../public');
+app.use(express.static(pathPublic));
+
 
 //Trear rutas en constantes//
 const mainRouter = require('./routers/main');
@@ -7,13 +14,6 @@ const productsRouter = require('./routers/products');
 
 const usersRouter = require('./routers/users');
 //Hasta aca todas las rutas//
-
-const app = express();
-
-const path = require('path');
-
-const pathPublic = path.resolve(__dirname, '../public');
-app.use(express.static(pathPublic));
 
 
 //Uso de Templates Engines//
