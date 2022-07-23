@@ -39,9 +39,36 @@
           </label>
       </ul>
       </li>
-      <li class="nav-content-item"><a class="nav-content-link" href="/productCart"><i
-            class="fas fa-shopping-cart"></i></a></li>
-      <!-- call to action -->
+      <!--Shopping cart-->
+      <div class="shopping-cart">
+        <div class="navbar-top">
+            <div>
+                <button id="menuButton"></button>
+            </div>
+        </div>
+        <div class="sum-prices">
+            <!--Shopping cart logo-->
+            <i
+                class="fas fa-shopping-cart shoppingCartButton"
+            ></i>
+            <!--The total prices of products in the shopping cart -->
+            <h6 id="sum-prices"></h6>
+        </div>
+        <!--es lo que va adentro del carrito-->
+        <div class="producstOnCart hide">
+            <div class="overlay"></div>
+            <div class="top">
+                <button id="closeButton">
+                    <i class="fas fa-times-circle"></i>
+                </button>
+                <h3>Cart</h3>
+            </div>
+            <ul id="buyItems">
+                <h4 class="empty">Your shopping cart is empty</h4>
+            </ul>
+            <button class="btn checkout hidden">Check out</button>
+          </div>
+        </div>
       </ul>
     </nav>
   </div>

@@ -5,39 +5,27 @@
   <%- include('../partials/header') %> 
 
   <!-- slide -->
-  <div class="slide">
-    <div class="slide-inner">
-      <input class="slide-open" type="radio" id="slide-1" name="slide" aria-hidden="true" hidden="" checked="checked">
-      <div class="slide-item">
-        <img src="/images/carrusel-1.webp">
-      </div>
-      <input class="slide-open" type="radio" id="slide-2" name="slide" aria-hidden="true" hidden="">
-      <div class="slide-item">
-        <img src="/images/carrusel-2.webp">
-      </div>
-      <input class="slide-open" type="radio" id="slide-3" name="slide" aria-hidden="true" hidden="">
-      <div class="slide-item">
-        <img src="/images/carrusel-3.webp">
-      </div>
-      <label for="slide-3" class="slide-control prev control-1">‹</label>
-      <label for="slide-2" class="slide-control next control-1">›</label>
-      <label for="slide-1" class="slide-control prev control-2">‹</label>
-      <label for="slide-3" class="slide-control next control-2">›</label>
-      <label for="slide-2" class="slide-control prev control-3">‹</label>
-      <label for="slide-1" class="slide-control next control-3">›</label>
-      <ol class="slide-indicador">
-        <li>
-          <label for="slide-1" class="slide-circulo">•</label>
-        </li>
-        <li>
-          <label for="slide-2" class="slide-circulo">•</label>
-        </li>
-        <li>
-          <label for="slide-3" class="slide-circulo">•</label>
-        </li>
-      </ol>
+  <header id="hearderSlide">
+    <div class="MS-content">
+        <a href="#" class="item">
+            <img src="images/carrusel-1.webp" />
+        </a>
+        <a href="#" class="item">
+            <img src="images/carrusel-2.webp" />
+        </a>
+        <a href="#" class="item">
+            <img src="images/carrusel-3.webp" />
+        </a>
     </div>
-  </div>
+    <div class="MS-controls">
+        <button class="MS-right">
+            <i class="fas fa-chevron-right fa-3x"></i>
+        </button>
+        <button class="MS-left">
+            <i class="fas fa-chevron-left fa-3x"></i>
+        </button>
+    </div>
+  </header>
   <!-- // slide -->
 
   <section class="banner">
@@ -48,84 +36,144 @@
       <!-- card products -->
     <h3>Ultimos productos navegados</h3>
 
-        <div class="CONT_GRID">
-            
-            <div class="card">
-                <img src="/images/category-indu-logo.jpg" alt="Denim Jeans" style="width:100%">
-                <h3>Tailored Jeans</h3>
-                <p class="price">$19.99</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam perspiciatis</p>
-                <p><button onClick="parent.location='/productCart'">Comprar</button></p>
-                <p><button onClick="parent.location='/productDetail'">Detalles</button></p>
-            </div>
-            <div class="card">
-                <img src="/images/category-indu-logo.jpg" alt="Denim Jeans" style="width:100%">
-                <h3>Tailored Jeans</h3>
-                <p class="price">$19.99</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam perspiciatis</p>
-                <p><button onClick="parent.location='/productCart'">Comprar</button></p>
-                <p><button onClick="parent.location='/productDetail'">Detalles</button></p>
-            </div>
-            <div class="card">
-                <img src="/images/category-indu-logo.jpg" alt="Denim Jeans" style="width:100%">
-                <h3>Tailored Jeans</h3>
-                <p class="price">$19.99</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam perspiciatis</p>
-                <p><button onClick="parent.location='/productCart'">Comprar</button></p>
-                <p><button onClick="parent.location='/productDetail'">Detalles</button></p>
-            </div>
-            <div class="card">
-                <img src="/images/category-indu-logo.jpg" alt="Denim Jeans" style="width:100%">
-                <h3>Tailored Jeans</h3>
-                <p class="price">$19.99</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam perspiciatis</p>
-                <p><button onClick="parent.location='/productCart'">Comprar</button></p>
-                <p><button onClick="parent.location='/productDetail'">Detalles</button></p>
-            </div>
-        </div>
-        <section class="banner">
-            <img src="/images/PDPcuotasnaranja.gif" alt="Funny image"> 
-        </section>
-
-    <h3>Ultima categoría navegada</h3>
-
-        <div class="CONT_GRID">
-            
-            <div class="card">
-                <img src="/images/category-indu-logo.jpg" alt="Denim Jeans" style="width:100%">
-                <h3>Tailored Jeans</h3>
-                <p class="price">$19.99</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam perspiciatis</p>
-                <p><button onClick="parent.location='/productCart'">Comprar</button></p>
-                <p><button onClick="parent.location='/productDetail'">Detalles</button></p>
-            </div>
-            <div class="card">
-                <img src="/images/category-indu-logo.jpg" alt="Denim Jeans" style="width:100%">
-                <h3>Tailored Jeans</h3>
-                <p class="price">$19.99</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam perspiciatis</p>
-                <p><button onClick="parent.location='/productCart'">Comprar</button></p>
-                <p><button onClick="parent.location='/productDetail'">Detalles</button></p>
-            </div>
-            <div class="card">
-                <img src="/images/category-indu-logo.jpg" alt="Denim Jeans" style="width:100%">
-                <h3>Tailored Jeans</h3>
-                <p class="price">$19.99</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam perspiciatis</p>
-                <p><button onClick="parent.location='/productCart'">Comprar</button></p>
-                <p><button onClick="parent.location='/productDetail'">Detalles</button></p>
-            </div>
-            <div class="card">
-                <img src="/images/category-indu-logo.jpg" alt="Denim Jeans" style="width:100%">
-                <h3>Tailored Jeans</h3>
-                <p class="price">$19.99</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam perspiciatis</p>
-                <p><button onClick="parent.location='/productCart'">Comprar</button></p>
-                <p><button onClick="parent.location='/productDetail'">Detalles</button></p>
-            </div>
-        </div>
-        <!-- // card products -->
-        
+    <section class="main-section">
+      <div class="product-container">
+          <div class="products">
+              <div class="product">
+                   <!--esto esta relacionado con js-->
+                  <div class="product-under">
+                      <figure class="product-image">
+                          <img
+                              src="images/category-indu-logo.jpg"
+                          />
+                          <div class="product-over">
+                              <button
+                                  class="btn btn-small addToCart"
+                                  data-product-id="1"
+                              >
+                                  <i class="fas fa-cart-plus"></i>Add
+                                  to cart
+                              </button>
+                              <a
+                                  href="#"
+                                  class="btn btn-small"
+                                  >More Info</a
+                              >
+                          </div>
+                      </figure>
+                      <div class="product-summary">
+                          <h4 class="productName">Product 1</h4>
+                          <p>
+                              luctus quis et est. Integer pretium
+                              purus
+                          </p>
+                          <h6 class="price">
+                              $<span class="priceValue">999</span>
+                          </h6>
+                      </div>
+                  </div>
+              </div>
+              <div class="product">
+                  <div class="product-under">
+                      <figure class="product-image">
+                          <img
+                              src="images/category-indu-logo.jpg"/>
+                          <div class="product-over">
+                              <button
+                                  class="btn btn-small addToCart"
+                                  data-product-id="2"
+                              >
+                                  <i class="fas fa-cart-plus"></i>Add
+                                  to cart
+                              </button>
+                              <a
+                                  href="#"
+                                  class="btn btn-small"
+                                  >More Info</a
+                              >
+                          </div>
+                      </figure>
+                      <div class="product-summary">
+                          <h4 class="productName">Product 2</h4>
+                          <p>
+                              luctus quis et est. Integer pretium
+                              purus
+                          </p>
+                          <h6 class="price">
+                              $<span class="priceValue">599</span>
+                          </h6>
+                      </div>
+                  </div>
+              </div>
+              <div class="product">
+                  <div class="product-under">
+                      <figure class="product-image">
+                          <img
+                              src="images/category-indu-logo.jpg"
+                          />
+                          <div class="product-over">
+                              <button
+                                  class="btn btn-small addToCart"
+                                  data-product-id="3"
+                              >
+                                  <i class="fas fa-cart-plus"></i>Add
+                                  to cart
+                              </button>
+                              <a
+                                  href="#"
+                                  class="btn btn-small"
+                                  >More Info</a
+                              >
+                          </div>
+                      </figure>
+                      <div class="product-summary">
+                          <h4 class="productName">Product 3</h4>
+                          <p>
+                              luctus quis et est. Integer pretium
+                              purus
+                          </p>
+                          <h6 class="price">
+                              $<span class="priceValue">650</span>
+                          </h6>
+                      </div>
+                  </div>
+              </div>
+              <div class="product">
+                  <div class="product-under">
+                      <figure class="product-image">
+                          <img
+                              src="images/category-indu-logo.jpg"
+                          />
+                          <div class="product-over">
+                              <button
+                                  class="btn btn-small addToCart"
+                                  data-product-id="4"
+                              >
+                                  <i class="fas fa-cart-plus"></i>Add
+                                  to cart
+                              </button>
+                              <a
+                                  href="#"
+                                  class="btn btn-small"
+                                  >More Info</a
+                              >
+                          </div>
+                      </figure>
+                      <div class="product-summary">
+                          <h4 class="productName">Product 4</h4>
+                          <p>
+                              luctus quis et est. Integer pretium
+                              purus
+                          </p>
+                          <h6 class="price">
+                              $<span class="priceValue">899</span>
+                          </h6>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
         <!-- Subscribe Button -->
         <div class="container-sub">
             <input type="radio" id="hide">
@@ -138,6 +186,8 @@
               </div>
             </div>
           </div>
+        <script src="JS/script.js"></script>
+        <script src="JS/shopping-cart.js"></script>
 <%- include('../partials/footer') %> 
     
 </body>
