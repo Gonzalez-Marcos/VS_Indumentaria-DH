@@ -335,18 +335,18 @@ ul .nav-links {
 
 #hearderSlide .MS-content {
     margin: 0 1%;
-    white-space: nowrap; /* required */
-    overflow: hidden; /* required */
+    white-space: nowrap;
+    overflow: hidden;
     height: 100%;
 }
 
 #hearderSlide .item {
     display: inline-block;
-    width: 33.3333%; /* required * Determines number of visible slides */
-    position: relative; /* required */
-    vertical-align: top; /* required */
-    overflow: hidden; /* required */
-    height: 100%; /* recommended */
+    width: 35%;
+    position: relative;
+    vertical-align: top; 
+    overflow: hidden; 
+    height: 100%; 
     white-space: normal;
 }
 
