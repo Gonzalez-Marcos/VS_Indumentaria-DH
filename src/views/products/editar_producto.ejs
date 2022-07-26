@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %> 
+<body>
+    <%- include('../partials/header') %>
+
+    <main class="main-container">
+        <div class="editar-producto-container">
+            <div class="titulo-editar-producto">
+
+            <div class="producto-container">
+                <form action="/">
+                    <div > <h2>Edita los productos</h2>
+                        <div class="estilos-input"><label for="nombre_producto">Nombre del Producto:</label>
+                            <input type="text" name="nombre_producto" id="nombre_producto">
+                        </div>
+                    
+                        <div class="estilos-input"><label for="imagenes-producto">Imagenes del Producto:</label>
+                            <input type="file" name="imagenes-producto" >
+                        </div>
+                        <div class="estilos-input">
+                            <label for="precio_producto">Precio :</label>
+                            <input type="number" name="precio_producto" id="precio_producto">
+                        </div>
+                    
+                        <div class="categoria estilos-input">
+                            <label for="categoria">Categoria: </label>
+                            <input type="text">
+                        </div>
+                        <div class="descripcion-producto">
+                            <label for="descripcion-producto">Descripcion del Producto:</label>
+                        </div>
+                        <div>
+                            <textarea name="descripcion-producto" id="descripcion-producto" cols="30" rows="10" placeholder="¡Escribe aqui la descripcion!"></textarea>
+                        </div>
+                        
+                    </div>
+                    <div class="button-editar-producto">
+                        <input type="submit" value="Editar Producto">
+                        <input type="submit" value="Cancelar">
+                    </div>     
+                </form>
+            </div>
+            </div>
+        </div>
+    </main>
+    <script src="JS/script.js"></script>
+    <script src="JS/shopping-cart.js"></script>
+    <%- include('../partials/footer') %> 
+</body>
+</html>
