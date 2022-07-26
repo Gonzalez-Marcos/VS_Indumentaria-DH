@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Libreria Fontawesome-->
+    <script src="https://kit.fontawesome.com/439c181295.js" crossorigin="anonymous"></script>
+    <title>Creacion</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <div><h2>---------- SOY EL HEADER ------------</h2></div>
+    </header>
+    <main class="main-container">
+        <div class="crear-producto-container">
+            <div class="titulo-crear-producto">
+                <h2>Crear Producto</h2>
+                <div class="icons-productos">
+                    <div>
+                        <i class="fas fa-socks"> </i>
+                        <i class="fas fa-socks"> </i>
+                        <i class="fas fa-socks"> </i>
+                    </div>
+                </div>
+            </div>
+            <div class="producto-container">
+                <form action="/">
+                    <div class="nombre"><label for="nombre_producto">Nombre</label></div>
+                    <div class="nombre"><input type="text" name="nombre_producto" id="nombre_producto"></div>
+                    <div class="imagenes-producto"><label for="imagenes-producto">Imagenes</label></div>
+                    <div class="imagenes-producto"><input type="file" name="imagenes-producto" id="imagenes-producto"></div>
+                    <div class="precio"><label for="precio_producto">Precio</label></div>
+                    <div class="precio"><input type="number" name="precio_producto" id="precio_producto"></div>
+                    <div class="categoria">
+                        <label for="categoria">Categoria  </label>
+                        <select name="categoria" id="categoria">
+                            <option value="categoria">CAMPERAS</option>
+                            <option value="categoria">REMERAS</option>
+                            <option value="categoria">SUETERS</option>
+                            <option value="categoria">PANTALONES</option>
+                            <option value="categoria">JEANS</option>
+                            <option value="categoria">BUZOS</option>
+                        </select>
+                    </div>
+                    <div><label for="colores">Colores Disponibles</label></div>
+                    <div class="color-container">
+                        <div>
+                            <span><input type="checkbox" name="colores" id="colores"> Negro </span>
+                            <span><input type="checkbox" name="colores" id="colores"> Rojo </span>
+                            <span><input type="checkbox" name="colores" id="colores"> Blanco  </span>
+                        </div>
+                        <div">
+                            <span><input type="checkbox" name="colores" id="colores"> Azul </span>
+                            <span><input type="checkbox" name="colores" id="colores"> Gris </span>
+                            <span><input type="checkbox" name="colores" id="colores"> Verde  </span>
+                        </div>
+                        <div>
+                            <span><input type="checkbox" name="colores" id="colores"> Amarillo </span>
+                            <span><input type="checkbox" name="colores" id="colores"> Rosa </span>
+                            <span><input type="checkbox" name="colores" id="colores"> Marron </span>
+                        </div>
+                    </div>
+                    <div><label for="talles">Talle</label></div>
+                    <div class="talles-container">
+                        <div class="talle">
+                            <span><input type="checkbox" name="talles" id="talles"> XS  </span>
+                            <span class="talle"><input type="checkbox" name="talles" id="talles"> S  </span>
+                            <span><input type="checkbox" name="talles" id="talles"> M  </span>
+                        </div>
+                        <div class="talle">
+                            <span><input type="checkbox" name="talles" id="talles"> L  </span>
+                            <span><input type="checkbox" name="talles" id="talles"> XL  </span>
+                            <span><input type="checkbox" name="talles" id="talles"> XXL </span>
+                        </div>
+                    </div>
+                    <div class="descripcion-producto">
+                        <div>
+                            <label for="descripcion-producto">Descripcion del Producto</label>
+                        </div>
+                        <div>
+                            <textarea name="descripcion-producto" id="descripcion-producto" cols="30" rows="10" placeholder="¡Escribe aqui la descripcion!"></textarea>
+                        </div>
+                    </div>
+                    <div class="button-agregar-producto">
+                        <input type="submit" value="AGREGAR PRODUCTO">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <h2>Footer</h2>
+    </footer>
+</body>
+</html>

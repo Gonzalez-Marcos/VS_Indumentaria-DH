@@ -1,0 +1,162 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #ebebeb;
+}
+
+footer , header {
+    background-color: blue;
+    height: 50px;
+}
+.main-container {
+    width: 100%;
+    /*border: 2px solid green;*/
+    /*background-color: rgb(198, 188, 188);*/
+    font-size: 14px;
+}
+
+.register-container {
+    padding: 50px 5px 2px;
+    /*border: 2px solid yellow;
+    background-color: rgb(227, 227, 106);*/
+}
+
+.datos-cuenta-container {
+    /*border: 2px solid rgb(210, 191, 197);*/
+    margin: 0px 1px 20px;
+}
+
+.datos-cuenta-container h2 {
+    margin: 10px 0px 15px;
+    font-size: 16px;
+}
+
+.terminos-container {
+    /*border: 2px solid blue;
+    background-color: rgb(91, 91, 231);*/
+    padding: 20px 15px;
+}
+
+
+
+.register-container h2 {
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.datos-personales-container {
+    padding: 10px 8px 0;
+    /*border: 2px solid brown;
+    background-color: rgb(164, 142, 142);*/
+    width: auto;
+}
+
+.datos-personales-container div , .datos-cuenta-container div {
+    padding-top: 10px;
+}
+
+.datos-personales-container form {
+    display: block;
+}
+
+.cuenta-container {
+    /*border: 2px solid rgb(210, 191, 197);
+    background-color:green;*/
+    padding: 5px 8px;
+    width: auto;
+}
+
+.cuenta-container form {
+    display: block;
+}
+
+.register {
+    border-bottom: 4px solid black;
+    padding: 20px;
+}
+
+.terminos-container form {
+    display: block;
+}
+
+.terminos-container form div {
+    padding-top: 20px;
+}
+
+div.cuenta-container div input {
+    width: 100%;
+    border-radius: 5px;
+    height: 30px;
+    padding: 6px 12px;
+}
+
+div.datos-personales-container div input, select {
+    width: 100%;
+    border-radius: 5px;
+    height: 30px;
+    padding: 6px 12px;
+}
+
+.crear-cuenta button{
+    border-radius: 25px;
+    height: 35px;
+    background-color: black;
+    width: 100%;
+    color: white;
+}
+
+.crear-cuenta {
+    max-width: 380px;
+    margin:auto;
+    padding: 5px 10px;
+}
+
+@media (min-width:768px) {
+    .datos-cuenta-container .datos-personales-container {
+        padding-right: 50px;
+    } 
+
+    .datos-cuenta-container .cuenta-container {
+        padding-left: 50px;
+    }
+
+    .terminos-container {
+        max-width: 380px;
+        margin: auto;
+    }
+
+    
+}
+
+@media (min-width: 820px) {
+
+    .datos-cuenta-container {
+        display: flex;
+        padding: 0px 90px;
+    }
+
+    .datos-personales-container, .cuenta-container {
+        width: 50%;
+    }
+
+    div.datos-cuenta-container form div {
+        padding: 10px 5px;
+    }
+
+    
+}
+
+@media (min-width:1280px) {
+    .register-container h2 {
+        font-size: 30px;
+    }
+    
+}
