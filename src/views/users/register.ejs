@@ -6,7 +6,7 @@
     <%- include('../partials/header') %> 
 
     <main class="main-container">
-        <div class="register-container">
+        <div class="register-container-2">
             <h2>Crear Cuenta</h2>
             <div class="datos-cuenta-container">
                 <div class="datos-personales-container">
@@ -44,48 +44,54 @@
                 <div class="cuenta-container">
                     <h2>Sobre tu Cuenta</h2>
                     <form action="/registro" method="POST" class="cuenta">
-                        <div><label for="email">Email</label></div>
-                        <div><input type="email" name="email" id="email"></div>
-                        <div><label for="confirm email">Confirmar Email</label></div>
-                        <div><input type="email" name="confirm email" id="confirm email"></div>
-                        <div><label for="password">Contraseña (minimo 8  carcteres)</label></div>
-                        <div><input type="password" name="password" id="password"></div>
-                        <div><label for="confirm password">Confirmar Contraseña</label></div>
-                        <div><input type="password" name="confirm password" id="confirm password"></div>
-                        <div><label for="intereses">¿Cuales son tus intereses?</label></div>
-                        <div>
-                            <select name="intereses" id="intereses">
-                                <option value="intereses">Seleccionar</option>
-                                <option value="intereses">Moda</option>
-                                <option value="intereses">Running</option>
-                                <option value="intereses">Futbol</option>
-                                <option value="intereses">Deportes</option>
-                            </select>
-                        </div>
-                        <div><label for="equipo">¿Cual e tu equipo de futbol?</label></div>
-                        <div>
-                            <select name="equipo" id="equipo">
-                                <option value="equipo">Seleccionar</option>
-                                <option value="equipo">Boca Juniors</option>
-                                <option value="equipo">River Plate</option>
-                                <option value="equipo">Independiente</option>
-                                <option value="equipo">Ninguno</option>
-                            </select>
+                        <div class="estilos-input-reg-2">
+                            <div class="input-reg-2-2">
+                                <div><label for="email">Email</label></div>
+                                <div><input type="email" name="email" id="email"></div>
+                                <div><label for="confirm email">Confirmar Email</label></div>
+                                <div><input type="email" name="confirm email" id="confirm email"></div>
+                                <div><label for="password">Contraseña (minimo 8  carcteres)</label></div>
+                                <div><input type="password" name="password" id="password"></div>
+                                <div><label for="confirm password">Confirmar Contraseña</label></div>
+                                <div><input type="password" name="confirm password" id="confirm password"></div>
+                                <div><label for="intereses">¿Cuales son tus intereses?</label></div>
+                            </div>
+                            <div class="select-reg">
+                                <select name="intereses" id="intereses">
+                                    <option value="intereses">Seleccionar</option>
+                                    <option value="intereses">Moda</option>
+                                    <option value="intereses">Running</option>
+                                    <option value="intereses">Futbol</option>
+                                    <option value="intereses">Deportes</option>
+                                </select>
+                            </div>
+                            <div><label for="equipo">¿Cual e tu equipo de futbol?</label></div>
+                            <div>
+                                <select name="equipo" id="equipo">
+                                    <option value="equipo">Seleccionar</option>
+                                    <option value="equipo">Boca Juniors</option>
+                                    <option value="equipo">River Plate</option>
+                                    <option value="equipo">Independiente</option>
+                                    <option value="equipo">Ninguno</option>
+                                </select>
+                            </div>
                         </div>
                     </form>
                 </div>
             </div>
             <div class="terminos-container">
-                <form action="/terminos">
-                    <div>
-                        <input type="checkbox" name="terminos" value="condiciones">
-                        <label for="terminos">Acepto las <a href="/">Politicas de Privacidad</a> y <a href="/">Terminos y Condiciones.</a></label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="newsletter" value="newsletter!">
-                        <label for="newsletter">Quiero recibir emails de promociones y noticias.</label>
-                    </div>
-                </form>
+                <div class="estilos-form-reg">
+                    <form action="/terminos">
+                        <div>
+                            <input type="checkbox" name="terminos" value="condiciones">
+                            <label for="terminos">Acepto las <a href="/">Politicas de Privacidad</a> y <a href="/">Terminos y Condiciones.</a></label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="newsletter" value="newsletter!">
+                            <label for="newsletter">Quiero recibir emails de promociones y noticias.</label>
+                        </div>
+                    </form>
+                </div>
             </div>
             <div class="crear-cuenta-2">
                 <button class="button-register" type="submit">CREAR CUENTA</button>
