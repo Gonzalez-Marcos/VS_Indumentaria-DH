@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head') %> 
+<%- include('../partials/head') %>
+    <link rel="stylesheet" href="css/estiloslogin.css">
+    </head>
 
-<body>
-    <%- include('../partials/header') %> 
+    <body>
+        <%- include('../partials/header') %>
+        </header>
 
-    <div class="contenedor-formulario contenedor">
-        <form class="formulario">
-            <div class="texto-formulario">
-                <h2>bienvenido de nuevo</h2>
-                <p>inicia sesion con tu cuenta</p>
-            </div>
-            <div class="input">
-                <label for="usuario">Usuario</label>
-                <input placeholder="ingresa tu nombre" type="text" id="usuario">
-            </div>
-            <div class="input">
-                <label for="contraseña">Contraseña</label>
-                <input placeholder="ingresa tu contraseña" type="password" id="contraseña">
-            </div>
-            <div class="contraseña-olvidada">
-                <a href="#">¿Olvidaste tu contraseña?</a>
-            </div>
-            <div class="input">
-                <input type="submit" value="Entrar">
-                <a href="#"></a>
-            </div>
-            <div class="recordar-contraseña">
-                <a href="#">Recordarme</a>
-            </div>
+            <div class="contenedor-formulario contenedor">
+                    <div class="img-login-messi">
+                        <!-- <img src="images/messi_login.jpg" alt="" class="login-messi"> -->
+                    </div>
+                    <form class="formulario">
+                        <div class="texto-formulario">
+                            <h2>Bienvenido</h2>
+                            <p>Inicia sesión con tu cuenta!</p>
+                        </div>
+                        <div class="input">
+                            <label for="usuario">Usuario</label>
+                            <input class="input-0" placeholder="Ingresa tu usuario" type="text" id="usuario">
+                        </div>
+                        <div class="input">
+                            <label for="contraseña">Contraseña</label>
+                            <input class="input-0" placeholder="Ingresa tu contraseña" type="password" id="contraseña">
+                        </div>
+                        <div class="line-div">
+                        </div>
+                        <div class="contraseña-olvidada">
+                            <a href="#">¿Olvidaste tu contraseña?</a><br><br>
+                            <a href="/register.ejs">¿Tenes cuenta?</a>
+                        </div>
+                        <div class="input">
+                            <input type="submit" value="Entrar">
+                            <a href="#"></a>
+                        </div>
+                        <div class="recordar-contraseña">
+                            <input class= "check-psw" type="checkbox"><a href="#">Recordarme</a>
+                        </div>
+                    </form>
 
-    </div>
-    </form>
-    </div>
-    <%- include('../partials/footer') %> 
+                </div>
 
-</body>
+            <%- include('../partials/footer') %>
+
+    </body>

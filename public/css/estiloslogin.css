@@ -17,8 +17,25 @@
     .contenedor-formulario {
         display:flex;
         justify-content: center;
-        padding: auto;
+        margin: 60px auto;
     }
+}
+
+.contenedor-formulario .img-login-messi {
+    background-image: url(/images/messi_login.jpg);
+    background-position: center center;
+    background-size: cover;
+    flex: 0 0 calc(45%);
+    position: relative;
+}
+.contenedor-formulario .img-login-messi::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, rgba(141,169,196,.5), rgba(19, 64, 116, .5) );
 }
 .formulario{
     padding: 50px;
@@ -27,45 +44,59 @@
 }
 .texto-formulario h2, p, .input label, .contraseña-olvidada a, .recordar-contraseña a{
     color: white;
+    margin-left: 10px;
 }
 .texto-formulario h2{
-    font-size:  40px; 
+    font-size:  50px; 
     text-align: center;
+    font-weight: bold;
 }
 .texto-formulario p{
     font-size: 22px;
     text-align: center;
-}
-input label{
-    display: block;
-    font-size: 22px;
     font-weight: bold;
-    margin: 20px, 0;
 }
-.contraseña-olvidada a{
+.input label{
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.contraseña-olvidada{
     display: inline-block;
     margin-top: 20px;
     font-size: 18px;
+    border-top: 1px grey;
 }
-.input input{
+.input{
+    margin: 10px 0;
+}
+.input .input-0{
     width: 100%;
-    padding: 10px, 16px ;
+    padding: 15px;
     border-radius:5px;
     outline: none;
 }
 .input input[type="submit"]{
+    padding: 15px;
     font-size: 22px;
     font-weight: bold;
     border: none;
     margin-top: 20px;
-    transition: background-color .3s ease-in-out;  
+    width: 100%;
+    border-radius: 5px;
+    transition: background-color 0.5s ease-in-out;  
 }
 .input input[type="submit"]:hover{ 
     cursor: pointer;
-    background-color: var(--azul);
+    background-color: darkgrey;
+    color: var(--blanco);
 }
 .recordar-contraseña{
     display: inline-block;
     margin-top: 20px;
     font-size: 18px;
+}
+.line-div {
+    border-top: 1px solid white;
+    margin: 20px auto;
 }

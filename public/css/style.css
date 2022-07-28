@@ -583,7 +583,7 @@ div.cont-productDetail {
 .banner_publicidad{
     width: 100%;
     display: block;
-    height: 25em;
+    height: 30em;
 }
 
 /* footer */
@@ -694,37 +694,47 @@ div.cont-productDetail {
   padding: 15px 25px 15px 15px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   position: relative;
-  animation: show_box 0.8s ease forwards;
+  animation: show_box 1s ease-in-out forwards;
 }
+/*Se comenta transform para probar box*/
 @keyframes show_box {
   0%{
     transform: translateX(100%);
   }
+  /* 20%{
+    transform: translateX(-20%);
+  }
   40%{
-    transform: translateX(-5%);
-  }
-  80%{
-    transform: translateX(0%);
-  }
+    transform: translateX(-40%);
+  } */
+  /* 60%{
+    transform: translateX(-60%);
+  } */
+  /* 80%{
+    transform: translateX(-80%);
+  } */
   100%{
-    transform: translateX(-10px);
+    transform: translateX(-100%);
   }
 }
 #hide:checked ~ .box{
-  animation: hide_box 0.8s ease forwards;
+  animation: hide_box 1s ease-in-out forwards;
 }
+/*Se comenta transform para probar box*/
 @keyframes hide_box {
   0%{
-    transform: translateX(0%);
+    transform: translateX(-100%);
   }
-  40%{
+  /* 40%{
     transform: translateX(5%);
   }
   80%{
     transform: translateX(0%);
-  }
+  } */
   100%{
-    transform: translateX(calc(100% + 35px ));
+    transform: translateX(100%);
+    /* transform: translateX(calc(100% + 35px )); */
+    opacity: 0;
   }
 }
 .container-sub .box i{
