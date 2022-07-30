@@ -21,9 +21,9 @@ const usersRouter = require('./routers/users');
 //Hasta aca todas las rutas//
 
 /* App use para ruta no encontrada*/
-app.use((req, res, next) => {
-    res.status(404).render('not-found');
-})
+// app.use((req, res, next) => {
+//     res.status(404).render('not-found');
+// })
 /* FIN App use para ruta no encontrada*/
 
 //Uso de Templates Engines//
