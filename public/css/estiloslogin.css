@@ -12,6 +12,45 @@
     max-width:  1200px;
     width: 95%;
 }
+/*ESTYLOS DE RECUPERO DE PSW*/
+.pass-cont {
+    border: 2px solid black;
+    border-radius: 20px;
+    color: white;
+    background: black;
+    text-align: center;
+    width: 90%;
+    height: 200px;
+    padding: 10px;
+}
+
+.form-pass label {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+.form-pass input {
+    width: 80%;
+    padding: 6px;
+    overflow: hidden;
+    margin-left: 15px;
+}
+.button-pass {
+    width: 60%;
+    border: 1px solid grey;
+    border-radius: 20px;
+    height: 40px;
+    background-color: grey;
+    color: white;
+    margin: 20px 0 auto;
+    font-size: 1.4rem;
+    font-weight: bold;
+    transition: all .5s ease-in-out;
+}
+.button-pass:hover {
+    background: white;
+    color: black;
+}
 
 @media(min-width:768px){
     .contenedor-formulario {
@@ -19,6 +58,10 @@
         justify-content: center;
         margin: 60px auto;
     }
+    /*Recupero PASS*/
+.passw-recupero {
+    margin: 15vw;
+}
 }
 
 .contenedor-formulario .img-login-messi {
@@ -84,12 +127,14 @@
     margin-top: 20px;
     width: 100%;
     border-radius: 5px;
+    background: grey;
+    color: white;
     transition: background-color 0.5s ease-in-out;  
 }
 .input input[type="submit"]:hover{ 
     cursor: pointer;
-    background-color: darkgrey;
-    color: var(--blanco);
+    background-color: white;
+    color: var(--negro);
 }
 .recordar-contraseña{
     display: inline-block;

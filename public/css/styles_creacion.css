@@ -1,16 +1,20 @@
 
 .main-container {
     /* background-color: rgb(226, 226, 216); */
-    padding: 50px 15px;
+    margin: 20px;
     font-size: 18px;
     /*border: 3px solid rgb(184, 51, 129);*/
 }
 
 .crear-producto-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
     border: 1px solid black;
     padding: 10px;
-    /*background-color: rgb(115, 181, 115);*/
-    border-radius: 10px;
+    background-color: black;
+    color: white;
+    border-radius: 10px; 
 }
 
 .crear-producto-container div {
@@ -33,13 +37,17 @@
     text-align: center;
 }
 
-.nombre input , .imagenes-producto input, .precio input {
+.nombre input , .imagenes-producto input, .precio input, .categoria .select-categoria  {
     border: 0px;
     width: 100%;
-    height: 20px;
+    height: 45px;
     padding: 4px;
-    border-bottom: 1px solid rgb(128, 124, 124);
-    background-color: rgb(226, 226, 216);
+    border-bottom: 2px solid rgb(128, 124, 124);
+    background-color: black;
+    color: white;
+}
+.nombre label , .imagenes-producto label, .precio label, .categoria label, .title-color label, .title-talles label, .title-description label{
+    color: white;
 }
 
 .categoria select {
@@ -48,23 +56,48 @@
     background-color: rgb(226, 226, 216);
     border: 0px;
     border-bottom: 1px solid rgb(128, 124, 124);
+    color: white;
 }
 
-.producto-container div {
-    padding-bottom: 5px;
+.precio,
+.categoria,
+.imagenes-producto,
+.nombre,
+.descripcion-producto {
+    margin: 10px auto;
     /*border: 1px solid blue;*/
 }
 
+.title-color {
+    margin: 15px auto;
+}
+
+.color-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 2px solid grey;
+}
 .imagenes-producto input {
-    font-size: 10px;
+    font-size: 13px;
+    padding: 1vh;
 }
 
 .color-container span {
-    padding-right: 5px;
+    margin: 4px 2px 8px 11px;
+}
+
+.talles-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 2px solid grey;
 }
 
 .descripcion-producto div {
-    padding-bottom: 5px;
+    padding: 5px;
+    margin: 20px auto;
 }
 
 .descripcion-producto textarea {
@@ -74,10 +107,43 @@
 
 .button-agregar-producto input {
     width: 100%;
+    border: 1px solid grey;
     border-radius: 20px;
     height: 40px;
-    background-color: black;
+    background-color: grey;
     color: white;
+    font-weight: 500;
+    transition: .4s ease-in-out;
+}
+
+.button-agregar-producto input:hover {
+    cursor: pointer;
+    background: white;
+    color: black;
+    border: 1px solid white;
+}
+.button-editar-producto {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.button-editar-producto input {
+    text-align: center;
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 12px;
+    height: 40px;
+    background-color: grey;
+    color: white;
+    font-weight: 500;
+    margin: 0 10px;
+    transition: .4s ease-in-out;
+}
+
+.button-editar-producto input:hover {
+    cursor: pointer;
+    background: white;
+    color: black;
+    border: 1px solid white;
 }
 
 @media (min-width:768px) {

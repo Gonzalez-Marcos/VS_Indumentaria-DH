@@ -50,14 +50,14 @@
     padding-top: 20px;
 }
 
-div.cuenta-container .estilos-input-reg-2 {
+.cuenta-container .estilos-input-reg-2 {
     width: 100%;
     border-radius: 5px;
     height: 30px;
     padding: 6px 12px;
 }
 
-div.datos-personales-container .input-reg-2-2 .select-reg {
+.datos-personales-container .input-reg-2-2 .select-reg {
     width: 100%;
     border-radius: 5px;
     height: 30px;
@@ -94,7 +94,7 @@ div.datos-personales-container .input-reg-2-2 .select-reg {
     }   
 }
 
-@media (min-width: 820px) {
+@media (min-width: 1024px) {
 
     .datos-cuenta-container {
         display: flex;
