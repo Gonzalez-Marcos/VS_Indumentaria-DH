@@ -12,18 +12,18 @@
                     <div class="img-login-messi">
                         <!-- <img src="images/messi_login.jpg" alt="" class="login-messi"> -->
                     </div>
-                    <form class="formulario">
+                    <form class="formulario" method="POST" action="/" >
                         <div class="texto-formulario">
                             <h2>Bienvenido</h2>
                             <p>Inicia sesión con tu cuenta!</p>
                         </div>
                         <div class="input">
                             <label for="usuario">Usuario</label>
-                            <input class="input-0" placeholder="Ingresa tu usuario" type="text" id="usuario">
+                            <input class="input-0" placeholder="Ingresa tu usuario" type="text" id="usuario" name="usuario">
                         </div>
                         <div class="input">
                             <label for="contraseña">Contraseña</label>
-                            <input class="input-0" placeholder="Ingresa tu contraseña" type="password" id="contraseña">
+                            <input class="input-0" placeholder="Ingresa tu contraseña" type="password" id="contraseña" name="contraseña">
                         </div>
                         <div class="line-div">
                         </div>
@@ -32,8 +32,8 @@
                             <a href="./register">¿Tenes cuenta?</a>
                         </div>
                         <div class="input">
-                            <input type="submit" value="Entrar">
-                            <a href="#"></a>
+                            <input type="submit" value="Entrar" name="entrar">
+                          
                         </div>
                         <div class="recordar-contraseña">
                             <input class= "check-psw" type="checkbox"><a href="#">Recordarme</a>
