@@ -1,5 +1,5 @@
 # Retrospectiva
 
-#### El equipo recien comienza. Vamos a mantener la comunicación al máximo para poder 
-#### hacer un GRAN trabajo, y sobre todo bien organizado.
-#### El objetivo está claro y daremos lo mejor para poder cumplirlo.
+#### Debemos mantener el equipo con la misma comunicación que obtuvimos en esta etapa.
+#### Tenemos que reforzar la organización de cada back log a realizar para poder ser ordenados.
+#### Vamos por buen camino, lo principal, mantener el trabajo en equipo.
