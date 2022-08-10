@@ -4,12 +4,13 @@ const app = express();
 const path = require('path');
 
 const pathPublic = path.resolve(__dirname, '../public');
+
 app.use(express.static(pathPublic));
 
 /*Libreria para sobreescribir el metodo original y poder implementar
 los metodos PUT o DELETE*/
 const methodOverride = require('method-override');
-app.use(methodOverride('_method'));
+
 /*Fin libreria*/
 
 //Trear rutas en constantes//
@@ -20,17 +21,19 @@ const productsRouter = require('./routers/products');
 const usersRouter = require('./routers/users');
 //Hasta aca todas las rutas//
 
-/* App use para ruta no encontrada*/
-// app.use((req, res, next) => {
-//     res.status(404).render('not-found');
-// })
-/* FIN App use para ruta no encontrada*/
+/*MiddleWares*/
+const logMiddleWare = require('./middleWares/logDBMiddleWare')
 
 //Uso de Templates Engines//
 app.set('view engine', 'ejs');
 
 app.set('views', path.join(__dirname, '/views'));
 
+
+// Ruta de logMiddleWare
+app.use(methodOverride('_method'));
+
+app.use(logMiddleWare);
 
 //Llamamos todas las rutas en la app//
 app.use('/', mainRouter);
@@ -39,6 +42,13 @@ app.use('/', productsRouter);
 
 app.use('/', usersRouter);
 //Hasta aca rutas//
+
+/* App use para ruta no encontrada*/
+app.use((req, res, next) => {
+
+    res.status(404).render("products/error-404");
+})
+/* FIN App use para ruta no encontrada*/
 
 app.use(express.json());
 

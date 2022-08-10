@@ -1,5 +1,7 @@
 const express = require('express');
 
+const { body } = require('express-validator') //Libreria de Validacion
+
 const productCartController = require('../controllers/productCartController');
 
 const productDetailController = require('../controllers/productDetailController');
