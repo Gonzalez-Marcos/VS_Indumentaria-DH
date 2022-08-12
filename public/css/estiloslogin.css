@@ -83,7 +83,7 @@
 .formulario{
     padding: 50px;
     background-color:black;
-    margin: 60px 0;
+    margin: 0;
     
 }
 .texto-formulario h2, p, .input label, .contraseña-olvidada a, .recordar-contraseña a{
