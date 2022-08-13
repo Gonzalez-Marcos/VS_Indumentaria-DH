@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 
-const { body } = require('express-validator') //Libreria de Validacion
+//const { body } = require('express-validator') //Libreria de Validacion
 
 const loginController = require('../controllers/loginController');
 
