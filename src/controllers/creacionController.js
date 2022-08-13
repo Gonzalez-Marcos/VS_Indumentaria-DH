@@ -1,7 +1,7 @@
 const path = require('path');
 
 const controller = {
-    creacion: (req, res) => {
+    create: (req, res) => {
         res.render('products/creacion_actual');
     },
 }

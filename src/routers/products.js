@@ -18,6 +18,6 @@ router.get('/productDetail', productDetailController.productDetail);
 
 router.get('/editar', editarController.editar);
 
-router.get('/creacion', creacionController.creacion);
+router.get('/create', creacionController.create);
 
 module.exports = router;

@@ -38,9 +38,9 @@ app.use(logMiddleWare);
 //Llamamos todas las rutas en la app//
 app.use('/', mainRouter);
 
-app.use('/', productsRouter);
+app.use('/products', productsRouter);
 
-app.use('/', usersRouter);
+app.use('/users', usersRouter);
 //Hasta aca rutas//
 
 /* App use para ruta no encontrada*/
@@ -52,7 +52,7 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({extended: false})); //Permite capturar la informacion que viaja por POST
 
 app.listen (8080, () => {
     console.log('Servidor iniciado en: http://localhost:8080');
