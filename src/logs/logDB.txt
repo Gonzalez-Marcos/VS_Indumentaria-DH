@@ -1241,6 +1241,7 @@ Se creó un registro al ingresar en la página /
 Se creó un registro al ingresar en la página /favicon.ico
 Se creó un registro al ingresar en la página /
 Se creó un registro al ingresar en la página /
+<<<<<<< HEAD
 Se creó un registro al ingresar en la página /
 Se creó un registro al ingresar en la página /images/images/indu_river.JPG
 Se creó un registro al ingresar en la página /favicon.ico
@@ -1365,3 +1366,15 @@ Se creó un registro al ingresar en la página /images/cat-accs/mochilas/mochi-3
 Se creó un registro al ingresar en la página /images/cat-accs/mochilas/mochi-4.jpg
 Se creó un registro al ingresar en la página /images/cat-indu/camiseta/cami-1.jpg
 Se creó un registro al ingresar en la página /images/cat-indu/camiseta/cami-2.jpg
+=======
+Se creó un registro al ingresar en la página /register
+Se creó un registro al ingresar en la página /
+Se creó un registro al ingresar en la página /login
+Se creó un registro al ingresar en la página /register
+Se creó un registro al ingresar en la página /register
+Se creó un registro al ingresar en la página /login
+Se creó un registro al ingresar en la página /login
+Se creó un registro al ingresar en la página /
+Se creó un registro al ingresar en la página /login
+Se creó un registro al ingresar en la página /register
+>>>>>>> 9b768447bd13d60622cb77eb83697b1a022435e7
