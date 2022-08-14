@@ -9,19 +9,19 @@ app.use(express.static(pathPublic));
 
 /*Libreria para sobreescribir el metodo original y poder implementar
 los metodos PUT o DELETE*/
-/*const methodOverride = require('method-override');
+//const methodOverride = require('method-override');
 
-/*Fin libreria*/
+//Fin libreria
 
-//Trear rutas en constantes//
+//Trear rutas en constantes
 const mainRouter = require('./routers/main');
 
 const productsRouter = require('./routers/products');
 
 const usersRouter = require('./routers/users');
-//Hasta aca todas las rutas//
+//Hasta aca todas las rutas
 
-/*MiddleWares*/
+//MiddleWares/
 const logMiddleWare = require('./middleWares/logDBMiddleWare')
 
 //Uso de Templates Engines//
@@ -56,4 +56,4 @@ app.use(express.urlencoded({extended: false})); //Permite capturar la informacio
 
 app.listen (8080, () => {
     console.log('Servidor iniciado en: http://localhost:8080');
-}); 
+});

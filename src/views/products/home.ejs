@@ -37,126 +37,63 @@
 
     <!-- card products -->
     <h3>Ultimos productos navegados</h3>
-
+    <% visit.forEach(element => { %>
     <section class="main-section">
-    <div class="product-container">
-        <div class="products">
-            <div class="product">
-                   <!--esto esta relacionado con js-->
+        <div class="product-container">
+                <div class="products">
                   <div class="product-under">
-                      <figure class="product-image">
-                          <img
-                              src="images/category-indu-logo.jpg"
-                          />
-                        <div class="product-over">
-                            <button
-                                class="btn btn-small addToCart"
-                                data-product-id="3">
-                                <i class="fas fa-cart-plus"></i>Add
-                                to cart
-                            </button>
-                            <a href="/productDetail" class="btn btn-small">More Info</a>
-                        </div>
-                      </figure>
-                      <div class="product-summary">
-                          <h4 class="productName">Product 1</h4>
-                          <p style="color: #000;">
-                              luctus quis et est. Integer pretium
-                              purus
-                          </p>
-                          <h6 class="price">
-                              $<span class="priceValue">999</span>
-                          </h6>
-                      </div>
-                  </div>
-              </div>
-              <div class="product">
-                  <div class="product-under">
-                      <figure class="product-image">
-                          <img
-                              src="images/category-indu-logo.jpg"/>
+                        <figure class="product-image">
+                            <img
+                              src="<%= element.image %>"
+                            />
                             <div class="product-over">
-                                <button
-                                    class="btn btn-small addToCart"
-                                    data-product-id="3">
-                                    <i class="fas fa-cart-plus"></i>Add
-                                    to cart
+                                <button class="btn btn-small addToCart" data-product-id="3">
+                                    <i class="fas fa-cart-plus"></i>Add to cart
                                 </button>
                                 <a href="/productDetail" class="btn btn-small">More Info</a>
                             </div>
-                      </figure>
-                      <div class="product-summary">
-                          <h4 class="productName">Product 2</h4>
-                          <p style="color: #000;">
-                              luctus quis et est. Integer pretium
-                              purus
-                          </p>
+                        </figure>
+                        <div class="product-summary">
+                          <h4 class="productName"><%= element.name %></h4>
+                          <p style="color: #000;"><%= element.description %></p>
                           <h6 class="price">
-                              $<span class="priceValue">599</span>
+                              $<span class="priceValue"><%= element.price %></span>
                           </h6>
-                      </div>
-                  </div>
-              </div>
-              <div class="product">
-                  <div class="product-under">
-                      <figure class="product-image">
-                          <img
-                              src="images/category-indu-logo.jpg"
-                          />
-                          <div class="product-over">
-                              <button
-                                  class="btn btn-small addToCart"
-                                  data-product-id="3">
-                                  <i class="fas fa-cart-plus"></i>Add
-                                  to cart
-                              </button>
-                              <a href="/productDetail" class="btn btn-small">More Info</a>
-                          </div>
-                      </figure>
-                      <div class="product-summary">
-                          <h4 class="productName">Product 3</h4>
-                          <p style="color: #000;">
-                              luctus quis et est. Integer pretium
-                              purus
-                          </p>
-                          <h6 class="price">
-                              $<span class="priceValue">650</span>
-                          </h6>
-                      </div>
-                  </div>
-              </div>
-              <div class="product">
-                  <div class="product-under">
-                      <figure class="product-image">
-                          <img
-                              src="images/category-indu-logo.jpg"
-                          />
-                        <div class="product-over">
-                            <button
-                                class="btn btn-small addToCart"
-                                data-product-id="3">
-                                <i class="fas fa-cart-plus"></i>Add
-                                to cart
-                            </button>
-                            <a href="/products/productDetail" class="btn btn-small">More Info</a>
                         </div>
-                      </figure>
-                      <div class="product-summary">
-                          <h4 class="productName">Product 4</h4>
-                          <p style="color: #000;">
-                              luctus quis et est. Integer pretium
-                              purus
-                          </p>
-                          <h6 class="price">
-                              $<span class="priceValue">899</span>
-                          </h6>
-                      </div>
                   </div>
-            </div>
+                </div>
         </div>
-    </div>
     </section>
-
+    <% }) %>
+    <h3>Novedades</h3>
+    <% visit.forEach(element => { %>
+        <section class="main-section">
+            <div class="product-container">
+                    <div class="products">
+                      <div class="product-under">
+                            <figure class="product-image">
+                                <img
+                                  src="<%= element.image %>"
+                                />
+                                <div class="product-over">
+                                    <button class="btn btn-small addToCart" data-product-id="3">
+                                        <i class="fas fa-cart-plus"></i>Add to cart
+                                    </button>
+                                    <a href="/productDetail" class="btn btn-small">More Info</a>
+                                </div>
+                            </figure>
+                            <div class="product-summary">
+                              <h4 class="productName"><%= element.name %></h4>
+                              <p style="color: #000;"><%= element.description %></p>
+                              <h6 class="price">
+                                  $<span class="priceValue"><%= element.price %></span>
+                              </h6>
+                            </div>
+                      </div>
+                    </div>
+            </div>
+        </section>
+        <% }) %>
     <!-- Subscribe Button -->
     <div class="container-sub">
             <input type="radio" id="hide">

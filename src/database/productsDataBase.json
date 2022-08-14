@@ -1,9 +1,290 @@
-[{
-"id": 1,
-  "name": "Cafetera Moulinex Dolce Gusto Edited",
-  "price": 100,
-  "category": "visited",
-   "waist": 12 , 
-  "description": "Cafetera Dolce Gusto Lumio. La cafetera Dolce Gusto Lumio es de variedad automática que ha llegado con un diseño radical al que nos tenía acostumbrados Dolce Gusto.En este post te contamos todo lo que necesitas saber sobre ella, desde sus características técnicas hasta la calidad de las cápsulas o price.",
-  "image": "img-cafetera-moulinex.jpg"
-}]
+[
+  {
+    "id": 1,
+    "name": "ZAPATILLAS ADIDAS RUN 70S AZUL",
+    "price": 20.999,
+    "waist": 12,
+    "category": "visit",
+    "description": "Rendí homenaje a los irrepetibles años 70 con estas zapatillas de running ADIDAS.",
+    "image": "images/cat-calzado/zapatillas/zap-1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "ZAPATILLAS NIKE WAFFLE DEBUT NEGRA",
+    "price": 19.799,
+    "waist": 12,
+    "category": "visit",
+    "description": "El look retro adquiere una dimensión moderna con las NIKE Waffle Debut",
+    "image": "images/cat-calzado/zapatillas/zap-2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "ZAPATILLAS RUNNING STRONG PACE 3 MUJER GRIS",
+    "price": 11.799,
+    "waist": 12,
+    "category": "visit",
+    "description": "Disfrutá del running y tus caminatas con la TOPPER Strong Pace 3",
+    "image": "images/cat-calzado/zapatillas/zap-3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "ZAPATILLAS RUNNING STRONG PACE 3 MUJER GRIS",
+    "price": 11.799,
+    "waist": 12,
+    "category": "visit",
+    "description": "Disfrutá del running y tus caminatas con la TOPPER Strong Pace 3",
+    "image": "images/cat-calzado/zapatillas/zap-4.jpg"
+  },
+  {
+    "id": 5,
+    "name": "BOTINES DE FUTBOL NIKE MERCURIAL SUPERFLY 8 ACADEMY TF UNISEX ROJO",
+    "price": 26.399,
+    "waist": 12,
+    "category": "visit",
+    "description": "Diseñado para el pasto sintético, el NIKE Mercurial Superfly 8 Academy TF es un diseño único ",
+    "image": "images/cat-calzado/botines/bot-1.jpg"
+  },
+  {
+    "id": 6,
+    "name": "BOTINES DE FUTBOL ADIDAS PREDATOR FREAK.4 FG UNISEX FUCSIA",
+    "price": 19.399,
+    "waist": 12,
+    "category": "visit",
+    "description": "No podés cambiar el juego hasta que dejes que el juego te cambie a vos.",
+    "image": "images/cat-calzado/botines/bot-2.jpg"
+  },
+  {
+    "id": 7,
+    "name": "BOTINES DE FUTBOL REVES FIRE TF MUJER FUCSIA",
+    "price": 10.010,
+    "waist": 12,
+    "category": "visit",
+    "description": "Es hora que demuestres quien manda dentro de la cancha, por eso REVES presenta los nuevos Fire.",
+    "image": "images/cat-calzado/botines/bot-3.jpg"
+  },
+  {
+    "id": 8,
+    "name": "BOTINES DE FUTBOL ADIDAS PREDATOR EDGE. 4 TF UNISEX NEGRO",
+    "price": 18.999,
+    "waist": 12,
+    "category": "visit",
+    "description": "Algunos entran a la cancha y ven limitaciones.Vos ves posibilidades.",
+    "image": "images/cat-calzado/botines/bot-4.jpg"
+  },
+  {
+    "id": 9,
+    "name": "BOLSO ADIDAS ID MUJER NEGRO",
+    "price": 14.799,
+    "waist": 12,
+    "category": "visit",
+    "description": "Tira de ajuste regulable y ganchos para desmontar.",
+    "image": "images/cat-accs/bolsos/bol-1.jpg"
+  },
+  {
+    "id": 10,
+    "name": "BOLSO PUMA PHASE SPORTS MUJER ROSA",
+    "price": 5.999,
+    "waist": 12,
+    "category": "visit",
+    "description": "Logo PUMA estampado.",
+    "image": "images/cat-accs/bolsos/bol-2.jpg"
+  },
+  {
+    "id": 11,
+    "name": "BOLSO PUMA PLUS SPORTS II NEGRO",
+    "price": 6.999,
+    "waist": 12,
+    "category": "visit",
+    "description": "Amplio compartimiento principal.",
+    "image": "images/cat-accs/bolsos/bol-3.jpg"
+  },
+  {
+    "id": 12,
+    "name": "BOLSO UNDER ARMOUR ROLAND GRIS",
+    "price": 10.080,
+    "waist": 12,
+    "category": "visit",
+    "description": "Logo UNDER ARMOUR estampado.",
+    "image": "images/cat-accs/bolsos/bol-4.jpg"
+  },
+  {
+    "id": 13,
+    "name": "MOCHILA JANSPORT HALF PINT MUJER CELESTE",
+    "price": 8.890,
+    "waist": 12,
+    "category": "visit",
+    "description": "Logo JANSPORT aplicado.",
+    "image": "images/cat-accs/mochilas/mochi-1.jpg"
+  },
+  {
+    "id": 14,
+    "name": "MOCHILA PUMA ACADEMY CAMUFLADA",
+    "price": 7.999,
+    "waist": 12,
+    "category": "visit",
+    "description": "Cuenta con espacio para notebook,Amplio compartimiento principal. ",
+    "image": "images/cat-accs/mochilas/mochi-2.jpg"
+  },
+  {
+    "id": 15,
+    "name": "MOCHILA PUMA PHASE MUJER ROSA",
+    "price": 5.799,
+    "waist": 12,
+    "category": "visit",
+    "description": "Amplio compartimiento principal,Bolsillo frontal con cierre.",
+    "image": "images/cat-accs/mochilas/mochi-3.jpg"
+  },
+  {
+    "id": 16,
+    "name": "MOCHILA DE BOCA ADIDAS AZUL",
+    "price": 12.220,
+    "waist": 12,
+    "category": "visit",
+    "description": "Logo ADIDAS y escudo CABJ estampados.",
+    "image": "images/cat-accs/mochilas/mochi-4.jpg"
+  },
+  {
+    "id": 17,
+    "name": "CALZA CORTA ADIDAS ENTRENAMIENTO FEELBRILLANT MUJER ROJA",
+    "price": 7.499,
+    "waist": 12,
+    "category": "visit",
+    "description": "Sé vos misma con estas calzas cortas ADIDAS.",
+    "image": "images/cat-indu/calzas/cal-1.jpg"
+  },
+  {
+    "id": 18,
+    "name": "CALZA ADIDAS ENTRENAMIENTO FEELBRILLIANT DESIGNED TO MOVE MUJER AZUL",
+    "price": 12.999,
+    "waist": 12,
+    "category": "visit",
+    "description": "Estas calzas son todo menos sencillas.",
+    "image": "images/cat-indu/calzas/cal-2.jpg"
+  },
+  {
+    "id": 19,
+    "name": "CALZA CORTA PUMA ENTRENAMIENTO STRONG 3 PULGADAS MUJER NEGRA",
+    "price": 6.199,
+    "waist": 12,
+    "category": "visit",
+    "description": "Presumí de fuerza sobrehumana con esta calza de training ceñidas pero cómodas",
+    "image": "images/cat-indu/calzas/cal-3.jpg"
+  },
+  {
+    "id": 20,
+    "name": "CALZA PUMA ESSENTIAL+ AOP MUJER NEGRA",
+    "price": 6.889,
+    "waist": 12,
+    "category": "visit",
+    "description": "Ponete esta calza y derrochá estilo en tus paseos o a donde quiera que vayas.",
+    "image": "images/cat-indu/calzas/cal-4.jpg"
+  },
+  {
+    "id": 21,
+    "name": "CAMISETA DE ARGENTINA ADIDAS OFICIAL BLANCA",
+    "price": 16.999,
+    "waist": 12,
+    "category": "visit",
+    "description": "Diseñada para los hinchas y los momentos de gloria",
+    "image": "images/cat-indu/camiseta/cami-1.jpg"
+  },
+  {
+    "id": 22,
+    "name": "CAMISETA DE RIVER ADIDAS TERCER RECAMBIO ROJA",
+    "price": 16.999,
+    "waist": 12,
+    "category": "visit",
+    "description": "ADIDAS se inspiró en la historia de éxito del River Plate para diseñar esta camiseta de fútbol.",
+    "image": "images/cat-indu/camiseta/cami-2.jpg"
+  },
+  {
+    "id": 23,
+    "name": "CAMISETA JUGADOR REUSCH BLANCA",
+    "price": 5.460,
+    "waist": 12,
+    "category": "visit",
+    "description": "Camiseta jugador, logo en el pecho..",
+    "image": "images/cat-indu/camisetas/cami-3.jpg"
+  },
+  {
+    "id": 24,
+    "name": "CAMISETA DE ARGENTINOS JUNIORS UMBRO OFICIAL ROJA",
+    "price": 9.899,
+    "waist": 12,
+    "category": "visit",
+    "description": "Escudo ARGENTINOS JUNIORS aplicado..",
+    "image": "images/cat-indu/camisetas/cami-4.jpg"
+  },
+  {
+    "id": 25,
+    "name": "REMERA FILA DAY ROJA",
+    "price": 6.490,
+    "waist": 12,
+    "category": "visit",
+    "description": "Esta remera FILA Day de algodón luce los colores característicos de la marca.",
+    "image": "images/cat-indu/remeras/rem-1.jpg"
+  },
+  {
+    "id": 26,
+    "name": "REMERA FOLAU NEGRA",
+    "price": 3.980,
+    "waist": 12,
+    "category": "visit",
+    "description": "Esta remera presenta un corte estandar y el largo justo, con un diseño pensado para utilizarla en cualquier momento",
+    "image": "images/cat-indu/remeras/rem-2.jpg"
+  },
+  {
+    "id": 27,
+    "name": "REMERA PUMA DOWNTOWN VERDE",
+    "price": 6.999,
+    "waist": 12,
+    "category": "visit",
+    "description": "Downtown es una línea de diseños extraídos directamente de la inspiración del estilo urbano que se ve en la naturaleza.",
+    "image": "images/cat-indu/remeras/rem-3.jpg"
+  },
+  {
+    "id": 28,
+    "name": "REMERA TOPPER ENTRENAMIENTO BASIC TRNG MUJER PETROLEO",
+    "price": 4.199,
+    "waist": 12,
+    "category": "visit",
+    "description": "Entrenamientos sin límites con la nueva remera TOPPER Basic TRNG.",
+    "image": "images/cat-indu/remeras/rem-4.jpg"
+  },
+  {
+    "id": 29,
+    "name": "SHORT FLASH FASHION KAKI",
+    "price": 9.170,
+    "waist": 12,
+    "category": "visit",
+    "description": "El estilo informal del verano se te acompaña cada día con FLASH.",
+    "image": "images/cat-indu/shorts/short-1.jpg"
+  },
+  {
+    "id": 30,
+    "name": "BERMUDA LACOSTE REGULAR FIT GABARDINA AZUL",
+    "price": 17.000,
+    "waist": 12,
+    "category": "visit",
+    "description": "Bermuda moderna y urbana en gabardina de algodón.",
+    "image": "images/cat-indu/shorts/short-2.jpg"
+  },
+  {
+    "id": 31,
+    "name": "BERMUDA LACOSTE DENIM SLIM FIT AZUL",
+    "price": 20.000,
+    "waist": 12,
+    "category": "visit",
+    "description": "Disfrutá el verano y lucí todo el estilo que LACOSTE puede darte, con esta bermuda de Jean.",
+    "image": "images/cat-indu/shorts/short-3.jpg"
+  },
+  {
+    "id": 32,
+    "name": "SHORT DE BAÑO FLASH 701 ROJO",
+    "price": 8.060,
+    "waist": 12,
+    "category": "visit",
+    "description": "Preparate para el verano con todo el estilo que solo un short de FLASH puede darte.",
+    "image": "images/cat-indu/shorts/short-4.jpg"
+  }
+]
