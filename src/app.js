@@ -9,7 +9,7 @@ app.use(express.static(pathPublic));
 
 /*Libreria para sobreescribir el metodo original y poder implementar
 los metodos PUT o DELETE*/
-//const methodOverride = require('method-override');
+const methodOverride = require('method-override');
 
 //Fin libreria
 
@@ -31,7 +31,7 @@ app.set('views', path.join(__dirname, '/views'));
 
 
 // Ruta de logMiddleWare
-//app.use(methodOverride('_method'));
+app.use(methodOverride('_method'));
 
 app.use(logMiddleWare);
 

@@ -4,7 +4,7 @@
     "name": "ZAPATILLAS ADIDAS RUN 70S AZUL",
     "price": 20.999,
     "waist": 12,
-    "category": "",
+    "category": "visit",
     "description": "Rendí homenaje a los irrepetibles años 70 con estas zapatillas de running ADIDAS.",
     "image": "images/cat-calzado/zapatillas/zap-1.jpg"
   },
@@ -249,7 +249,7 @@
     "waist": 12,
     "category": "visit",
     "description": "Entrenamientos sin límites con la nueva remera TOPPER Basic TRNG.",
-    "image": "images/cat-indu/remeras/rem-4.jpg"
+    "image": "cat-indu/remeras/rem-4.jpg"
   },
   {
     "id": 29,

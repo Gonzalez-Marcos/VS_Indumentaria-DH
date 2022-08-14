@@ -1,116 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head') %> 
-</head>
-<body>
-    <%- include('../partials/header') %> 
-    </header>
+<%- include('../partials/head') %>
+    </head>
 
-    <!-- slide -->
-    <header id="hearderSlide">
-    <div class="MS-content">
-        <a href="#" class="item">
-            <img src="images/slider-home-1.png" />
-        </a>
-        <a href="#" class="item">
-            <img src="images/slider-home-2.png" />
-        </a>
-        <a href="#" class="item">
-            <img src="images/slider-home-3.png" />
-        </a>
-    </div>
-    <div class="MS-controls">
-        <button class="MS-right">
-            <i class="fas fa-chevron-right fa-3x"></i>
-        </button>
-        <button class="MS-left">
-            <i class="fas fa-chevron-left fa-3x"></i>
-        </button>
-    </div>
-    </header>
-    <!-- // slide -->
+    <body>
+        <%- include('../partials/header') %>
+            </header>
 
-    <!-- img publicidad -->
-    <section>
-    <img class="banner_publicidad" src="/images/banner-ofertas.jpg">
-    </section>
-
-    <!-- card products -->
-    <h3>Ultimos productos navegados</h3>
-    <% visit.forEach(element => { %>
-    <section class="main-section">
-        <div class="product-container">
-                <div class="products">
-                  <div class="product-under">
-                        <figure class="product-image">
-                            <img
-                              src="<%= element.image %>"
-                            />
-                            <div class="product-over">
-                                <button class="btn btn-small addToCart" data-product-id="3">
-                                    <i class="fas fa-cart-plus"></i>Add to cart
-                                </button>
-                                <a href="/productDetail" class="btn btn-small">More Info</a>
-                            </div>
-                        </figure>
-                        <div class="product-summary">
-                          <h4 class="productName"><%= element.name %></h4>
-                          <p style="color: #000;"><%= element.description %></p>
-                          <h6 class="price">
-                              $<span class="priceValue"><%= element.price %></span>
-                          </h6>
-                        </div>
-                  </div>
+            <!-- slide -->
+            <header id="hearderSlide">
+                <div class="MS-content">
+                    <a href="#" class="item">
+                        <img src="images/slider-home-1.png" />
+                    </a>
+                    <a href="#" class="item">
+                        <img src="images/slider-home-2.png" />
+                    </a>
+                    <a href="#" class="item">
+                        <img src="images/slider-home-3.png" />
+                    </a>
                 </div>
-        </div>
-    </section>
-    <% }) %>
-    <h3>Novedades</h3>
-    <% visit.forEach(element => { %>
-        <section class="main-section">
-            <div class="product-container">
-                    <div class="products">
-                      <div class="product-under">
-                            <figure class="product-image">
-                                <img
-                                  src="<%= element.image %>"
-                                />
-                                <div class="product-over">
-                                    <button class="btn btn-small addToCart" data-product-id="3">
-                                        <i class="fas fa-cart-plus"></i>Add to cart
-                                    </button>
-                                    <a href="/productDetail" class="btn btn-small">More Info</a>
+                <div class="MS-controls">
+                    <button class="MS-right">
+                        <i class="fas fa-chevron-right fa-3x"></i>
+                    </button>
+                    <button class="MS-left">
+                        <i class="fas fa-chevron-left fa-3x"></i>
+                    </button>
+                </div>
+            </header>
+            <!-- // slide -->
+
+            <!-- img publicidad -->
+            <section>
+                <img class="banner_publicidad" src="/images/banner-ofertas.jpg">
+            </section>
+
+            <!-- card products -->
+            <h3>Ultimos productos navegados</h3>
+            <% visit.forEach(element=> { %>
+                <section class="main-section">
+                    <div class="product-container">
+                        <div class="products">
+                            <div class="product-under">
+                                <figure class="product-image">
+                                    <img src="<%= element.image %>" />
+                                    <div class="product-over">
+                                        <button class="btn btn-small addToCart" data-product-id="3">
+                                            <i class="fas fa-cart-plus"></i>Add to cart
+                                        </button>
+                                        <a href="/productDetail" class="btn btn-small">More Info</a>
+                                    </div>
+                                </figure>
+                                <div class="product-summary">
+                                    <h4 class="productName">
+                                        <%= element.name %>
+                                    </h4>
+                                    <p style="color: #000;">
+                                        <%= element.description %>
+                                    </p>
+                                    <h6 class="price">
+                                        $<span class="priceValue">
+                                            <%= element.price %>
+                                        </span>
+                                    </h6>
                                 </div>
-                            </figure>
-                            <div class="product-summary">
-                              <h4 class="productName"><%= element.name %></h4>
-                              <p style="color: #000;"><%= element.description %></p>
-                              <h6 class="price">
-                                  $<span class="priceValue"><%= element.price %></span>
-                              </h6>
                             </div>
-                      </div>
+                        </div>
                     </div>
-            </div>
-        </section>
-        <% }) %>
-    <!-- Subscribe Button -->
-    <div class="container-sub">
-            <input type="radio" id="hide">
-        <div class="box">
-            <label for="hide"><i class="fas fa-times"></i></label>
-            <div class="right">
-                <div class="text-1">VS Indumentaria</div>
-                <div class="text-2">Descuentos del 20% en tu primera compra</div>
-                <a href="" target="_blank">Subscribe</a>
-            </div>
-        </div>
-    </div>
+                </section>
+                <% }) %>
+                    <h3>Novedades</h3>
+                    <% visit.forEach(element=> { %>
+                        <section class="main-section">
+                            <div class="product-container">
+                                <div class="products">
+                                    <div class="product-under">
+                                        <figure class="product-image">
+                                            <img src="<%= element.image %>" />
+                                            <div class="product-over">
+                                                <button class="btn btn-small addToCart" data-product-id="3">
+                                                    <i class="fas fa-cart-plus"></i>Add to cart
+                                                </button>
+                                                <a href="/productDetail" class="btn btn-small">More Info</a>
+                                            </div>
+                                        </figure>
+                                        <div class="product-summary">
+                                            <h4 class="productName">
+                                                <%= element.name %>
+                                            </h4>
+                                            <p style="color: #000;">
+                                                <%= element.description %>
+                                            </p>
+                                            <h6 class="price">
+                                                $<span class="priceValue">
+                                                    <%= element.price %>
+                                                </span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <% }) %>
+                            <!-- Subscribe Button -->
+                            <div class="container-sub">
+                                <input type="radio" id="hide">
+                                <div class="box">
+                                    <label for="hide"><i class="fas fa-times"></i></label>
+                                    <div class="right">
+                                        <div class="text-1">VS Indumentaria</div>
+                                        <div class="text-2">Descuentos del 20% en tu primera compra</div>
+                                        <a href="" target="_blank">Subscribe</a>
+                                    </div>
+                                </div>
+                            </div>
 
 
-        <script src="JS/script.js"></script>
-        <script src="JS/shopping-cart.js"></script>
-        <%- include('../partials/footer') %> 
-    
-</body>
+                            <script src="JS/script.js"></script>
+                            <script src="JS/shopping-cart.js"></script>
+                            <%- include('../partials/footer') %>
+
+    </body>
+
 </html>
