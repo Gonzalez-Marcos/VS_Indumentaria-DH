@@ -1,12 +1,12 @@
 .main-register-container1 {
     width: 100%;
     font-size: 14px;
+    padding: 0% 5%;
     color: white;
 }
 
 .register-container1 {
     padding: 70px 5px 50px;
-    border: 2px solid rgb(48, 47, 47);
     background-color: black;
 }
 
@@ -22,8 +22,6 @@
 .determination-container1 {
     padding: 20px 15px;
 }
-
-
 
 .register-container1 h2 {
     padding-bottom: 10px;
@@ -71,7 +69,7 @@
 div.personal-information-container1 label,
 .account-container1 label,
 .determination-container1 label,
-.determination-container1 a {
+.determination-container1 label a {
     color: white;
 }
 
@@ -103,40 +101,30 @@ div.personal-information-container1 select,
     .data-account-container1 .personal-information-container1 {
         padding-right: 50px;
     } 
-
     .data-account-container1 .account-container1 {
         padding-left: 50px;
     }
-
     .determination-container1 {
         max-width: 380px;
         margin: auto;
     }
-
-    
 }
 
 @media (min-width: 990px) {
-
     .data-account-container1 {
         display: flex;
         padding: 0px 90px;
     }
-
     .personal-information-container1, .account-container1 {
         width: 50%;
     }
-
     div.data-account-container1 div {
         padding: 10px 5px;
     }
-
-    
 }
 
 @media (min-width:1280px) {
     .register-container1 h2 {
         font-size: 30px;
     }
-    
 }

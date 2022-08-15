@@ -29,9 +29,22 @@ router.get('/', productsController.listProducts);
 
 router.get('/editar', editarController.editar);
 
+//para mostrar la vista del create
 router.get('/create', productsController.create);
+
+//para cargar los datos del nuevo producto
 router.post('/create', upload.single('image'), productsController.store);
 
+//ruta para ver el detalle de un producto segun id
 router.get('/:id/', productsController.productDetail);
+
+//ruta para mostrar la vista de la edicion de un producto segun el id
+router.get('/edit/:id/', productsController.edit); 
+
+//ruta por el cual recibe los datos del producto a editar
+router.put('/edit/:id/', productsController.update);
+
+//ruta para eliminar un producto
+router.delete('/delete/:id', productsController.delete); 
 
 module.exports = router;

@@ -37,6 +37,15 @@ const controller = {
         //redirect vuelve a la list products
         res.redirect('/products/');
     },
+    edit: (req, res) => {
+        //falta completar
+    },
+    update: (req, res) => {
+        //falta completar
+    },
+    delete: (req, res) => {
+        //falta completar
+    }
 };
 
 module.exports = controller;

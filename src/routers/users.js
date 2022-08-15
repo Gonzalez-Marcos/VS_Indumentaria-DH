@@ -18,7 +18,7 @@ const logMiddleWare = require('../middleWares/logDBMiddleWare') //Ruta de middle
 //router.get('/login', loginController.login);
 router.get('/login', usersController.login);
 
-//router.post('/', logMiddleWare, loginController.logged);
+
 router.post('/', logMiddleWare, usersController.logged);
 
 //router.get('/register', registerController.register);
