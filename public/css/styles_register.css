@@ -1,116 +1,141 @@
-
-.main-container {
+.main-register-container1 {
     width: 100%;
     font-size: 14px;
+    color: white;
 }
 
-.register-container-2 {
-    padding: 50px 5px 2px;
+.register-container1 {
+    padding: 70px 5px 50px;
+    border: 2px solid rgb(48, 47, 47);
+    background-color: black;
 }
 
-.datos-cuenta-container {
+.data-account-container1 {
     margin: 0px 1px 20px;
 }
 
-.datos-cuenta-container {
+.data-account-container1 h2 {
     margin: 10px 0px 15px;
     font-size: 16px;
 }
 
-.register-container-2 {
+.determination-container1 {
+    padding: 20px 15px;
+}
+
+
+
+.register-container1 h2 {
     padding-bottom: 10px;
     text-align: center;
 }
 
-.datos-personales-container {
+.personal-information-container1 {
     padding: 10px 8px 0;
     width: auto;
 }
 
-.register-2 {
-    border-bottom: 4px solid black;
-    padding: 20px;
-}
-.register-container-2{
-    border: 2px solid black;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    background: radial-gradient(#ffffff, #fffbfb21);
-    width: 100%;
+.personal-information-container1 div , .data-account-container1 div {
+    padding-top: 10px;
 }
 
-.terminos-container .estilos-form-reg {
+.personal-information-container1 form {
     display: block;
 }
 
-.terminos-container .estilos-form-reg {
+.account-container1 {
+    padding: 5px 8px;
+    width: auto;
+}
+
+.account-container1 form {
+    display: block;
+}
+
+
+.determination-container1 form {
+    display: block;
+}
+
+.determination-container1 form .determination-condition {
     padding-top: 20px;
 }
 
-.cuenta-container .estilos-input-reg-2 {
+.account-container1 .determination-condition .terminos-input {
     width: 100%;
     border-radius: 5px;
     height: 30px;
     padding: 6px 12px;
 }
 
-.datos-personales-container .input-reg-2-2 .select-reg {
+div.personal-information-container1 label,
+.account-container1 label,
+.determination-container1 label,
+.determination-container1 a {
+    color: white;
+}
+
+div.personal-information-container1 input,
+div.personal-information-container1 select,
+.account-container1 input,
+.account-container1 select {
     width: 100%;
     border-radius: 5px;
     height: 30px;
     padding: 6px 12px;
 }
 
-.crear-cuenta-2 .button-register{
-    border-radius: 16px;
-    height: 43px;
-    background-color: black;
+.create-account1 button{
+    border-radius: 25px;
+    height: 35px;
+    background-color: grey;
     width: 100%;
     color: white;
-    padding: 10px;
 }
 
-.crear-cuenta-2 {
+.create-account1 {
     max-width: 380px;
     margin:auto;
     padding: 5px 10px;
 }
-/*modificar las medida*/
+
 @media (min-width:768px) {
-    .datos-cuenta-container .datos-personales-container {
+    .data-account-container1 .personal-information-container1 {
         padding-right: 50px;
     } 
 
-    .datos-cuenta-container .cuenta-container {
+    .data-account-container1 .account-container1 {
         padding-left: 50px;
     }
 
-    .terminos-container {
+    .determination-container1 {
         max-width: 380px;
         margin: auto;
-    }   
+    }
+
+    
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 990px) {
 
-    .datos-cuenta-container {
+    .data-account-container1 {
         display: flex;
         padding: 0px 90px;
     }
 
-    .datos-personales-container, .cuenta-container {
+    .personal-information-container1, .account-container1 {
         width: 50%;
     }
 
-    div.datos-cuenta-container form div {
+    div.data-account-container1 div {
         padding: 10px 5px;
-    }  
+    }
+
+    
 }
-@media (min-width:992px) {
-    .register-container-2 h2 {
+
+@media (min-width:1280px) {
+    .register-container1 h2 {
         font-size: 30px;
     }
     

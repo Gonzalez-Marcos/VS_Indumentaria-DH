@@ -108,5 +108,15 @@
     "category": "shirt",
     "description": "La camiseta Nike Boca Dry Match  se inspira en el diseño retro de los 80's. Su tejido suave absorbe el sudor para mantenerte cómodo y seguro en el gimnasio o alentando en La Bombonera. Lucí el escudo tejido del Xeneixe que demuestra tu amor por los colores.",
     "image": "1660537803348-remera-bocajr.jpg"
+  },
+  {
+    "id": 11,
+    "name": "remera",
+    "price": "100",
+    "waist": "on",
+    "color": "on",
+    "category": "visit",
+    "description": "La camiseta Nike Boca Dry Match  se inspira en el diseño retro de los 80's. Su tejido suave absorbe el sudor para mantenerte cómodo y seguro en el gimnasio o alentando en La Bombonera. Lucí el escudo tejido del Xeneixe que demuestra tu amor por los colores.",
+    "image": "1660538829219-remera-bocajr.jpg"
   }
 ]
