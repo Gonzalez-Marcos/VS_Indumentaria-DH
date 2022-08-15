@@ -9,8 +9,9 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
 	home: (req, res) => {
-		const visit = products.filter(products => products.category === 'visit');
-		res.render('products/home', {visit});
+		const visit = products.filter(product => product.category === 'visit');
+		const news = products.filter(product => product.category === 'news');
+		res.render('products/home', {visit, news});
 	}
 };
 
