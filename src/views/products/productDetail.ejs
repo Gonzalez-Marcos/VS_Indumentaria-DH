@@ -3,165 +3,71 @@
 <%- include('../partials/head') %> 
 </head>
 <body>
-  <%- include('../partials/header') %> 
+    <%- include('../partials/header') %> 
     </header>
 
      <!-- card productDetail -->
     <section class="cont-productDetail">
-     <div class="container-proDet">
-        <div class="imgBx">
-            <img src="/images/category-indu-logo.jpg">
-        </div>
-        <div class="details">
-            <div class="content">
-                <h2>Lorem ipsum dolor<br>
-                    <span>Lorem ipsum dolor</span>
-                </h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Error quam consequuntur suscipit labore, fugit exercitationem 
-                    inventore cum voluptatibus obcaecati consequatur numquam 
-                    perspiciatis totam magni. 
-                    Nostrum nihil exercitationem expedita ratione vitae?
-                </p>
-                <p class="product-colors">Available Colors:
-                    <span class="black active" data-color-primary="#000" data-color-sec="#212121" data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto.png?raw=true"></span>
-                    <span class="red" data-color-primary="#7E021C" data-color-sec="#bd072d" data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto_red_black.png?raw=true"></span>
-                    <span class="orange" data-color-primary="#CE5B39" data-color-sec="#F18557" data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto_orange_black.png?raw=true"></span>
-                </p>
-                <h3>$ 12,800</h3>
-                <button>Probador Virtual</button>
-                <button>Buy Now</button>
-                
+        <div class="container-proDet">
+            <div class="imgBx">
+                <img src="/images/<%= productIndex.image %>">
+            </div>
+            <div class="details">
+                <div class="content">
+                    <h2><%= productIndex.name %> <br>
+                        <span><%= productIndex.name %> </span>
+                    </h2>
+                    <p><%= productIndex.description %> </p>
+                    <p class="product-colors">Available Colors:
+                        <span class="black active" data-color-primary="#000" data-color-sec="#212121" data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto.png?raw=true"></span>
+                        <span class="red" data-color-primary="#7E021C" data-color-sec="#bd072d" data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto_red_black.png?raw=true"></span>
+                        <span class="orange" data-color-primary="#CE5B39" data-color-sec="#F18557" data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto_orange_black.png?raw=true"></span>
+                    </p>
+                    <h3>$ <%= productIndex.price %> </h3>
+                    <button>Probador Virtual</button>
+                    <button>Buy Now</button>
+                </div>
             </div>
         </div>
-    </div>
     </section>
 
-<!-- card products -->
-<h3>Ultimos productos navegados</h3>
+    <!-- card products -->
+    <h3>Ultimos productos navegados</h3>
 
-<section class="main-section">
-    <div class="product-container">
-        <div class="products">
-            <div class="product">
+    <section class="main-section">
+        <div class="product-container">
+            <div class="products">
+                <% visited.forEach(product => { %> 
+                <div class="product">
                    <!--esto esta relacionado con js-->
-                  <div class="product-under">
-                      <figure class="product-image">
-                          <img
-                              src="/images/category-indu-logo.jpg"
-                          />
-                        <div class="product-over">
-                            <button
-                                class="btn btn-small addToCart"
-                                data-product-id="3">
-                                <i class="fas fa-cart-plus"></i>Add
-                                to cart
-                            </button>
-                            <a href="/products/productDetail" class="btn btn-small">More Info</a>
-                        </div>
-                      </figure>
-                      <div class="product-summary">
-                          <h4 class="productName">Product 1</h4>
-                          <p style="color: #000;">
-                              luctus quis et est. Integer pretium
-                              purus
-                          </p>
-                          <h6 class="price">
-                              $<span class="priceValue">999</span>
-                          </h6>
-                      </div>
-                  </div>
-              </div>
-              <div class="product">
-                  <div class="product-under">
-                      <figure class="product-image">
-                          <img
-                              src="/images/category-indu-logo.jpg"/>
+                    <div class="product-under">
+                        <figure class="product-image">
+                            <img src="/images/<%= product.image %> "/>
                             <div class="product-over">
-                                <button
-                                    class="btn btn-small addToCart"
-                                    data-product-id="3">
-                                    <i class="fas fa-cart-plus"></i>Add
-                                    to cart
+                                <button class="btn btn-small addToCart" data-product-id="3">
+                                    <i class="fas fa-cart-plus"></i>Add to cart
                                 </button>
-                                <a href="/products/productDetail" class="btn btn-small">More Info</a>
+                                <a href="/products/<%= product.id %> " class="btn btn-small">More Info</a>
                             </div>
-                      </figure>
-                      <div class="product-summary">
-                          <h4 class="productName">Product 2</h4>
-                          <p style="color: #000;">
-                              luctus quis et est. Integer pretium
-                              purus
-                          </p>
-                          <h6 class="price">
-                              $<span class="priceValue">599</span>
-                          </h6>
-                      </div>
-                  </div>
-              </div>
-              <div class="product">
-                  <div class="product-under">
-                      <figure class="product-image">
-                          <img
-                              src="/images/category-indu-logo.jpg"
-                          />
-                          <div class="product-over">
-                              <button
-                                  class="btn btn-small addToCart"
-                                  data-product-id="3">
-                                  <i class="fas fa-cart-plus"></i>Add
-                                  to cart
-                              </button>
-                              <a href="/products/productDetail" class="btn btn-small">More Info</a>
-                          </div>
-                      </figure>
-                      <div class="product-summary">
-                          <h4 class="productName">Product 3</h4>
-                          <p style="color: #000;">
-                              luctus quis et est. Integer pretium
-                              purus
-                          </p>
-                          <h6 class="price">
-                              $<span class="priceValue">650</span>
-                          </h6>
-                      </div>
-                  </div>
-              </div>
-              <div class="product">
-                  <div class="product-under">
-                      <figure class="product-image">
-                          <img
-                              src="/images/category-indu-logo.jpg"
-                          />
-                        <div class="product-over">
-                            <button
-                                class="btn btn-small addToCart"
-                                data-product-id="3">
-                                <i class="fas fa-cart-plus"></i>Add
-                                to cart
-                            </button>
-                            <a href="/products/productDetail" class="btn btn-small">More Info</a>
+                        </figure>
+                        <div class="product-summary">
+                            <h4 class="productName"><%= product.name %> </h4>
+                            <p style="color: #000;">
+                                <%= product.description %> 
+                            </p>
+                            <h6 class="price">
+                                $<span class="priceValue"><%= product.price %> </span>
+                            </h6>
                         </div>
-                      </figure>
-                      <div class="product-summary">
-                          <h4 class="productName">Product 4</h4>
-                          <p style="color: #000;">
-                              luctus quis et est. Integer pretium
-                              purus
-                          </p>
-                          <h6 class="price">
-                              $<span class="priceValue">899</span>
-                          </h6>
-                      </div>
-                  </div>
+                    </div>
+                </div>
+                <% }); %>
             </div>
         </div>
-    </div>
-</section>
-<script src="JS/script.js"></script>
-<script src="JS/shopping-cart.js"></script>
-<%- include('../partials/footer') %> 
+    </section>
+    <script src="JS/script.js"></script>
+    <script src="JS/shopping-cart.js"></script>
+    <%- include('../partials/footer') %> 
 </body>
 </html>
     
