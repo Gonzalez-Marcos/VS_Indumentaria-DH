@@ -26,7 +26,7 @@ const controller = {
             id: productsClone.length,
             name: req.body.name,
             price: req.body.price,
-            wist: req.body.wish,
+            waist: req.body.waist,
 			color: req.body.color,
             category: req.body.category,
             description: req.body.description,
