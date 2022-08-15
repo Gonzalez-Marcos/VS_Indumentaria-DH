@@ -1,3 +1,4 @@
+const { json } = require('express');
 const fs = require('fs');
 const path = require('path');
 
@@ -9,12 +10,32 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const controller = {
 	listProducts: (req, res) => {
-		res.render('products/listproducts', { products });
+		res.render('products/listProducts', { products });
 	},
 	productDetail: (req, res) => {
 		const productIndex = products.find(product => product.id == req.params.id);
 		const visited = products.filter(product => product.category === 'visit');
         res.render('products/productDetail', { productIndex, visited });
+    },
+	create: (req, res) => {
+        res.render('products/creacion_actual');
+    },
+	store: (req, res) => {
+        const productsClone = products;
+        const newProduct = {
+            id: productsClone.length,
+            name: req.body.name,
+            price: req.body.price,
+            wist: req.body.wish,
+			color: req.body.color,
+            category: req.body.category,
+            description: req.body.description,
+            image: req.file?.filename
+        };
+        productsClone.push(newProduct);
+        fs.writeFileSync(productsFilePath, JSON.stringify(productsClone, null, '  '));
+        //redirect vuelve a la list products
+        res.redirect('/products/');
     },
 };
 

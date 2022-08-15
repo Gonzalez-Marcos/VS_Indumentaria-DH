@@ -2,14 +2,13 @@ const express = require ('express');
 const app = express();
 
 const path = require('path');
-
+const methodOverride = require('method-override');
 const pathPublic = path.resolve(__dirname, '../public');
 
 app.use(express.static(pathPublic));
-
+app.use(methodOverride('_method'));
 /*Libreria para sobreescribir el metodo original y poder implementar
 los metodos PUT o DELETE*/
-const methodOverride = require('method-override');
 
 //Fin libreria
 
