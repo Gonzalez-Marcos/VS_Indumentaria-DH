@@ -26,6 +26,10 @@
                     <h3>$ <%= productIndex.price %> </h3>
                     <button>Probador Virtual</button>
                     <button>Buy Now</button>
+                    <button><a href="/products/edit/<%= productIndex.id %>">EDITAR</a></button>
+                    <form action="/products/delete/<%= productIndex.id %>?_method=DELETE" method="POST">
+                        <button type="submit">ELIMINAR</button>
+                    </form>
                 </div>
             </div>
         </div>
