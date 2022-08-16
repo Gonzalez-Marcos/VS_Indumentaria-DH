@@ -67,11 +67,11 @@
     "color": "blue",
     "category": "news",
     "description": "Logo PUMA estampado.",
-    "image": "cat-indu/calzas/cal-2.jpg"
+    "image": "cat-accs/bolsos/bol-2.jpg"
   },
   {
     "id": 10,
-    "name": "remera",
+    "name": "Remera",
     "price": "100",
     "waist": "12",
     "color": "blue",
