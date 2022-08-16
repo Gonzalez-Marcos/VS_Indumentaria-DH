@@ -13,12 +13,12 @@
             <div class="data-account-container1">
                 <div class="personal-information-container1">
                     <h2>Datos Personales</h2>
-                    <form action="/users/register" method="POST" enctype="multipart/form-data">
+                    <form method="POST" action="users/register" enctype="multipart/form-data">
                         <div><label for="name">Nombre</label></div>
-                        <div><input type="text" name="name" id="name" placeholder="Ej:Pepito"></div>
+                        <div><input type="text" name="name" id="name" placeholder="Ej:Pepito" autofocus required></div>
                         <div><label for="last-name">Apellido</label></div>
-                        <div><input type="text" name="last-name" id="last-name" placeholder="Ej: House"></div>
-                        <div><label for="date-birth">Fecha de Nacimiento</label></div>
+                        <div><input type="text" name="last_name" id="last_name" placeholder="Ej:House" autofocus required></div>
+                         <!-- <div><label for="date-birth">Fecha de Nacimiento</label></div>
                         <div><input type="date" name="date-birth" id="date-birth" value="2022-02-11" min="1920-08-02" max="2022-08-12"></div>
                         <div><label for="type">Tipo</label></div>
                         <div>
@@ -64,21 +64,11 @@
                                 <option value="sports">Deportes</option>
                             </select>
                         </div>
-                        <div><label for="team">¿Cual e tu equipo de futbol?</label></div>
-                        <div>
-                            <select name="team" id="team">
-                                <option value="">Seleccionar</option>
-                                <option value="boca juniors">Boca Juniors</option>
-                                <option value="river plate">River Plate</option>
-                                <option value="independiente">Independiente</option>
-                                <option value="other">Otro</option>
-                            </select>
-                        </div>
                     </form>
                 </div>
             </div>
             <div class="determination-container1">
-                <form action="/users/create" method="POST" enctype="multipart/form-data">
+                <form target="/users/register" method="POST" enctype="multipart/form-data">
                     <div class="determination-condition">
                         <input type="checkbox" name="determination" value="determination">
                         <label for="determination">Acepto las <a href="/">Politicas de Privacidad</a> y <a href="/">Terminos y Condiciones.</a></label>
@@ -88,7 +78,7 @@
                         <label for="newsletter">Quiero recibir emails de promociones y noticias.</label>
                     </div>
                 </form>
-            </div>
+            </div>-->
             <div class="create-account1">
                 <button type="submit">CREAR CUENTA</button>
             </div>

@@ -1,25 +1,5 @@
 [
   {
-    "id": 0,
-    "name": "ZAPATILLAS ADIDAS RUN 70S AZUL",
-    "price": 20.999,
-    "waist": 12,
-    "color": "blue",
-    "category": "visit",
-    "description": "Rendí homenaje a los irrepetibles años 70 con estas zapatillas de running ADIDAS.",
-    "image": "cat-calzado/zapatillas/zap-1.jpg"
-  },
-  {
-    "id": 1,
-    "name": "ZAPATILLAS NIKE WAFFLE DEBUT NEGRA",
-    "price": 19.799,
-    "waist": 12,
-    "color": "blue",
-    "category": "visit",
-    "description": "El look retro adquiere una dimensión moderna con las NIKE Waffle Debut",
-    "image": "cat-calzado/zapatillas/zap-2.jpg"
-  },
-  {
     "id": 2,
     "name": "ZAPATILLAS RUNNING STRONG PACE 3 MUJER GRIS",
     "price": 11.799,
@@ -58,16 +38,6 @@
     "category": "news",
     "description": "No podés cambiar el juego hasta que dejes que el juego te cambie a vos.",
     "image": "cat-indu/camisetas/cami-1.jpg"
-  },
-  {
-    "id": 6,
-    "name": "BOTINES DE FUTBOL REVES FIRE TF MUJER FUCSIA",
-    "price": 10.01,
-    "waist": 12,
-    "color": "blue",
-    "category": "news",
-    "description": "Es hora que demuestres quien manda dentro de la cancha, por eso REVES presenta los nuevos Fire.",
-    "image": "cat-indu/camisetas/cami-2.jpg"
   },
   {
     "id": 7,
