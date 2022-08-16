@@ -13,7 +13,9 @@
 .data-account-container1 {
     margin: 0px 1px 20px;
 }
-
+.image-div {
+    display: none;
+}
 .data-account-container1 h2 {
     margin: 10px 0px 15px;
     font-size: 16px;
@@ -37,7 +39,7 @@
     padding-top: 10px;
 }
 
-.personal-information-container1 form {
+.personal-information-container1  {
     display: block;
 }
 
@@ -46,12 +48,12 @@
     width: auto;
 }
 
-.account-container1 form {
+.account-container1  {
     display: block;
 }
 
 
-.determination-container1 form {
+.determination-container1  {
     display: block;
 }
 
@@ -83,7 +85,7 @@ div.personal-information-container1 select,
     padding: 6px 12px;
 }
 
-.create-account1 button{
+.create-account1 input{
     border-radius: 25px;
     height: 35px;
     background-color: grey;

@@ -9,6 +9,9 @@ app.use(express.static(pathPublic));
 app.use(methodOverride('_method'));
 /*Libreria para sobreescribir el metodo original y poder implementar
 los metodos PUT o DELETE*/
+app.use(express.json());
+
+app.use(express.urlencoded({extended: false})); //Permite capturar la informacion que viaja por POST
 
 //Fin libreria
 
@@ -49,9 +52,6 @@ app.use((req, res, next) => {
 })
 /* FIN App use para ruta no encontrada*/
 
-app.use(express.json());
-
-app.use(express.urlencoded({extended: false})); //Permite capturar la informacion que viaja por POST
 
 app.listen (8080, () => {
     console.log('Servidor iniciado en: http://localhost:8080');

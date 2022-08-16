@@ -10,16 +10,16 @@
     <div class="main-register-container1">
         <div class="register-container1">
             <h2>Crear Cuenta</h2>
-            <div class="data-account-container1">
-                <div class="personal-information-container1">
-                    <h2>Datos Personales</h2>
-                    <form method="POST" action="users/register" enctype="multipart/form-data">
-                        <div><label for="name">Nombre</label></div>
-                        <div><input type="text" name="name" id="name" placeholder="Ej:Pepito" autofocus required></div>
-                        <div><label for="last-name">Apellido</label></div>
+            <form action="/users/register" method="POST" enctype="multipart/form-data" >
+               <div class="data-account-container1">
+                    <div class="personal-information-container1">
+                        <h2>Datos Personales</h2>
+                        <div><label for="name_user">Nombre</label></div>
+                        <div><input type="text" name="name_user" id="name_user" placeholder="Ej:Pepito" autofocus required></div>
+                        <div><label for="last_name">Apellido</label></div>
                         <div><input type="text" name="last_name" id="last_name" placeholder="Ej:House" autofocus required></div>
-                         <!-- <div><label for="date-birth">Fecha de Nacimiento</label></div>
-                        <div><input type="date" name="date-birth" id="date-birth" value="2022-02-11" min="1920-08-02" max="2022-08-12"></div>
+                        <div><label for="date_birth">Fecha de Nacimiento</label></div>
+                        <div><input type="date" name="date_birth" id="date_birth" value="2022-02-11" min="1920-08-02" max="2022-08-12"></div>
                         <div><label for="type">Tipo</label></div>
                         <div>
                             <select name="type" id="type">
@@ -28,8 +28,8 @@
                                 <option value="other">OTRO</option>
                             </select>
                         </div>
-                        <div><label for="number-dni">Numero de Documento</label></div>
-                        <div><input type="number" name="number-dni" id="number-dni" placeholder="12345678"></div>
+                        <div><label for="number_dni">Numero de Documento</label></div>
+                        <div><input type="number" name="number_dni" id="number_dni" placeholder="12345678"></div>
                         <div><label for="gender">Genero</label></div>
                         <div>
                             <select name="gender" id="gender">
@@ -41,19 +41,17 @@
                         </div>
                         <div><label for="phone">Telefono</label></div>
                         <div><input type="number" name="phone" id="phone" placeholder="1122334455"></div>
-                    </form>
-                </div>
-                <div class="account-container1">
-                    <h2>Sobre tu Cuenta</h2>
-                    <form action="/users/register" method="POST" enctype="multipart/form-data">
+                    </div>
+                    <div class="account-container1">
+                        <h2>Sobre tu Cuenta</h2>
                         <div><label for="email">Email</label></div>
                         <div><input type="email" name="email" id="email" placeholder="iampepito@gmail.com"></div>
-                        <div><label for="confirm-email">Confirmar Email</label></div>
-                        <div><input type="email" name="confirm-email" id="confirm-email" placeholder="iampepito@gmail.com"></div>
+                        <div><label for="confirm_email">Confirmar Email</label></div>
+                        <div><input type="email" name="confirm_email" id="confirm_email" placeholder="iampepito@gmail.com"></div>
                         <div><label for="password">Contraseña (minimo 8  caracteres)</label></div>
                         <div><input type="password" name="password" id="password" placeholder="12345678"></div>
                         <div><label for="confirm-password">Confirmar Contraseña</label></div>
-                        <div><input type="password" name="confirm-password" id="confirm-password" placeholder="12345678"></div>
+                        <div><input type="password" name="confirm_password" id="confirm_password" placeholder="12345678"></div>
                         <div><label for="interests">¿Cuales son tus intereses?</label></div>
                         <div>
                             <select name="interests" id="interests">
@@ -64,24 +62,25 @@
                                 <option value="sports">Deportes</option>
                             </select>
                         </div>
-                    </form>
+                        <div class="image-div">
+                            <input type="file" name="image" id="image">
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="determination-container1">
-                <form target="/users/register" method="POST" enctype="multipart/form-data">
+                <div class="determination-container1">
                     <div class="determination-condition">
-                        <input type="checkbox" name="determination" value="determination">
+                        <input type="checkbox" name="determination" value="true">
                         <label for="determination">Acepto las <a href="/">Politicas de Privacidad</a> y <a href="/">Terminos y Condiciones.</a></label>
                     </div>
                     <div class="determination-condition">
-                        <input type="checkbox" name="newsletter" value="newsletter!">
+                        <input type="checkbox" name="newsletter" value="true">
                         <label for="newsletter">Quiero recibir emails de promociones y noticias.</label>
                     </div>
-                </form>
-            </div>-->
-            <div class="create-account1">
-                <button type="submit">CREAR CUENTA</button>
-            </div>
+                </div>
+                <div class="create-account1">
+                    <input type="submit" value="Registrarse">
+                </div>
+            </form>
         </div>
     </div>
 

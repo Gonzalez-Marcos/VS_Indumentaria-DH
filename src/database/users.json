@@ -1,0 +1,53 @@
+[
+  {
+    "id": 0,
+    "name_user": "user",
+    "last_name": "user",
+    "date_birth": "2022-02-11",
+    "type": "dni",
+    "number_dni": "123456",
+    "gender": "binary",
+    "phone": "1234567",
+    "email": "user@div.com",
+    "confirm_email": "user@div.com",
+    "password": "123456",
+    "confirm_password": "123456",
+    "interests": "soccer",
+    "determination": "true",
+    "newsletter": "true"
+  },
+  {
+    "id": 1,
+    "name_user": "Pepito",
+    "last_name": "Hualanito",
+    "date_birth": "2022-02-11",
+    "type": "dni",
+    "number_dni": "12345678",
+    "gender": "binary",
+    "phone": "12345678",
+    "email": "pepito@google.com",
+    "confirm_email": "pepito@google.com",
+    "password": "12345688888",
+    "confirm_password": "21234455555",
+    "interests": "running",
+    "determination": "true",
+    "newsletter": "true"
+  },
+  {
+    "id": 2,
+    "name_user": "Homero",
+    "last_name": "Simpson",
+    "date_birth": "2022-02-11",
+    "type": "other",
+    "number_dni": "12345678",
+    "gender": "binary",
+    "phone": "12345678",
+    "email": "homerosimpson@simpsons.com",
+    "confirm_email": "homerosimpson@simpsons.com",
+    "password": "Margesimspson",
+    "confirm_password": "margesimpson",
+    "interests": "sports",
+    "determination": "true",
+    "newsletter": "true"
+  }
+]
