@@ -9,10 +9,6 @@ app.use(express.static(pathPublic));
 app.use(methodOverride('_method'));
 /*Libreria para sobreescribir el metodo original y poder implementar
 los metodos PUT o DELETE*/
-app.use(express.json());
-
-app.use(express.urlencoded({extended: false})); //Permite capturar la informacion que viaja por POST
-
 //Fin libreria
 
 //Trear rutas en constantes
@@ -21,6 +17,7 @@ const mainRouter = require('./routers/main');
 const productsRouter = require('./routers/products');
 
 const usersRouter = require('./routers/users');
+
 //Hasta aca todas las rutas
 
 //MiddleWares/
@@ -31,9 +28,11 @@ app.set('view engine', 'ejs');
 
 app.set('views', path.join(__dirname, '/views'));
 
+app.use(express.json());
+
+app.use(express.urlencoded({extended: false})); //Permite capturar la informacion que viaja por POST
 
 // Ruta de logMiddleWare
-app.use(methodOverride('_method'));
 
 app.use(logMiddleWare);
 

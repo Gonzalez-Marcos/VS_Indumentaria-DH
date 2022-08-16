@@ -27,7 +27,7 @@ router.get('/productCart', productCartController.productCart);
 
 router.get('/', productsController.listProducts);
 
-router.get('/editar', editarController.editar);
+//router.get('/editar', editarController.editar);
 
 //para mostrar la vista del create
 router.get('/create', productsController.create);
@@ -42,7 +42,7 @@ router.get('/:id/', productsController.productDetail);
 router.get('/edit/:id/', productsController.edit); 
 
 //ruta por el cual recibe los datos del producto a editar
-router.put('/edit/:id/', productsController.update);
+router.put('/edit/:id/', upload.single('image'), productsController.update);
 
 //ruta para eliminar un producto
 router.delete('/delete/:id', productsController.delete); 

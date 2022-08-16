@@ -1,6 +1,6 @@
 [
   {
-    "id": 2,
+    "id": 0,
     "name": "ZAPATILLAS RUNNING STRONG PACE 3 MUJER GRIS",
     "price": 11.799,
     "waist": 12,
@@ -10,7 +10,7 @@
     "image": "cat-calzado/zapatillas/zap-3.jpg"
   },
   {
-    "id": 3,
+    "id": 1,
     "name": "ZAPATILLAS RUNNING STRONG PACE 3 MUJER GRIS",
     "price": 11.799,
     "waist": 12,
@@ -20,17 +20,7 @@
     "image": "cat-calzado/zapatillas/zap-4.jpg"
   },
   {
-    "id": 4,
-    "name": "BOTINES DE FUTBOL NIKE MERCURIAL SUPERFLY 8 ACADEMY TF UNISEX ROJO",
-    "price": 26.399,
-    "waist": 12,
-    "color": "blue",
-    "category": "visit",
-    "description": "Diseñado para el pasto sintético, el NIKE Mercurial Superfly 8 Academy TF es un diseño único ",
-    "image": "cat-calzado/botines/bot-1.jpg"
-  },
-  {
-    "id": 5,
+    "id": 2,
     "name": "BOTINES DE FUTBOL ADIDAS PREDATOR FREAK.4 FG UNISEX FUCSIA",
     "price": 19.399,
     "waist": 12,
@@ -40,17 +30,26 @@
     "image": "cat-indu/camisetas/cami-1.jpg"
   },
   {
-    "id": 7,
-    "name": "BOTINES DE FUTBOL ADIDAS PREDATOR EDGE. 4 TF UNISEX NEGRO",
-    "price": 18.999,
+    "id": 3,
+    "name": "BOTINES DE FUTBOL ADIDAS PREDATOR FREAK.4 FG UNISEX FUCSIA",
+    "price": 19.399,
     "waist": 12,
     "color": "blue",
     "category": "news",
-    "description": "Algunos entran a la cancha y ven limitaciones.Vos ves posibilidades.",
-    "image": "cat-indu/camisetas/cami-3.jpg"
+    "description": "No podés cambiar el juego hasta que dejes que el juego te cambie a vos.",
+    "image": "cat-indu/camisetas/cami-1.jpg"
   },
   {
-    "id": 8,
+    "id": 4,
+    "name": "bolso",
+    "price": "21111111",
+    "waist": "on",
+    "color": "on",
+    "category": "visit",
+    "image": "cat-indu/camisetas/cami-4.jpg"
+  },
+  {
+    "id": 5,
     "name": "BOLSO ADIDAS ID MUJER NEGRO",
     "price": 14.799,
     "waist": 12,
@@ -60,7 +59,7 @@
     "image": "cat-indu/camisetas/cami-4.jpg"
   },
   {
-    "id": 9,
+    "id": 6,
     "name": "BOLSO PUMA PHASE SPORTS MUJER ROSA",
     "price": 5.999,
     "waist": 12,
@@ -70,13 +69,13 @@
     "image": "cat-indu/calzas/cal-2.jpg"
   },
   {
-    "id": 10,
-    "name": "remera",
-    "price": "100",
-    "waist": "12",
-    "color": "blue",
+    "id": 7,
+    "name": "bolso",
+    "price": "1200",
+    "waist": "on",
+    "color": "on",
     "category": "visit",
-    "description": "La camiseta Nike Boca Dry Match  se inspira en el diseño retro de los 80's. Su tejido suave absorbe el sudor para mantenerte cómodo y seguro en el gimnasio o alentando en La Bombonera. Lucí el escudo tejido del Xeneixe que demuestra tu amor por los colores.",
-    "image": "1660538829219-remera-bocajr.jpg"
+    "description": "calza de  mujer",
+    "image": "cat-indu/calzas/cal-2.jpg"
   }
 ]

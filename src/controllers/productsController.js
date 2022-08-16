@@ -38,13 +38,30 @@ const controller = {
         res.redirect('/products/');
     },
     edit: (req, res) => {
-        //falta completar
+        const product = products.find(product => product.id == req.params.id);
+        res.render('products/editar_producto', { product });
     },
     update: (req, res) => {
-        //falta completar
+        const productIndex = products.findIndex(product => product.id == req.params.id);
+        console.log(req.body)
+        products[productIndex] = {
+            id: productIndex,
+            name: req.body.name,
+            price: req.body.price,
+            waist: req.body.waist,
+            color: req.body.color,
+            category: req.body.category,
+            description: req.body.description,
+            image: products[productIndex].image
+        };
+        let productModifidJSON = JSON.stringify(products, null, '  ');
+        fs.writeFileSync(productsFilePath, productModifidJSON);
+        res.redirect('/products/');
     },
     delete: (req, res) => {
-        //falta completar
+        const allProducts = products.filter(product => product.id != req.params.id);
+        fs.writeFileSync(productsFilePath, JSON.stringify(allProducts, null, '  '));
+        res.redirect('/products/');
     }
 };
 
