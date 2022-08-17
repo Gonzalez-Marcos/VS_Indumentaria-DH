@@ -49,5 +49,22 @@
     "interests": "sports",
     "determination": "true",
     "newsletter": "true"
+  },
+  {
+    "id": 3,
+    "name_user": "DON SAPITO",
+    "last_name": "sapo",
+    "date_birth": "2022-02-11",
+    "type": "other",
+    "number_dni": "1234567",
+    "gender": "binary",
+    "phone": "12345678",
+    "email": "user@div.com",
+    "confirm_email": "user@div.com",
+    "password": "1234567",
+    "confirm_password": "123456",
+    "interests": "fashion",
+    "determination": "true",
+    "newsletter": "true"
   }
 ]

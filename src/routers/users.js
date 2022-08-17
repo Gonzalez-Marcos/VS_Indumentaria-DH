@@ -26,6 +26,9 @@ router.get('/login', usersController.login);
 router.post('/', logMiddleWare, usersController.logged);
 
 router.get('/register', usersController.register);
+//nose si lo de upload va o no , pasa que lo image no pedidmos y lo vemos demas digamos, sabiendo que 
+//upload lo usamos solo para pedir archivos????????
+//claro pero yo buscaba algo mas global clarooo porque nose para mis una trampita esto del upload
 router.post('/register', upload.single('image'), usersController.createUser);
 
 router.get('/pass', passwController.passw);

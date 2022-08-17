@@ -5,7 +5,7 @@ const path = require('path');
 //const users = [];
 const usersFilePath = path.join(__dirname, '../database/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
+//con eso llamas al json usuarios
 const controller = {
     login: (req, res) => {
         res.render('users/login');

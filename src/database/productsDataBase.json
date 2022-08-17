@@ -50,12 +50,12 @@
   },
   {
     "id": 5,
-    "name": "BOLSO ADIDAS ID MUJER NEGRO",
-    "price": 14.799,
-    "waist": 12,
-    "color": "blue",
-    "category": "news",
-    "description": "Tira de ajuste regulable y ganchos para desmontar.",
+    "name": "BOLSO",
+    "price": "122222222222",
+    "waist": "on",
+    "color": "on",
+    "category": "visit",
+    "description": "AAAAAAAAAAAAAAAAAA",
     "image": "cat-indu/camisetas/cami-4.jpg"
   },
   {
@@ -69,19 +69,11 @@
     "image": "cat-accs/bolsos/bol-2.jpg"
   },
   {
-<<<<<<< HEAD
-    "id": 10,
+    "id": 7,
     "name": "Remera",
     "price": "100",
     "waist": "12",
     "color": "blue",
-=======
-    "id": 7,
-    "name": "bolso",
-    "price": "1200",
-    "waist": "on",
-    "color": "on",
->>>>>>> 34d485a3fc0f59c13c20f3bdf12a1dcd512651f0
     "category": "visit",
     "description": "calza de  mujer",
     "image": "cat-indu/calzas/cal-2.jpg"
