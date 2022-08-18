@@ -62,6 +62,9 @@ const controller = {
         const allProducts = products.filter(product => product.id != req.params.id);
         fs.writeFileSync(productsFilePath, JSON.stringify(allProducts, null, '  '));
         res.redirect('/products/');
+    },
+    productCart: (req, res) => {
+        res.render('products/productCart');
     }
 };
 

@@ -13,10 +13,8 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-//const loginController = require('../controllers/loginController');
 const usersController = require('../controllers/usersController');
-//const registerController = require('../controllers/registerController');
-const passwController = require('../controllers/passwController')
+
 const logMiddleWare = require('../middleWares/logDBMiddleWare') //Ruta de middleWares para DB
 
 const router = express.Router();
@@ -31,7 +29,7 @@ router.get('/register', usersController.register);
 //claro pero yo buscaba algo mas global clarooo porque nose para mis una trampita esto del upload
 router.post('/register', upload.single('image'), usersController.createUser);
 
-router.get('/pass', passwController.passw);
-router.post('/login', passwController.recPassw);
+// router.get('/pass', passwController.passw);
+// router.post('/login', passwController.recPassw);
 
 module.exports = router;

@@ -14,20 +14,15 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-const productCartController = require('../controllers/productCartController');
-
 //Aca importamos todos los metodos de products
 const productsController = require('../controllers/productsController');
 
-const editarController = require('../controllers/editarController');
 
 const router = express.Router();
 
-router.get('/productCart', productCartController.productCart);
+router.get('/productCart', productsController.productCart);
 
 router.get('/', productsController.listProducts);
-
-//router.get('/editar', editarController.editar);
 
 //para mostrar la vista del create
 router.get('/create', productsController.create);
