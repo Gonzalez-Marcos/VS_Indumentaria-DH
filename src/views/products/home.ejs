@@ -20,20 +20,20 @@
         <!-- card products -->
         <h3>Ultimos productos navegados</h3>
         <section class="main-section">
-            <div class="product-container">
-                <div class="products">
+            <div class="product-container"><!-- blue -->
+                <div class="products"><!-- green -->
                     <% visit.forEach(product => { %>
-                    <div class="product-under">
-                        <figure class="product-image">
+                    <div class="product-under"><!-- pink -->
+                        <figure class="product-image"><!-- red -->
                             <img src="/images/<%= product.image %>" />
-                            <div class="product-over">
+                            <div class="product-over"><!-- black -->
                                 <button class="btn btn-small addToCart" data-product-id="3">
                                     <i class="fas fa-cart-plus"></i>Add to cart
                                 </button>
                                 <a href="/products/<%= product.id %> " class="btn btn-small">More Info</a>
                             </div>
                         </figure>
-                        <div class="product-summary">
+                        <div class="product-summary"><!-- yellow -->
                             <h4 class="productName"><%= product.name %></h4>
                             <p style="color: #000;"><%= product.description %></p>
                             <h6 class="price">
@@ -52,7 +52,7 @@
                 <div class="products">
                     <% news.forEach(product => { %>
                     <div class="product-under">
-                        <figure class="product-image">
+                        <figure class="product-image"><!-- red -->
                             <img src="/images/<%= product.image %>" />
                             <div class="product-over">
                                 <button class="btn btn-small addToCart" data-product-id="3">

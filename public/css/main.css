@@ -418,9 +418,11 @@ main {
 }
 
 .products {
+    /* border: 3px solid green; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 2fr 2fr;
+    gap: 110px 10px;
 }
 
 .product {
@@ -432,11 +434,13 @@ main {
 }
 
 .product-under {
+    /* border: 3px solid pink; */
     width: 100%;
     height: 100%;
 }
 
 .product-over {
+    /* border: 3px solid black; */
     z-index: 10;
     position: absolute;
     left: 0;
@@ -465,6 +469,7 @@ main {
 }
 
 .product-image {
+    /* border: 3px solid red; */
     position: relative;
     height: 62%;
     background-color: #eee;
@@ -479,6 +484,7 @@ main {
 }
 
 .product-summary {
+    /* border: 3px solid yellow; */
     font-size: 0.9rem;
     position: relative;
     padding: 10px 5px;
@@ -700,6 +706,7 @@ main {
     }
 
     .product-container {
+        /* border: 3px solid blue; */
         width: 90%;
     }
 
