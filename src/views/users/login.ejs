@@ -12,18 +12,27 @@
                     <div class="img-login-messi">
                         <!-- <img src="images/messi_login.jpg" alt="" class="login-messi"> -->
                     </div>
-                    <form class="formulario" method="POST" action="/" >
+                    <form class="formulario" method="POST" action="../users/login" >
                         <div class="texto-formulario">
                             <h2>Bienvenido</h2>
                             <p>Inicia sesión con tu cuenta!</p>
                         </div>
                         <div class="input">
-                            <label for="usuario">Usuario</label>
-                            <input class="input-0" placeholder="Ingresa tu usuario" type="text" id="usuario" name="usuario">
+                            <label for="email">Usuario</label>
+                            <input class="input-0" placeholder="Ingresa tu email" type="text" id="email" name="email"
+                            class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.email : null %>"> 
                         </div>
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="text-danger" style="color: red">
+                                <%= errors.email.msg %> 
+                            </div>
+                        <% } %>
+                        
                         <div class="input">
                             <label for="contraseña">Contraseña</label>
-                            <input class="input-0" placeholder="Ingresa tu contraseña" type="password" id="contraseña" name="contraseña">
+                            <input class="input-0" placeholder="Ingresa tu contraseña" type="password" id="password" name="password"
+                            class="form-control <%= locals.errors && errors.password? 'is-invalid' : null %>">
                         </div>
                         <div class="line-div">
                         </div>
@@ -36,7 +45,7 @@
                           
                         </div>
                         <div class="recordar-contraseña">
-                            <input class= "check-psw" type="checkbox"><a href="#">Recordarme</a>
+                            <input class= "check-psw" name="remember_user" type="checkbox"><a href="#">Recordarme</a>
                         </div>
                     </form>
 
