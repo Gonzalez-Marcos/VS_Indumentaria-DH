@@ -31,44 +31,54 @@
 
             <i class="fas fa-user-circle"></i> <span class="item-arrow"></span>
 
-            <!-- submenu -->
-            <ul class="login-list">
-              <li class="login-list-item"><a href="/users/login">My account</a></li>
-              <li class="login-list-item"><a href="/users/register">Create account</a></li>
-              <li class="login-list-item"><a href="/">logout</a></li>
-          </label>
+            <!-- <ul class="logged">
+              <li class="logged-li"><a>
+                  <h4>Hi <locals.userLogged.name_user %>
+                  </h4>
+                </a> -->
+
+                <!-- submenu -->
+                <ul class="login-list">
+                  <% if (locals.isLogged) { %>
+
+                    <li class="login-list-item"><a href="/users/logout">logout</a></li>
+                    <% } else { %>
+                      <li class="login-list-item"><a href="/users/login">My account</a></li>
+                      <li class="login-list-item"><a href="/users/register">Create account</a></li>
+                      <% } %>
+              <!-- </li>
+            </ul> -->
       </ul>
+      </label>
       </li>
       <!--Shopping cart-->
       <div class="shopping-cart">
         <div class="navbar-top">
-            <div>
+          <!-- <div>
                 <button id="menuButton"></button>
-            </div>
+            </div> -->
         </div>
         <div class="sum-prices">
-            <i
-                class="fas fa-shopping-cart shoppingCartButton"
-            ></i>
-            <h6 id="sum-prices"></h6>
+          <i class="fas fa-shopping-cart shoppingCartButton"></i>
+          <h6 id="sum-prices"></h6>
         </div>
         <!--es lo que va adentro del carrito-->
         <div class="producstOnCart hide">
-            <div class="overlay"></div>
-            <div class="top">
-                <button id="closeButton">
-                    <i class="fas fa-times-circle"></i>
-                </button>
-                <h3>Cart</h3>
-            </div>
-            <ul id="buyItems">
-                <h4 class="empty">Your shopping cart is empty</h4>
-            </ul>
-            <button class="btn checkout hidden">Check out</button>
+          <div class="overlay"></div>
+          <div class="top">
+            <button id="closeButton">
+              <i class="fas fa-times-circle"></i>
+            </button>
+            <h3>Cart</h3>
           </div>
+          <ul id="buyItems">
+            <h4 class="empty">Your shopping cart is empty</h4>
+          </ul>
+          <button class="btn checkout hidden">Check out</button>
         </div>
+      </div>
       </ul>
-       <!--terminara carrito-->
+      <!--terminara carrito-->
     </nav>
   </div>
   <!-- nav -->
@@ -83,7 +93,7 @@
         <ul class="all-category-list">
           <!--Agrego el link para productos-->
           <li class="all-category-list-item"><a href="/products/" class="all-category-list-link">Todos los productos<i
-            class="fas fa-angle-right"></i></a>
+                class="fas fa-angle-right"></i></a>
           </li>
           <!--fin para productos-->
           <li class="all-category-list-item"><a href="..." class="all-category-list-link">Calzado<i
@@ -136,4 +146,3 @@
       </ul>
     </nav>
   </div>
-  
