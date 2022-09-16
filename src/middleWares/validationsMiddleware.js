@@ -18,7 +18,7 @@ module.exports = [
 	body('interests').notEmpty().withMessage('Tienes que elegir un interés'),
 	body('image').custom((value, { req }) => {
 		const file = req.file;
-		const acceptedExtensions = ['.jpg', '.png', '.gif', '.jpeg'];
+		const acceptedExtensions = ['.jpg', '.png', '.gif'];
 
 		if (!file) {
 			throw new Error('Tienes que subir una imagen');

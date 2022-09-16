@@ -1,5 +1,4 @@
 const express = require('express');
-const { body } = require('express-validator') //Libreria de Validacion
 const usersController = require('../controllers/usersController');
 
 //Middlewares

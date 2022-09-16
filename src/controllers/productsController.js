@@ -30,7 +30,7 @@ const controller = {
 			color: req.body.color,
             category: req.body.category,
             description: req.body.description,
-            image: req.file?.filename
+            image: req.file.filename
         };
         productsClone.push(newProduct);
         fs.writeFileSync(productsFilePath, JSON.stringify(productsClone, null, '  '));
