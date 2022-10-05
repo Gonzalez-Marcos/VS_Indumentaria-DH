@@ -7,7 +7,7 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        sizes: {
+        size: {
             type: dataTypes.STRING(100),
             allowNull: false
         }
@@ -20,6 +20,14 @@ module.exports = (sequelize, dataTypes) => {
     };
 
     const Size = sequelize.define(alias, cols, config);
+
+    Size.belongToMany(models.Products, {
+        as: "products",
+        through: "products_has_sizes",
+        foreignKey: "size_id",
+        otherKey: "products_id",
+        timestamps: false
+    })
 
     
     return Size;

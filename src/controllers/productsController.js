@@ -48,7 +48,7 @@ const controller = {
             id: productIndex,
             name: req.body.name,
             price: req.body.price,
-            waist: req.body.waist,
+            sizes: req.body.sizes,
             color: req.body.color,
             category: req.body.category,
             description: req.body.description,

@@ -15,11 +15,16 @@ module.exports = (sequelize, dataTypes) => {
     };
     
     const config = {
-        tableName: 'images_product',
+        tableName: 'products_images',
         timestamps: false
     };
 
     const Image = sequelize.define(alias, cols, config);
+
+    Image.belongTo(models.Products, {
+        as: "product",       
+        foreignKey: "product_id"
+    })
 
     
     return Image;

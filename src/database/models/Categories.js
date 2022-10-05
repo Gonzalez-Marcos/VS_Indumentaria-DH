@@ -20,14 +20,15 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     };
 
-    const Category = sequelize.define(alias, cols, config);
+    const category = sequelize.define(alias, cols, config);
 
-    Category.associate = (models) => {
-        Category.hasMany(models.Product, {
-            as: "producto",
-            foreingKey: "categories_id"
+    category.associate = (models) => {
+
+        category.hasMany(models.Product, {
+            as: "productos",
+            foreingKey: "category_id"
         })
     }
 
-    return Category;
+    return category;
 }
