@@ -21,10 +21,10 @@ module.exports = (sequelize, dataTypes) => {
 
     const Size = sequelize.define(alias, cols, config);
 
-    Size.belongToMany(models.Products, {
+    Size.belongToMany(models.Product, {
         as: "products",
-        through: "products_has_sizes",
-        foreignKey: "size_id",
+        through: "products_sizes",
+        foreignKey: "sizes_id",
         otherKey: "products_id",
         timestamps: false
     })
