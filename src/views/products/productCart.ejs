@@ -1,115 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <%- include('../partials/head') %>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<%- include('../partials/head') %>
     </head>
 
     <body>
         <%- include('../partials/header') %>
             </header>
-        <main>
-            <!-- Forma de pago -->
-            <div class="container mt-5 p-3 rounded cart">
-                <div class="row no-gutters">
-                    <div class="col-md-8">
-                        <div class="product-details mr-2">
-                            <div class="d-flex flex-row align-items-center"><i class="fa fa-long-arrow-left"></i><span
-                                    class="ml-2">Seguir Comprando</span></div>
-                            <hr>
-                            <h6 class="mb-0">Shopping cart</h6>
-                            <div class="d-flex justify-content-between"><span>You have 4 items in your cart</span>
-                                <div class="d-flex flex-row align-items-center"><span class="text-black-50">Sort
-                                        by:</span>
-                                    <div class="price ml-2"><span class="mr-1">price</span><i
-                                            class="fa fa-angle-down"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
-                                <div class="d-flex flex-row"><img class="rounded" src="/images/category-indu-logo.jpg"
-                                        width="40">
-                                    <div class="ml-2"><span class="font-weight-bold d-block">Buzo Nike</span><span
-                                            class="spec">Gris con mangas negras</span></div>
-                                </div>
-                                <div class="d-flex flex-row align-items-center"><span class="d-block">2</span><span
-                                        class="d-block ml-5 font-weight-bold">$99</span><i
-                                        class="fa fa-trash-o ml-3 text-black-50"></i></div>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
-                                <div class="d-flex flex-row"><img class="rounded" src="/images/category-indu-logo.jpg"
-                                        width="40">
-                                    <div class="ml-2"><span class="font-weight-bold d-block">Buzo Nike</span><span
-                                            class="spec">Gris con mangas negras</span></div>
-                                </div>
-                                <div class="d-flex flex-row align-items-center"><span class="d-block">2</span><span
-                                        class="d-block ml-5 font-weight-bold">$99</span><i
-                                        class="fa fa-trash-o ml-3 text-black-50"></i></div>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
-                                <div class="d-flex flex-row"><img class="rounded" src="/images/category-indu-logo.jpg"
-                                        width="40">
-                                    <div class="ml-2"><span class="font-weight-bold d-block">Buzo Nike</span><span
-                                            class="spec">Gris con mangas negras</span></div>
-                                </div>
-                                <div class="d-flex flex-row align-items-center"><span class="d-block">1</span><span
-                                        class="d-block ml-5 font-weight-bold">$99</span><i
-                                        class="fa fa-trash-o ml-3 text-black-50"></i></div>
-                            </div>
-                            <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">
-                                <div class="d-flex flex-row"><img class="rounded" src="/images/category-indu-logo.jpg"
-                                        width="40">
-                                    <div class="ml-2"><span class="font-weight-bold d-block">Buzo Nike&nbsp;</span><span
-                                            class="spec">Gris con mangas negras</span></div>
-                                </div>
-                                <div class="d-flex flex-row align-items-center"><span class="d-block">1</span><span
-                                        class="d-block ml-5 font-weight-bold">$99</span><i
-                                        class="fa fa-trash-o ml-3 text-black-50"></i></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="payment-info">
-                            <span class="type d-block mt-3 mb-1">Seleccionar Tipo de Tarjeta</span><label class="radio">
-                                <input type="radio" name="card" value="payment" checked> <span><img width="30"
-                                        src="https://img.icons8.com/color/48/000000/mastercard.png" /></span> </label>
 
-                            <label class="radio"> <input type="radio" name="card" value="payment"> <span><img width="30"
-                                        src="https://img.icons8.com/officel/48/000000/visa.png" /></span> </label>
-                            <label class="radio"> <input type="radio" name="card" value="payment"> <span><img width="30"
-                                        src="https://img.icons8.com/ultraviolet/48/000000/amex.png" /></span> </label>
-                            <label class="radio"> <input type="radio" name="card" value="payment"> <span><img width="30"
-                                        src="https://img.icons8.com/officel/48/000000/paypal.png" /></span> </label>
+    <!--Portada-->
 
-                            <div><label class="credit-card-label">Nombre y Apellido</label><input type="text"
-                                    class="form-control credit-inputs" placeholder="Name"></div>
-                            <div><label class="credit-card-label">Ingresar numero</label><input type="text"
-                                    class="form-control credit-inputs" placeholder="0000 0000 0000 0000"></div>
-                            <div class="row">
-                                <div class="col-md-6"><label class="credit-card-label">Date</label><input type="text"
-                                        class="form-control credit-inputs" placeholder="12/24"></div>
-                                <div class="col-md-6"><label class="credit-card-label">CVV</label><input type="text"
-                                        class="form-control credit-inputs" placeholder="342"></div>
-                            </div>
-                            <hr class="line">
-                            <div class="d-flex justify-content-between information">
-                                <span>Subtotal</span><span>$3000.00</span>
-                            </div>
-                            <div class="d-flex justify-content-between information">
-                                <span>Total</span><span>$3020.00</span>
-                            </div><button class="btn btn-primary btn-block d-flex justify-content-between mt-3"
-                                type="button"><span>$3020.00</span><span>Checkout<i
-                                        class="fa fa-long-arrow-right ml-1"></i></span></button>
-                        </div>
-                    </div>
+    <div class="container-productCart-post">
+
+        <input type="radio" id="TODOS" name="categories" value="TODOS" checked>
+        <input type="radio" id="CALZADO" name="categories" value="CALZADO">
+        <input type="radio" id="INDUMENTARIA" name="categories" value="INDUMENTARIA">
+        
+
+        <div class="container-productCart-category">
+            <label for="TODOS">TODOS</label>
+            <label for="CALZADO">CALZADO</label>
+            <label for="INDUMENTARIA">INDUMENTARIA</label>
+        </div>
+
+        <div class="posts">
+
+            <div class="post" data-category="CALZADO">
+
+                <div class="ctn-img">
+                    <img src="img/articulos/house_1.jpg" alt="">
                 </div>
+                <h2>Casa de 3 dormitorios</h2>
+                <span>Cuenta con un amplio living, un comedor, una cocina, dos baños, cochera y tres dormitorios </span>
+                <ul class="ctn-tag">
+                    <li>Dimensiones 120m2</li>
+                    <li>Zona Barrio Camba Cua</li>
+                </ul>
+                <a href="articulo.html"><button>Leer más</button></a>
+
             </div>
-        </main>
-    </body>
+
+            <div class="post" data-category="CALZADO">
+
+                <div class="ctn-img"><img src="img/articulos/house_2.jpg" alt=""></div>
+                <h2>Casa de 3 dormitorios</h2>
+                <span>Cuenta con un amplio living, un comedor, una cocina, dos baños, cochera y tres dormitorios </span>
+                <ul class="ctn-tag">
+                    <li>Dimensiones 120m2</li>
+                    <li>Zona Barrio Camba Cua</li>
+                </ul>
+                <a href="articulo.html"><button>Leer más</button></a>
+
+            </div>
+
+
+            <div class="post" data-category="INDUMENTARIA">
+
+                <div class="ctn-img"><img src="" alt=""></div>
+                <h2>Departamento de 2 dormitorios</h2>
+                <span>Cuenta con living y comder, dos habitaciones, cocina, balcon, lavadero, un baño y cochera</span>
+                <ul class="ctn-tag">
+                    <li>Dimensiones 80m2</li>
+                    <li>Zona Costanera</li>
+                </ul>
+                <a href="#"><button>leer más</button></a>
+
+            </div>
+
+            <div class="post" data-category="INDUMENTARIA">
+
+                <div class="ctn-img"><img src="" alt=""></div>
+                <h2>Departamento de 2 dormitorios</h2>
+                <span>Cuenta con living y comder, dos habitaciones, cocina, balcon, lavadero, un baño y cochera</span>
+                <ul class="ctn-tag">
+                    <li>Dimensiones 80m2</li>
+                    <li>Zona Costanera</li>
+                </ul>
+                <a href="#"><button>leer más</button></a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script src="/JS/products.js"></script>
+    <%- include('../partials/footer') %>
+
+</body>
 
 </html>

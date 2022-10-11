@@ -48,6 +48,10 @@ const controller = {
         
         return res.render('users/login');
     },
+    contacto: (req, res) => {
+        
+        return res.render('users/contacto');
+    },
 
     loginProcess: (req, res) => {
 

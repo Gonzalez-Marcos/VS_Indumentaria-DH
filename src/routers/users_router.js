@@ -14,6 +14,9 @@ const router = express.Router();
 //Formulario de Login
 router.get('/login', guestMiddleware, usersController.login);
 
+//Formulario de contacto
+router.get('/contacto', usersController.contacto);
+
 //Procesar login
 router.post('/login', validationsMiddleware, usersController.loginProcess);
 
