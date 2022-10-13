@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+</head>
+
+<body>
+    <%- include('../partials/header') %>
+    </header>
+    
+        <div class="container-contacto">
+            <form >
+              <i class="fas fa-paper-plane"></i>
+        
+              <div class="input-group">
+                <label>Nombre Completo</label>
+                <input type="text" placeholder="Ingresar nombre completo" id="contact-name" onkeyup="validateName()">
+                <span id="name-error"></span>
+              </div>
+        
+              <div class="input-group">
+                <label>Telefono</label>
+                <input type="tel" placeholder="123 456 7890" id="contact-phone" onkeyup="validatePhone()">
+                <span id="phone-error"></span>
+              </div>
+        
+              <div class="input-group">
+                <label>Email</label>
+                <input type="email" placeholder="Ingrese su Email" id="contact-email" onkeyup="validateEmail()">
+                <span id="email-error"></span>
+              </div>   
+        
+              <div class="input-group">
+                <label>En que podemos ayudarte?</label>
+                <textarea rows="5" placeholder="Escribir su mensaje" id="contact-message" onkeyup="validateMessage()"></textarea>
+                <span id="message-error"></span>
+              </div>
+        
+            <button onclick="return validateFrom()">Submit</button>
+            <span id="subit-error"></span>
+        
+            <input type="hidden" name="_next" value="https://localhost/">
+            <input type="hidden" name="_captcha" value="false">
+        
+          </form>
+        </div>
+    
+    <script src="JS/contacto.js"></script>
+    <%- include('../partials/footer') %>
+</body>

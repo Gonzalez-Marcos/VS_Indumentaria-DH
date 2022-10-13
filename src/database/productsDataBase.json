@@ -10,16 +10,6 @@
     "image": "cat-calzado/zapatillas/zap-3.jpg"
   },
   {
-    "id": 1,
-    "name": "ZAPATILLAS RUNNING STRONG PACE 3 MUJER GRIS",
-    "price": 11.799,
-    "waist": 12,
-    "color": "blue",
-    "category": "visit",
-    "description": "Disfrutá del running y tus caminatas con la TOPPER Strong Pace 3",
-    "image": "cat-calzado/zapatillas/zap-4.jpg"
-  },
-  {
     "id": 2,
     "name": "BOTINES DE FUTBOL ADIDAS PREDATOR FREAK.4 FG UNISEX FUCSIA",
     "price": 19.399,
