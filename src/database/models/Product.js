@@ -8,7 +8,7 @@ module.exports = (sequelize, dataTypes) => {
             autoIncrement: true
         },
         name: {
-            type: dataTypes.STRING(100),
+            type: dataTypes.STRING,
             allowNull: false
         },
         price: { 
@@ -18,15 +18,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.TEXT,
             allowNull: false
         },
-        talles_id: {
-            type: dataTypes.STRING(8),
-            allowNull: false
-        },
         categories_id: {
-            type: dataTypes.INTEGER,
-            allowNull: false
-        },
-        images_id: {
             type: dataTypes.INTEGER,
             allowNull: false
         }
@@ -42,12 +34,12 @@ module.exports = (sequelize, dataTypes) => {
 
     Product.associate = (models) => {
 
-        Product.belongTo(models.Category, {
+        Product.belongsTo(models.Category, {
             as: 'category',
-            foreignKey: "category_id",
+            foreignKey: "categories_id",
         })
 
-        Product.belongToMany(models.Colour, {
+        Product.belongsToMany(models.Colour, {
             as: "colours",
             through: "colours_products",
             foreignKey: "products_id",
@@ -55,7 +47,7 @@ module.exports = (sequelize, dataTypes) => {
             timestamps: false
         })
 
-        Product.belongToMany(models.Size, {
+        Product.belongsToMany(models.Size, {
             as: "sizes",
             through: "products_sizes",
             foreignKey: "products_id",

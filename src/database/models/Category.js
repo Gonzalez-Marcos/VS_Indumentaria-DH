@@ -7,8 +7,8 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        category: {
-            type: dataTypes.STRING(100),
+        name: {
+            type: dataTypes.STRING,
             allowNull: false
         }
        
@@ -20,15 +20,15 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     };
 
-    const category = sequelize.define(alias, cols, config);
+    const Category = sequelize.define(alias, cols, config);
 
-    category.associate = (models) => {
+    Category.associate = (models) => {
 
-        category.hasMany(models.Product, {
+        Category.belongsTo(models.Product, {
             as: "productos",
-            foreingKey: "category_id"
+            foreingKey: "categories_id"
         })
     }
 
-    return category;
+    return Category;
 }

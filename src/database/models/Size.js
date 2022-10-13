@@ -7,8 +7,8 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        size: {
-            type: dataTypes.STRING(100),
+        name: {
+            type: dataTypes.STRING,
             allowNull: false
         }
 
@@ -21,13 +21,16 @@ module.exports = (sequelize, dataTypes) => {
 
     const Size = sequelize.define(alias, cols, config);
 
-    Size.belongToMany(models.Product, {
+    Size.associate = (models) => {
+
+    Size.belongsToMany(models.Product, {
         as: "products",
         through: "products_sizes",
         foreignKey: "sizes_id",
         otherKey: "products_id",
         timestamps: false
-    })
+    });
+};
 
     
     return Size;

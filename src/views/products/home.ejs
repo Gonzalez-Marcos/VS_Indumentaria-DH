@@ -22,7 +22,7 @@
         <section class="main-section">
             <div class="product-container"><!-- blue -->
                 <div class="products"><!-- green -->
-                    <% visit.forEach(product => { %>
+                    <% products.forEach(product => { %>
                     <div class="product-under"><!-- pink -->
                         <figure class="product-image"><!-- red -->
                             <img src="/images/<%= product.image %>" />
@@ -50,7 +50,7 @@
         <section class="main-section">
             <div class="product-container">
                 <div class="products">
-                    <% news.forEach(product => { %>
+                    <% products.forEach(product => { %>
                     <div class="product-under">
                         <figure class="product-image"><!-- red -->
                             <img src="/images/<%= product.image %>" />
