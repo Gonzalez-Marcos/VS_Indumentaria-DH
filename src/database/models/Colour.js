@@ -7,8 +7,8 @@ module.exports = (sequelize, dataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        colours: {
-            type: dataTypes.STRING(100),
+        name: {
+            type: dataTypes.STRING,
             allowNull: false
         }
 
@@ -23,7 +23,7 @@ module.exports = (sequelize, dataTypes) => {
 
     Colour.associate = (models) => {
 
-        Colour.belongToMany(models.Product, {
+        Colour.belongsToMany(models.Product, {
             as: "products",
             through: "colours_products",
             foreignKey: "colours_id",

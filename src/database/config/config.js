@@ -4,7 +4,7 @@ module.exports = {
     "password": null,
     "database": "vs_indumentaria",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
   },
   "test": {
     "username": "root",

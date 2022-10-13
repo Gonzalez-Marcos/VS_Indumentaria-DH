@@ -15,7 +15,7 @@ strong {
     padding: 0;
     margin: 0;
 }
-label, a {
+label, a, .title_vs {
     text-decoration: none;
     color: rgb(0, 0, 0);
 }
@@ -498,6 +498,9 @@ div.cont-productDetail {
     font-size: 2.5em;
     color: #a2a2a2;
     float: left;
+}
+.button-edit{
+    color: #fff;
 }
 .container-proDet .details button {
     background: #000;

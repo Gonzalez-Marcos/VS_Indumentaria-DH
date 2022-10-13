@@ -10,24 +10,24 @@
     <section class="cont-productDetail">
         <div class="container-proDet">
             <div class="imgBx">
-                <img src="/images/<%=productIndex.image%>">
+                <img src="/images/">
             </div>
             <div class="details">
                 <div class="content">
-                    <h2><%= productIndex.name %> <br>
-                        <span><%= productIndex.name %> </span>
+                    <h2><%= product.name %> <br>
+                        <span><%= product.name %> </span>
                     </h2>
-                    <p><%= productIndex.description %> </p>
+                    <p><%= product.description %> </p>
                     <p class="product-colors">Available Colors:
                         <span class="black active" data-color-primary="#000" data-color-sec="#212121" data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto.png?raw=true"></span>
                         <span class="red" data-color-primary="#7E021C" data-color-sec="#bd072d" data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto_red_black.png?raw=true"></span>
                         <span class="orange" data-color-primary="#CE5B39" data-color-sec="#F18557" data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto_orange_black.png?raw=true"></span>
                     </p>
-                    <h3>$ <%= productIndex.price %> </h3>
+                    <h3>$ <%= product.price %> </h3>
                     <button>Probador Virtual</button>
                     <button>Buy Now</button>
-                    <button><a href="/products/edit/<%= productIndex.id %>">EDITAR</a></button>
-                    <form action="/products/delete/<%= productIndex.id %>?_method=DELETE" method="POST">
+                    <button><a class="button-edit" href="/products/edit/<%= product.id %>">EDITAR</a></button>
+                    <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
                         <button type="submit">ELIMINAR</button>
                     </form>
                 </div>
@@ -37,40 +37,40 @@
 
     <!-- card products -->
     <h3>Ultimos productos navegados</h3>
-
     <section class="main-section">
         <div class="product-container">
             <div class="products">
-                <% visited.forEach(product => { %> 
+                <% for(let i = 0; i < product.length; i++ ){ %> 
                 <div class="product">
                    <!--esto esta relacionado con js-->
                     <div class="product-under">
                         <figure class="product-image">
-                            <img src="/images/<%= product.image %> "/>
+                            <img src="/images/<%= product[i].id %> "/>
                             <div class="product-over">
                                 <button class="btn btn-small addToCart" data-product-id="3">
                                     <i class="fas fa-cart-plus"></i>Add to cart
                                 </button>
-                                <a href="/products/<%= product.id %> " class="btn btn-small">More Info</a>
+                                <a href="/products/<%= product[i].id %> " class="btn btn-small">More Info</a>
                             </div>
                         </figure>
                         <div class="product-summary">
-                            <h4 class="productName"><%= product.name %> </h4>
+                            <h4 class="productName"><%= product[i].name %> </h4>
                             <p style="color: #000;">
-                                <%= product.description %> 
+                                <%= product[i].description %> 
                             </p>
                             <h6 class="price">
-                                $<span class="priceValue"><%= product.price %> </span>
+                                $<span class="priceValue"><%= product[i].price %> </span>
                             </h6>
                         </div>
                     </div>
                 </div>
-                <% }); %>
+                <% }; %>
             </div>
         </div>
     </section>
+    
     <script src="JS/script.js"></script>
-    <script src="JS/shopping-cart.js"></script>
+    <script src="../../../public/JS/shopping-cart.js"></script>
     <%- include('../partials/footer') %> 
 </body>
 </html>

@@ -20,9 +20,9 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `vs_indumentaria`
 --
-CREATE SCHEMA IF NOT EXISTS `VS_Indumentaria` DEFAULT CHARACTER SET utf8 ;
+CREATE SCHEMA IF NOT EXISTS `vs_indumentaria` DEFAULT CHARACTER SET utf8 ;
 
-USE `VS_Indumentaria` ;
+USE `vs_indumentaria` ;
 -- --------------------------------------------------------
 
 --
@@ -95,7 +95,7 @@ INSERT INTO `colours_products` (`colours_id`, `products_id`) VALUES
 
 CREATE TABLE `images_product` (
   `id` int(11) NOT NULL,
-  `images` text NOT NULL,
+  `name` text NOT NULL,
   `products_id` int(11)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -103,7 +103,7 @@ CREATE TABLE `images_product` (
 -- Volcado de datos para la tabla `images_product`
 --
 
-INSERT INTO `images_product` (`id`, `images`, `products_id` ) VALUES
+INSERT INTO `images_product` (`id`, `name`, `products_id` ) VALUES
 (1, 'cat-calzado/zapatillas/zap-3.jpg', 1),
 (2, 'cat-calzado/zapatillas/zap-4.jpg', 2),
 (3, 'cat-indu/camisetas/cami-1.jpg', 3),
@@ -327,21 +327,21 @@ ALTER TABLE `users`
 -- Filtros para la tabla `colours_products`
 --
 ALTER TABLE `colours_products`
-  ADD CONSTRAINT `fk_Colours_has_Products_Colours1` FOREIGN KEY (`colours_id`) REFERENCES `colours` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_Colours_has_Products_Products1` FOREIGN KEY (`products_id`) REFERENCES `products` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_Colours_has_Products_Colours1` FOREIGN KEY (`colours_id`) REFERENCES `colours` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_Colours_has_Products_Products1` FOREIGN KEY (`products_id`) REFERENCES `products` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `products`
 --
 ALTER TABLE `products`
-  ADD CONSTRAINT `fk_products_categories1` FOREIGN KEY (`categories_id`) REFERENCES `categories` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_products_categories1` FOREIGN KEY (`categories_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `products_sizes`
 --
 ALTER TABLE `products_sizes`
-  ADD CONSTRAINT `fk_Products_has_Sizes_Products1` FOREIGN KEY (`products_id`) REFERENCES `products` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_Products_has_Sizes_Sizes1` FOREIGN KEY (`sizes_id`) REFERENCES `sizes` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_Products_has_Sizes_Products1` FOREIGN KEY (`products_id`) REFERENCES `products` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_Products_has_Sizes_Sizes1` FOREIGN KEY (`sizes_id`) REFERENCES `sizes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
