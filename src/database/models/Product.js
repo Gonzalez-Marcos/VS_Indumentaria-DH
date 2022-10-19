@@ -1,31 +1,31 @@
 module.exports = (sequelize, dataTypes) => {
-    const alias = "Product";
+    let alias = "Product";
 
-    const cols = {
+    let cols = {
         id: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
             autoIncrement: true
         },
         name: {
-            type: dataTypes.STRING,
+            type: dataTypes.STRING(100),
             allowNull: false
         },
-        price: { 
-            type: dataTypes.DECIMAL(10, 2) 
+        description: {
+            type: dataTypes.STRING(255)
         },
-        descriptions: {
-            type: dataTypes.TEXT,
+        price: {
+            type: dataTypes.DECIMAL(10, 2),
             allowNull: false
         },
-        categories_id: {
-            type: dataTypes.INTEGER,
+        CategoryId: {
+            type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false
         }
 
     };
     
-    const config = {
+    let config = {
         tableName: 'products',
         timestamps: false
     };
@@ -35,31 +35,29 @@ module.exports = (sequelize, dataTypes) => {
     Product.associate = (models) => {
 
         Product.belongsTo(models.Category, {
-            as: 'category',
-            foreignKey: "categories_id",
-        })
+            foreignKey: "CategoryId",
+            as: 'category'
+        });
 
         Product.belongsToMany(models.Colour, {
             as: "colours",
-            through: "colours_products",
-            foreignKey: "products_id",
-            otherKey: "colours_id",
-            timestamps: false
-        })
+            through: "product_colour",
+            foreignKey: "ProductId",
+            otherKey: "ColourId"
+        });
 
         Product.belongsToMany(models.Size, {
             as: "sizes",
-            through: "products_sizes",
-            foreignKey: "products_id",
-            otherKey: "sizes_id",
+            through: "product_size",
+            foreignKey: "ProductId",
+            otherKey: "SizeId",
             timestamps: false
-        })
+        });
 
         Product.hasMany(models.Image, {
             as: "images",       
-            foreignKey: "product_id"
-        })
-
+            foreignKey: "ProductId"
+        });
     }
 
     return Product;

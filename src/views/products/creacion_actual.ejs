@@ -33,40 +33,24 @@
                                 <input type="number" name="price" id="price">
                             </div>
                             <div class="categoria">
-                                <label for="categories_id">Categoria </label><br>
-                                <select class="select-categoria" name="categories_id" id="categories_id">
-                                    <option value="news">nuevos</option>
-                                    <option value="visit">en oferta</option>
+                                <label for="category">Categoria </label><br>
+                                <select class="select-categoria" name="category" id="category">
+                                    <% categories.forEach(category => { %> 
+                                        <option value="<%= category.id %> "> <%= category.name %> </option>    
+                                    <% }); %>
                                 </select>
                             </div>
-                            <div class="title-color"><label for="color">Colores Disponibles</label></div>
+                            <div class="title-color"><label for="colour">Colores Disponibles</label></div>
                             <div class="color-container">
-
-                                <span><input type="checkbox" name="color" id="color"> Negro </span>
-                                <span><input type="checkbox" name="color" id="color"> Rojo </span>
-                                <span><input type="checkbox" name="color" id="color"> Blanco </span>
-                              
-                                <span><input type="checkbox" name="color" id="color"> Azul </span>
-                                <span><input type="checkbox" name="color" id="color"> Gris </span>
-                                <span><input type="checkbox" name="color" id="color"> Verde </span>
-
-
-                                <span><input type="checkbox" name="color" id="color"> Amarillo </span>
-                                <span><input type="checkbox" name="color" id="color"> Rosa </span>
-                                <span><input type="checkbox" name="color" id="color"> Marron </span>
-
+                                <% colours.forEach(colour => { %> 
+                                <span><input type="checkbox" name="colour" id="colour" value="<%= colour.id %>"> <%= colour.name %>  </span>
+                                <% }); %>
                             </div><br>
-                            <div class="title-talles"><label for="sizes">Talle</label></div><br>
+                            <div class="title-talles"><label for="size">Talle</label></div><br>
                             <div class="talles-container">
-
-                                <span><input type="checkbox" name="sizes" id="sizes"> XS </span>
-                                <span class="talle"><input type="checkbox" name="sizes" id="sizes"> S </span>
-                                <span><input type="checkbox" name="sizes" id="sizes"> M </span>
-
-
-                                <span><input type="checkbox" name="sizes" id="sizes"> L </span>
-                                <span><input type="checkbox" name="sizes" id="sizes"> XL </span>
-                                <span><input type="checkbox" name="sizes" id="sizes"> XXL </span>
+                                <% sizes.forEach(size => { %> 
+                                    <span><input type="checkbox" name="size" id="size" value="<%= size.id %> "> <%= size.name %>  </span>    
+                                <% }); %>
 
                             </div>
                             <div class="descripcion-producto">

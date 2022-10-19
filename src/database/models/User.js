@@ -3,28 +3,28 @@ module.exports = (sequelize, dataTypes) => {
 
     const cols = {
         id: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
             autoIncrement: true
         },
-        email: {
-            type: dataTypes.STRING,
-            allowNull: false
-        },
-        password: {
-            type: dataTypes.TEXT,
-            allowNull: false
-        },
-        name_user: {
-            type: dataTypes.STRING,
+        name: {
+            type: dataTypes.STRING(255),
             allowNull: false
         },
         last_name: {
-            type: dataTypes.STRING,
+            type: dataTypes.STRING(255),
+            allowNull: false
+        },
+        email: {
+            type: dataTypes.STRING(255),
+            allowNull: false
+        },
+        password: {
+            type: dataTypes.STRING(255),
             allowNull: false
         },
         image: {
-            type: dataTypes.TEXT,
+            type: dataTypes.STRING(255),
             allowNull: false
         }
 

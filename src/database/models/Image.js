@@ -1,36 +1,30 @@
 module.exports = (sequelize, dataTypes) => {
     const alias = "Image";
-
     const cols = {
         id: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
             autoIncrement: true
         },
         name: {
-            type: dataTypes.TEXT,
+            type: dataTypes.STRING(500),
             allowNull: false
         },
-        products_id: {
-            type: dataTypes.INTEGER,
+        ProductId: {
+            type: dataTypes.BIGINT(10).UNSIGNED,
             allowNull: false
         }
-
     };
-
     const config = {
-        tableName: 'images_product',
+        tableName: 'images',
         timestamps: false
     };
-
     const Image = sequelize.define(alias, cols, config);
-
     Image.associate = (models) => {
-        Image.belongsTo(models.Product, {
-            as: "product",
-            foreignKey: "products_id"
+        Image.belongsTo(models.Product, {    
+            foreignKey: "ProductId",
+            as: "product"
         });
-    };
-
-        return Image;
     }
+    return Image;
+}

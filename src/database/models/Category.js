@@ -3,12 +3,12 @@ module.exports = (sequelize, dataTypes) => {
 
     const cols = {
         id: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
             autoIncrement: true
         },
         name: {
-            type: dataTypes.STRING,
+            type: dataTypes.STRING(255),
             allowNull: false
         }
        
@@ -24,10 +24,10 @@ module.exports = (sequelize, dataTypes) => {
 
     Category.associate = (models) => {
 
-        Category.belongsTo(models.Product, {
-            as: "productos",
-            foreingKey: "categories_id"
-        })
+        Category.hasMany(models.Product, {
+            as: "products",
+            foreingKey: "CategoryId"
+        });
     }
 
     return Category;

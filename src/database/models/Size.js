@@ -1,37 +1,30 @@
 module.exports = (sequelize, dataTypes) => {
     const alias = "Size";
-
     const cols = {
         id: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.BIGINT(10).UNSIGNED,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
         },
         name: {
-            type: dataTypes.STRING,
+            type: dataTypes.STRING(255),
             allowNull: false
         }
-
     };
-    
     const config = {
         tableName: 'sizes',
         timestamps: false
     };
 
     const Size = sequelize.define(alias, cols, config);
-
     Size.associate = (models) => {
-
-    Size.belongsToMany(models.Product, {
-        as: "products",
-        through: "products_sizes",
-        foreignKey: "sizes_id",
-        otherKey: "products_id",
-        timestamps: false
-    });
-};
-
-    
+        Size.belongsToMany(models.Product, {
+            as: "products",
+            through: "product_size",
+            foreignKey: "SizeId",
+            otherKey: "ProductId",
+            timestamps: false
+        });
+    }  
     return Size;
 }

@@ -22,57 +22,61 @@
         <section class="main-section">
             <div class="product-container"><!-- blue -->
                 <div class="products"><!-- green -->
-                    <% products.forEach(product => { %>
-                    <div class="product-under"><!-- pink -->
-                        <figure class="product-image"><!-- red -->
-                            <img src="/images/<%= product.image %>" />
-                            <div class="product-over"><!-- black -->
-                                <button class="btn btn-small addToCart" data-product-id="3">
-                                    <i class="fas fa-cart-plus"></i>Add to cart
-                                </button>
-                                <a href="/products/<%= product.id %> " class="btn btn-small">More Info</a>
+                    <% products.forEach(product => {%>
+                        <% if (product.category.name == 'new') { %> 
+                            <div class="product-under"><!-- pink -->
+                                <figure class="product-image"><!-- red -->
+                                    <% if (product.images[0]) { %>
+                                        <img src="/images/products/<%= product.images[0].name %>"/>
+                                    <% } %>
+                                    <div class="product-over"><!-- black -->
+                                        <button class="btn btn-small addToCart" data-product-id="3">
+                                            <i class="fas fa-cart-plus"></i>Add to cart
+                                        </button>
+                                        <a href="/products/<%= product.id %> " class="btn btn-small">More Info</a>
+                                    </div>
+                                </figure>
+                                <div class="product-summary"><!-- yellow -->
+                                    <h4 class="productName"><%= product.name %></h4>
+                                    <p style="color: #000;"><%= product.description %></p>
+                                    <h6 class="price">
+                                        $<span class="priceValue"> <%= product.price %></span>
+                                    </h6> 
+                                </div>
                             </div>
-                        </figure>
-                        <div class="product-summary"><!-- yellow -->
-                            <h4 class="productName"><%= product.name %></h4>
-                            <p style="color: #000;"><%= product.description %></p>
-                            <h6 class="price">
-                                $<span class="priceValue"> <%= product.price %></span>
-                            </h6>
-                        </div>
-                    </div>
+                        <% } %> 
                     <% }); %>
                 </div>
             </div>
         </section>
 
-        <h3>Novedades</h3>
+        <!-- <h3>Novedades</h3>
         <section class="main-section">
             <div class="product-container">
                 <div class="products">
-                    <% products.forEach(product => { %>
+                    
                     <div class="product-under">
-                        <figure class="product-image"><!-- red -->
-                            <img src="/images/<%= product.image %>" />
+                        <figure class="product-image">
+                            <img src="/images/" />
                             <div class="product-over">
                                 <button class="btn btn-small addToCart" data-product-id="3">
                                     <i class="fas fa-cart-plus"></i>Add to cart
                                 </button>
-                                <a href="/products/<%= product.id %>" class="btn btn-small">More Info</a>
+                                <a href="/products/" class="btn btn-small">More Info</a>
                             </div>
                         </figure>
                         <div class="product-summary">
-                            <h4 class="productName"><%= product.name %></h4>
-                            <p style="color: #000;"><%= product.description %></p>
+                            <h4 class="productName"></h4>
+                            <p style="color: #000;"><></p>
                             <h6 class="price">
-                                $<span class="priceValue"><%= product.price %></span>
+                                $<span class="priceValue"><</span>
                             </h6>
                         </div>
                     </div>
-                    <% }); %> 
+                    
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- Subscribe Button -->
         <div class="container-sub">
             <input type="radio" id="hide">
