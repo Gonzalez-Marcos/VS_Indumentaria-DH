@@ -1,26 +1,17 @@
-//Chatbox/bot (Jordyn)
+//Chatbox/bot
+//Condiciones para colocar en le chat, se puede agregar mas o modificar lo armado
 function getBotResponse(input) {
-    //rock paper scissors
-    if (input == "rock") {
-        return "paper";
-    } else if (input == "paper") {
-        return "scissors";
-    } else if (input == "scissors") {
-        return "rock";
+    if (input == "1") {
+        return "Camiseta de argentina 20% de descuento";
+    } else if (input == "2") {
+        return "Tarjeta de credito en 3 cuotas sin interes";
+    } else if (input == "3") {
+        return "Las compras se pueden devolver con 5 dias habiles luego de recibirla. Debes contar con el recibo";
+    } else if (input == "4") {
+        return "En la parte inferior se encuentra la opcion de contacto";
     }
-
-// simple responses
-if (input == "hello") {
-    return "hello there, how can we help you?";
-} else if (input == "goodbye") {
-    return "Thanks for shopping with Tokyos!";
-} else {
-    return "Didn't get that, try asking something else";
-}
 }
 
-
-// collapsible
 var coll = document.getElementsByClassName("collapsible");
 
 for (let i = 0; i < coll.length; i++) {
@@ -54,9 +45,14 @@ function getTime() {
     let time = hours + ":" + minutes;
     return time;
 }
-
+//Mensaje que aparece al hacer click en el chat bot
 function firstBotMessage() {
-    let firstMessage = "How's it going?"
+    let firstMessage = 
+    'Hola en que te podemos ayudar?'+
+    '\n1️⃣ Productos'+
+    '\n2️⃣ Promociones bancarias'+
+    '\n3️⃣ Devolución'+
+    '\n4️⃣ Contactanos'
     document.getElementById("botStarterMessage").innerHTML = '<p class="botText"><span>' + firstMessage + '</span></p>';
 
     let time = getTime();
