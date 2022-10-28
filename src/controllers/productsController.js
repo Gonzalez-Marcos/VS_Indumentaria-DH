@@ -83,89 +83,44 @@ const controller = {
         const productId = req.params.id;
         const coloursProductActually = await ProductColour.findAll({where: { ProductId: productId}});
         const sizesProductActually = await ProductSize.findAll({where: { ProductId: productId}});
-        Products.update({
-            name: req.body.name,
-            price: req.body.price,
-            description: req.body.description,
-            CategoryId: req.body.category
-        },{
-            where: {id: productId}
-        }).then(() => {
-            let coloursEdit = req.body.colour; 
-            let sizesEdit = req.body.size;
-            //edit colours
-            let coloursModify = coloursProductActually.filter((colour) => {
-                let ok = true;
-                for (let i = 0; i < coloursEdit.length && ok; i++) { // Corta cuando no hay mas following o cuando ya se encontró uno
-                    if (Number(coloursEdit[i]) == colour.ColourId) {
-                        ok = false;
-                        coloursEdit.splice(i, 1);
-                    }
-                };
-                return ok;
+        
+        try {
+            const ProductUpdate = Products.update({
+                name: req.body.name,
+                price: req.body.price,
+                description: req.body.description,
+                CategoryId: req.body.category
+            },{
+                where: {id: productId}
             });
-            let cantActually = 0;
-			for (let i = 0; i < coloursEdit.length; i++)  {
-				if (coloursModify.length > i) {
-                    db.ProductColour.update({
-                        ColourId: Number(coloursEdit[i])
-                    },{
-                        where: { id: coloursModify[i].id }
-                    });
-					cantActually += 1;
-				}
+            let coloursEdit = req.body.colour;
+            let sizesEdit = req.body.size;
+            for (let i = 0; i < coloursEdit.length; i++)  {
+				ProductColour.upsert({
+                    id: coloursProductActually.length > i ? coloursProductActually[i].id : 1000,
+                    ProductId: productId,
+                    ColourId: Number(coloursEdit[i])
+                });
 			}
-            if (coloursEdit.length - cantActually > 0) {
-                for (let i = cantActually; i < coloursEdit.length; i++) {
-                    ProductColour.create({
-                        ProductId: productId,
-                        ColourId: Number(coloursEdit[i])
-                    });
-                }
-            }
-            if (coloursModify.length > cantActually) {
-                for (let i = cantActually; i < coloursModify.length; i++) {
-                    ProductColour.destroy({where: {id: coloursModify[i].id}});
-                }
+			for (let i = coloursEdit.length; i < coloursProductActually.length; i++) {
+                ProductColour.destroy({where: {id: coloursProductActually[i].id}});
             }
             //edit sizes
-            let sizesModify = sizesProductActually.filter((size) => {
-                let ok = true;
-                for (let i = 0; i < sizesEdit.length && ok; i++) { // Corta cuando no hay mas following o cuando ya se encontró uno
-                    if (Number(sizesEdit[i]) == size.SizeId) {
-                        ok = false;
-                        sizesEdit.splice(i, 1);
-                    }
-                };
-                return ok;
-            });
-            cantActually = 0;
-			for (let i = 0; i < sizesEdit.length; i++)  {
-				if (sizesModify.length > i) {
-                    db.ProductSize.update({
-                        SizeId: Number(sizesEdit[i])
-                    },{
-                        where: { id: sizesModify[i].id }
-                    });
-					cantActually += 1;
-				}
+            for (let i = 0; i < sizesEdit.length; i++)  {
+				ProductSize.upsert({
+                    id: sizesProductActually.length > i ? sizesProductActually[i].id : 1000,
+                    ProductId: productId,
+                    SizeId: Number(sizesEdit[i])
+                });
 			}
-            if (sizesEdit.length - cantActually > 0) {
-                for (let i = cantActually; i < sizesEdit.length; i++) {
-                    ProductSize.create({
-                        ProductId: productId,
-                        SizeId: Number(sizesEdit[i])
-                    });
-                }
+			for (let i = sizesEdit.length; i < sizesProductActually.length; i++) {
+                ProductSize.destroy({where: {id: sizesProductActually[i].id}});
             }
-            if (sizesModify.length > cantActually) {
-                for (let i = cantActually; i < sizesModify.length; i++) {
-                    ProductSize.destroy({where: {id: sizesModify[i].id}});
-                }
-            }
-            res.redirect('/products/');
-        })
-        .catch(error => res.send(error))
+
+            return res.redirect('/products/');
+        } catch(error) {
+            res.send('Aca hay un error');
+        }
     },
     delete: (req, res) => {
         const productId = req.params.id;
