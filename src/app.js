@@ -6,9 +6,9 @@ const methodOverride =  require('method-override');
 
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 
-const mainRouters = require('./routers/main_router');
-const productRouters = require('./routers/products_router');
-const userRouters = require('./routers/users_router');
+const mainRouters = require('./routers/mainRouter');
+const productRouters = require('./routers/productsRouter');
+const userRouters = require('./routers/usersRouter');
 
 const app = express();
 

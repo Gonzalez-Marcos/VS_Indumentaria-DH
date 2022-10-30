@@ -24,7 +24,9 @@
                     <% products.forEach(product => { %>
                     <div class="product-under">
                         <figure class="product-image">
-                            <img src="/images/<%= product.image %>" />
+                            <% if (product.images[0]) { %>
+                            <img src="/images/products/<%= product.images[0].name %>" />
+                            <% } %>
                             <div class="product-over">
                                 <button class="btn btn-small addToCart" data-product-id="3">
                                     <i class="fas fa-cart-plus"></i>Add to cart
@@ -38,7 +40,16 @@
                             <h6 class="price">
                                 $<span class="priceValue"><%= product.price %></span>
                             </h6>
+                            <h4 class="productName">Colores disponibles: </h4>
+                            <% product.colours.forEach(colour => {%>
+                                <h4 class="productName"><%= colour.name %></h4>
+                            <%}); %> 
+                            <h4 class="productName">Talles disponibles: </h4>
+                            <% product.sizes.forEach(size => {%>
+                                <h4 class="productName"><%= size.name %></h4>
+                            <%}); %> 
                         </div>
+
                     </div>
                     <% }); %> 
                 </div>

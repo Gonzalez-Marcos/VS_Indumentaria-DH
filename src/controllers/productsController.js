@@ -1,67 +1,136 @@
-const { json } = require('express');
-const fs = require('fs');
 const path = require('path');
 
-const productsFilePath = path.join(__dirname, '../database/productsDataBase.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
 
-// cada tres string genera un .
-//const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-
+const Products = db.Product;
+const ProductColour = db.ProductColour;
+const ProductSize = db.ProductSize;
+const Colours = db.Colour;
+const Images = db.Image;
+const Sizes = db.Size;
+const Categories = db.Category;
 const controller = {
 	listProducts: (req, res) => {
-		res.render('products/listProducts', { products });
+        Products.findAll({
+            include:[
+                {association: 'images'},
+                {association: 'colours'},
+                {association: 'sizes'}
+        ]
+        }).then(products => {
+            res.render('products/listProducts', { products });
+        });
+        
 	},
-	productDetail: (req, res) => {
-		const productIndex = products.find(product => product.id == req.params.id);
-		const visited = products.filter(product => product.category === 'visit');
-        res.render('products/productDetail', { productIndex, visited });
+	productDetail: async (req, res) => {
+        const productId = req.params.id;
+        const promProduct =  await Products.findByPk(productId, { include: ['category', 'images', 'colours', 'sizes'] });
+        const promProducts = await Products.findAll({include: [{association: 'category'}, {association: 'images'}, {association: 'colours'}, {association: 'sizes'}]});
+        res.render('products/productDetail', { productPk: promProduct, allProducts: promProducts });
     },
-	create: (req, res) => {
-        res.render('products/creacion_actual');
+	create: async (req, res) => {
+        const colours = await Colours.findAll();
+        const sizes = await Sizes.findAll();
+        const categories = await Categories.findAll();
+        res.render('products/creacion_actual', { colours, sizes, categories });
     },
 	store: (req, res) => {
-        const productsClone = products;
-        const newProduct = {
-            id: productsClone.length,
+        Products.create({
             name: req.body.name,
-            price: req.body.price,
-            waist: req.body.waist,
-			color: req.body.color,
-            category: req.body.category,
             description: req.body.description,
-            image: req.file.filename
-        };
-        productsClone.push(newProduct);
-        fs.writeFileSync(productsFilePath, JSON.stringify(productsClone, null, '  '));
-        //redirect vuelve a la list products
-        res.redirect('/products/');
+            price: Number(req.body.price),
+            CategoryId: Number(req.body.category)
+        })
+        .then((productCreated) => {
+            
+            let colores = req.body.colour;
+            let productColours = colores.map((colour) => {
+                return {
+                    ProductId: productCreated.id,
+                    ColourId: Number(colour)
+                };
+            });
+            ProductColour.bulkCreate(productColours);
+
+            let sizes = req.body.size;
+            let productSizes = sizes.map((size) => {
+                return {
+                    ProductId: productCreated.id,
+                    SizeId: Number(size)
+                };
+            });
+            ProductSize.bulkCreate(productSizes);
+
+            Images.create({
+                name: req.file.filename,
+                ProductId: productCreated.id
+            });
+
+            res.redirect('/products/');
+            
+        });
     },
-    edit: (req, res) => {
-        const product = products.find(product => product.id == req.params.id);
-        res.render('products/editar_producto', { product });
+    edit: async (req, res) => {
+        const product = await Products.findByPk(req.params.id, { include: ['images', 'colours', 'sizes'] });
+        const colours = await Colours.findAll();
+        const sizes = await Sizes.findAll();
+        const categories = await Categories.findAll();
+        res.render('products/editar_producto', { product, colours, sizes, categories });
     },
-    update: (req, res) => {
-        const productIndex = products.findIndex(product => product.id == req.params.id);
-        console.log(req.body)
-        products[productIndex] = {
-            id: productIndex,
-            name: req.body.name,
-            price: req.body.price,
-            sizes: req.body.sizes,
-            color: req.body.color,
-            category: req.body.category,
-            description: req.body.description,
-            image: products[productIndex].image
-        };
-        let productModifidJSON = JSON.stringify(products, null, '  ');
-        fs.writeFileSync(productsFilePath, productModifidJSON);
-        res.redirect('/products/');
+    update: async (req, res) => {
+        const productId = req.params.id;
+        const coloursProductActually = await ProductColour.findAll({where: { ProductId: productId}});
+        const sizesProductActually = await ProductSize.findAll({where: { ProductId: productId}});
+        
+        try {
+            const ProductUpdate = Products.update({
+                name: req.body.name,
+                price: req.body.price,
+                description: req.body.description,
+                CategoryId: req.body.category
+            },{
+                where: {id: productId}
+            });
+            let coloursEdit = req.body.colour;
+            let sizesEdit = req.body.size;
+            for (let i = 0; i < coloursEdit.length; i++)  {
+				ProductColour.upsert({
+                    id: coloursProductActually.length > i ? coloursProductActually[i].id : 1000,
+                    ProductId: productId,
+                    ColourId: Number(coloursEdit[i])
+                });
+			}
+			for (let i = coloursEdit.length; i < coloursProductActually.length; i++) {
+                ProductColour.destroy({where: {id: coloursProductActually[i].id}});
+            }
+            //edit sizes
+            for (let i = 0; i < sizesEdit.length; i++)  {
+				ProductSize.upsert({
+                    id: sizesProductActually.length > i ? sizesProductActually[i].id : 1000,
+                    ProductId: productId,
+                    SizeId: Number(sizesEdit[i])
+                });
+			}
+			for (let i = sizesEdit.length; i < sizesProductActually.length; i++) {
+                ProductSize.destroy({where: {id: sizesProductActually[i].id}});
+            }
+
+            return res.redirect('/products/');
+        } catch(error) {
+            res.send('Aca hay un error');
+        }
     },
     delete: (req, res) => {
-        const allProducts = products.filter(product => product.id != req.params.id);
-        fs.writeFileSync(productsFilePath, JSON.stringify(allProducts, null, '  '));
-        res.redirect('/products/');
+        const productId = req.params.id;
+        ProductColour.destroy({where: { ProductId: productId}})
+        .then(() => {
+            ProductSize.destroy({where: { ProductId: productId}});
+            Images.destroy({where: { ProductId: productId}});
+            Products.destroy({where: { id: productId}});
+            res.redirect('/products/');
+        });
     },
     productCart: (req, res) => {
         res.render('products/productCart');
