@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+    </head>
+    <title>Creacion</title>
+    <link rel="stylesheet" href="/css/styles_creacion.css">
+    </head>
+
+    <body>
+        <%- include ('../partials/header') %>
+            </header>
+            <main class="main-container">
+                <div class="crear-producto-container">
+                    <div class="titulo-crear-producto">
+                        <h2>Crear Producto</h2>
+                        <div class="icons-productos">
+                            <div>
+                                <i class="fas fa-socks"> </i>
+                                <i class="fas fa-socks"> </i>
+                                <i class="fas fa-socks"> </i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="producto-container">
+                        <form action="/products/create" method="POST" enctype="multipart/form-data">
+                            <div class="nombre"><label for="name">Nombre</label><br>
+                                <input type="text" name="name" id="name">
+                            </div>
+                            <div class="imagenes-producto"><label for="image">Imagenes</label><br>
+                                <input type="file" name="image" id="image">
+                            </div>
+                            <div class="precio"><label for="price">Precio</label><br>
+                                <input type="number" name="price" id="price">
+                            </div>
+                            <div class="categoria">
+                                <label for="category">Categoria </label><br>
+                                <select class="select-categoria" name="category" id="category">
+                                    <% categories.forEach(category => { %> 
+                                        <option value="<%= category.id %> "> <%= category.name %> </option>    
+                                    <% }); %>
+                                </select>
+                            </div>
+                            <div class="title-color"><label for="colour">Colores Disponibles</label></div>
+                            <div class="color-container">
+                                <% colours.forEach(colour => { %> 
+                                <span><input type="checkbox" name="colour" id="colour" value="<%= colour.id %>"> <%= colour.name %>  </span>
+                                <% }); %>
+                            </div><br>
+                            <div class="title-talles"><label for="size">Talle</label></div><br>
+                            <div class="talles-container">
+                                <% sizes.forEach(size => { %> 
+                                    <span><input type="checkbox" name="size" id="size" value="<%= size.id %> "> <%= size.name %>  </span>    
+                                <% }); %>
+
+                            </div>
+                            <div class="descripcion-producto">
+                                <div class="title-description">
+                                    <label for="description">Descripcion del Producto</label>
+                                </div>
+                                <div>
+                                    <textarea name="description" id="description" cols="30" rows="10"
+                                        placeholder="¡Escribe aqui la descripcion!"></textarea>
+                                </div>
+                            </div>
+                            <div class="button-agregar-producto">
+                                <input type="submit" value="AGREGAR PRODUCTO">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </main>
+
+            <script src="JS/script.js"></script>
+            <script src="JS/shopping-cart.js"></script>
+            <%- include('../partials/footer') %>
+    </body>
+
+</html>
