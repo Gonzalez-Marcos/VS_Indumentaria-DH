@@ -8,8 +8,6 @@ const productsController = require('../controllers/productsController');
 const productUploadFile = require('../middlewares/multerProductsMiddleware');
 
 
-// router.get('/productCart', productsController.productCart);
-
 router.get('/', productsController.listProducts);
 
 //para mostrar la vista del create

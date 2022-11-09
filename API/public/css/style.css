@@ -884,12 +884,15 @@ div.cont-productDetail {
     margin-bottom: 4px;
   }
 
-  /* tamaño para dispositivo movil */
-@media (max-width: 500px) {
+  /* tamaño para dispositivo movil, en este caso sera para que no aparesca en ese tamaño */
+@media (max-width: 600px) {
     .banner_publicidad{
         display: none;
     }
     .container-sub{
+        display: none;
+    }
+    .chat-bar-collapsible{
         display: none;
     }
 }
