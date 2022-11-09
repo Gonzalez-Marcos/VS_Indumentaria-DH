@@ -610,6 +610,7 @@ div.cont-productDetail {
     position: relative;
     height: auto;
     background-color: #000000;
+    margin-top: 200px;
   }
   .footer .col {
     width: 190px;

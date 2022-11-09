@@ -12,17 +12,6 @@ const ProductList = ({productos}) => {
                     <th>Letras</th>
                 </tr>
             </thead>
-            <tbody>
-                {productos.map(producto => (
-                    <tr key={producto.id}>
-                        <th>{producto.id}</th>
-                        <th>{producto.Nombre}</th>
-                        <th>{producto.Precio}</th>
-                        <th>{producto.Talle}</th>
-                        <th>{producto.Letras}</th>
-                    </tr> 
-                ))}
-            </tbody>
         </table>
     )
 }

@@ -22,10 +22,6 @@ function Products(){
                         <h2 style={{textAlign: 'center'}}>Lista de productos</h2>
                         <ProductList productos={productos}/>
                     </div>
-                    <div className="col-5">
-                        <h2 style={{textAlign: 'center'}}>Formulario de productos</h2>
-                        
-                    </div>
                 </div>
             </div>
         </Fragment>
