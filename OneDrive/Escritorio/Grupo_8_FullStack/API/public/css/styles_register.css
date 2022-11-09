@@ -1,0 +1,141 @@
+.main-register-container1 {
+    width: 100%;
+    font-size: 14px;
+    padding: 0% 5%;
+    color: white;
+}
+
+.register-container1 {
+    padding: 70px 5px 50px;
+    background-color: black;
+}
+
+.data-account-container1 {
+    margin: 0px 1px 20px;
+}
+.image-div {
+    display: none;
+}
+.data-account-container1 h2 {
+    margin: 10px 0px 15px;
+    font-size: 16px;
+}
+
+.determination-container1 {
+    padding: 20px 15px;
+}
+
+.register-container1 h2 {
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.personal-information-container1 {
+    padding: 10px 8px 0;
+    width: auto;
+}
+
+.personal-information-container1 div , .data-account-container1 div {
+    padding-top: 10px;
+}
+
+.personal-information-container1  {
+    display: block;
+}
+
+.account-container1 {
+    padding: 5px 8px;
+    width: auto;
+}
+
+.account-container1  {
+    display: block;
+}
+
+
+.determination-container1  {
+    display: block;
+}
+
+.determination-container1 form .determination-condition {
+    padding-top: 20px;
+}
+
+.account-container1 .determination-condition .terminos-input {
+    width: 100%;
+    border-radius: 5px;
+    height: 30px;
+    padding: 6px 12px;
+}
+
+div.personal-information-container1 label,
+.account-container1 label,
+.determination-container1 label,
+.determination-container1 label a {
+    color: white;
+}
+
+div.personal-information-container1 input,
+div.personal-information-container1 select,
+.account-container1 input,
+.account-container1 select {
+    width: 100%;
+    border-radius: 5px;
+    height: 30px;
+    padding: 6px 12px;
+}
+
+.create-account1 input{
+    border-radius: 25px;
+    height: 35px;
+    background-color: grey;
+    width: 100%;
+    color: white;
+}
+
+.create-account1 {
+    max-width: 380px;
+    margin:auto;
+    padding: 5px 10px;
+}
+
+.account-container1 .imagePerfil-div input{
+    width: 100%;
+    border-radius: 5px;
+    height: 30px;
+    padding: 6px 12px;
+    color: black;
+    background: white;
+}
+
+@media (min-width:768px) {
+    .data-account-container1 .personal-information-container1 {
+        padding-left: 50px;
+    } 
+    .data-account-container1 .account-container1 {
+        padding-left: 50px;
+    }
+    .determination-container1 {
+        max-width: 380px;
+        margin: auto;
+    }
+}
+
+@media (min-width: 990px) {
+    .data-account-container1 {
+        display: flex;
+        padding: 0px 90px;
+    }
+    .personal-information-container1, .account-container1 {
+        width: 50%;
+    }
+    div.data-account-container1 div {
+        padding: 10px 5px;
+    }
+}
+
+@media (min-width:1280px) {
+    .register-container1 h2 {
+        font-size: 30px;
+    }
+}

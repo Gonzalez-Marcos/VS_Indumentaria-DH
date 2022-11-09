@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('../partials/head'); %>
+    </head>
+
+    <body>
+        <header>
+            <!-- contact content -->
+            <div class="header-content-top">
+              <div class="content">
+                <span><i class="fas fa-phone-square-alt"></i> (+54)911-42523-2424</span>
+                <span><i class="fas fa-envelope-square"></i>vsIndumentaria@gmail.com.br</span>
+              </div>
+            </div>
+            <!-- / contact content -->
+            <div class="container">
+              <!-- logo -->
+              <strong class="logo"><a class="title_vs" href="/"><i>VS Indumentaria</i></a></strong>
+          
+              <!--search -->
+              <label class="open-search" for="open-search">
+                <i class="fas fa-search"></i>
+                <input class="input-open-search" id="open-search" type="checkbox" name="menu" />
+                <div class="search">
+                  <button class="button-search"><i class="fas fa-search"></i></button>
+                  <input type="text" placeholder="Encontrá lo que buscás" class="input-search" />
+                </div>
+              </label>
+              <!-- // search -->
+              <nav class="nav-content">
+                <!-- nav -->
+                <ul class="nav-content-list">
+                  <li class="nav-content-item account-login">
+                    <label class="open-menu-login-account" for="open-menu-login-account">
+          
+                      <input class="input-menu" id="open-menu-login-account" type="checkbox" name="menu" />
+          
+                      <i class="fas fa-user-circle"></i> <span class="item-arrow"></span> 
+                      <h2> <%= user.name_user %>
+                      </h2>
+                      <!-- <ul class="logged">
+                        <li class="logged-li"><a>
+                            <h4>Hi <locals.userLogged.name_user %>
+                            </h4>
+                          </a> -->
+                          <!-- submenu -->
+                          <ul class="login-list" style="margin-top: 30px;left: -180px;">
+                            <% if (locals.isLogged) { %>
+          
+                              <li class="login-list-item"><a href="/users/logout">logout</a></li>
+                              <li class="login-list-item"><a href="http://localhost:3000/">dashboard</a></li>
+                              <% } else { %>
+                                <li class="login-list-item"><a href="/users/login">My account</a></li>
+                                <li class="login-list-item"><a href="/users/register">Create account</a></li>
+                                <% } %>
+                        <!-- </li>
+                      </ul> -->
+                </ul>
+                </label>
+                </li>
+                <!--Shopping cart-->
+                <div class="shopping-cart">
+                  <div class="navbar-top">
+                    <!-- <div>
+                          <button id="menuButton"></button>
+                      </div> -->
+                  </div>
+                  <div class="sum-prices">
+                    <i class="fas fa-shopping-cart shoppingCartButton"></i>
+                    <h6 id="sum-prices"></h6>
+                  </div>
+                  <!--es lo que va adentro del carrito-->
+                  <div class="producstOnCart hide">
+                    <div class="overlay"></div>
+                    <div class="top">
+                      <button id="closeButton">
+                        <i class="fas fa-times-circle"></i>
+                      </button>
+                      <h3>Cart</h3>
+                    </div>
+                    <ul id="buyItems">
+                      <h4 class="empty">Your shopping cart is empty</h4>
+                    </ul>
+                    <button class="btn checkout hidden">Check out</button>
+                  </div>
+                </div>
+                </ul>
+                <!--terminara carrito-->
+              </nav>
+            </div>
+            <!-- nav -->
+            <div class="nav-container">
+              <nav class="all-category-nav">
+                <label class="open-menu-all" for="open-menu-all">
+                  <input class="input-menu-all" id="open-menu-all" type="checkbox" name="menu-open" />
+                  <span class="all-navigator"><i class="fas fa-bars"></i> <span>Category</span> <i class="fas fa-angle-down"></i>
+                    <i class="fas fa-angle-up"></i>
+                  </span>
+          
+                  <ul class="all-category-list">
+                    <!--Agrego el link para productos-->
+                    <li class="all-category-list-item"><a href="/products/" class="all-category-list-link">Todos los productos<i
+                          class="fas fa-angle-right"></i></a>
+                    </li>
+                    <!--fin para productos-->
+                    <li class="all-category-list-item"><a href="/products/" class="all-category-list-link">Calzado<i
+                          class="fas fa-angle-right"></i></a>
+                      <div class="category-second-list">
+                        <ul class="category-second-list-ul">
+                          <li class="category-second-item"><a href="....">Botines</a></li>
+                          <li class="category-second-item"><a href="....">Zapatillas</a></li>
+                          <li class="category-second-item"><a href="....">Ver todos</a></li>
+                        </ul>
+          
+                        <div class="img-product-menu"><img src="/images/category-zap-logo.jpg"></div>
+                      </div>
+                    </li>
+                    <li class="all-category-list-item"><a href="/products/" class="all-category-list-link">Indumentaria<i
+                          class="fas fa-angle-right"></i></a>
+                      <div class="category-second-list">
+                        <ul class="category-second-list-ul">
+                          <li class="category-second-item"><a href="....">Remeras</a></li>
+                          <li class="category-second-item"><a href="....">Camisetas de Futbol</a></li>
+                          <li class="category-second-item"><a href="....">Short</a></li>
+                          <li class="category-second-item"><a href="....">Calzado</a></li>
+                        </ul>
+          
+                        <div class="img-product-menu"><img src="/images/category-indu-logo.jpg"></div>
+                      </div>
+                    </li>
+                  </ul>
+                </label>
+          
+              </nav>
+            </div>
+             <!-- slide -->
+            <%- include('../partials/carousel') %> 
+            </header>
+
+                <!-- El codigo de abajo era el original 
+                <div class="container" style="margin-top: 40px;">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h2>Hi <%= user.name_user %>
+                            </h2>
+                            <img src="/images/<%=user.image%> ">
+                            <br>
+                            <br>
+                            <div class="alert alert-success">
+                                
+                                    <%= user.email %>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+             -->
+            <%- include('../partials/footer'); %>
+    </body>
+
+</html>

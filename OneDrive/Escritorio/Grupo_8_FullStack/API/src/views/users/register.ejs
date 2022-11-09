@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+</head>
+
+<body>
+    <%- include('../partials/header') %>
+    </header>
+    
+    <div class="main-register-container1">
+        <div class="register-container1"> 
+           
+            <h2>Crear Cuenta</h2>
+            <form action="/users/register" method="POST" enctype="multipart/form-data" >
+               <div class="data-account-container1">
+               
+                    <div class="personal-information-container1">
+                        <h2>Datos Personales</h2>
+                        <div><label for="name_user">Nombre</label></div>
+                        <div><input type="text" name="name_user" id="name_user" placeholder="Ej:Pepito" autofocus 
+                            class="form-control <%= locals.errors && errors.name_user ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.name_user : null %>"></div>
+                        <% if (locals.errors && errors.name_user) { %>
+                            <div class="text-danger" style="color: red">
+                                <%= errors.name_user.msg %> 
+                            </div>
+                        <% } %>
+
+                        <div><label for="last_name">Apellido</label></div>
+                        <div><input type="text" name="last_name" id="last_name" placeholder="Ej:House" autofocus 
+                            class="form-control <%= locals.errors && errors.last_name? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.last_name : null %>"></div>
+                            <% if (locals.errors && errors.last_name) { %>
+                                <div class="text-danger" style="color: red">
+                                    <%= errors.last_name.msg %> 
+                                </div>
+                            <% } %>
+
+                        <div><label for="date_birth">Fecha de Nacimiento</label></div>
+                        <div><input type="date" name="date_birth" id="date_birth" value="2022-02-11" min="1920-08-02" max="2022-08-12"
+                            class="form-control <%= locals.errors && errors.date_birth ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.date_birth : null %>"></div>
+                            <% if (locals.errors && errors.date_birth) { %>
+                                <div class="text-danger" style="color: red">
+                                    <%= errors.date_birth.msg %> 
+                                </div>
+                            <% } %>
+
+                        <div><label for="gender">Genero</label></div>
+                        <div>
+                            <select name="gender" id="gender"
+                            class="form-control <%= locals.errors && errors.gender ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.gender : null %>">
+                                <option value="">Seleccionar</option>
+                                <option value="woman">Mujer</option>
+                                <option value="man">Hombre</option>
+                                <option value="binary">Binario</option>
+                                <option value="notimport">No importa</option>
+                            </select>
+                        </div>
+                        <% if (locals.errors && errors.gender) { %>
+                                <div class="text-danger" style="color: red">
+                                    <%= errors.gender.msg %> 
+                                </div>
+                            <% } %>
+
+                        <div><label for="phone">Telefono</label></div>
+                        <div><input type="number" name="phone" id="phone" placeholder="1122334455"
+                            class="form-control <%= locals.errors && errors.phone ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.phone : null %>"></div>
+                            <% if (locals.errors && errors.phone) { %>
+                            <div class="text-danger" style="color: red">
+                                <%= errors.phone.msg %> 
+                            </div>
+                        <% } %>
+                        </div>
+                        
+
+                    <div class="account-container1">
+                        <h2>Sobre tu Cuenta</h2>
+
+                        <div><label for="email">Email</label></div>
+                        <div><input type="email" name="email" id="email" placeholder="iampepito@gmail.com"
+                            class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.email : null %>"></div>
+                            <% if (locals.errors && errors.email) { %>
+                                <div class="text-danger" style="color: red">
+                                    <%= errors.email.msg %> 
+                                </div>
+                            <% } %>
+
+                        <div><label for="confirm_email">Confirmar Email</label></div>
+                        <div><input type="email" name="confirm_email" id="confirm_email" placeholder="iampepito@gmail.com"></div>
+                        <% if (locals.errors && errors.confirm_email) { %>
+                            <div class="text-danger" style="color: red">
+                                <%= errors.confirm_email.msg %> 
+                            </div>
+                        <% } %>
+
+                        <div><label for="password">Contraseña (minimo 8  caracteres)</label></div>
+                        <div><input type="password" name="password" id="password" placeholder="12345678"></div>
+                        <% if (locals.errors && errors.password) { %>
+                            <div class="text-danger" style="color: red">
+                                <%= errors.password.msg %> 
+                            </div>
+                        <% } %>
+
+                        <div><label for="confirm-password">Confirmar Contraseña</label></div>
+                        <div><input type="password" name="confirm_password" id="confirm_password" placeholder="12345678"></div>
+                        <% if (locals.errors && errors.confirm_password) { %>
+                            <div class="text-danger" style="color: red">
+                                <%= errors.confirm_password.msg %> 
+                            </div>
+                        <% } %>
+
+                        <div><label for="interests">¿Cuales son tus intereses?</label></div>
+                        <div>
+                            <select name="interests" id="interests"
+                            class="form-control <%= locals.errors && errors.interests ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.interests : null %>">
+                                <option value="">Seleccionar</option>
+                                <option value="fashion">Moda</option>
+                                <option value="running">Running</option>
+                                <option value="soccer">Futbol</option>
+                                <option value="sports">Deportes</option>
+                            </select>
+                        </div>
+                        <% if (locals.errors && errors.interests) { %>
+                            <div class="text-danger" style="color: red">
+                                <%= errors.interests.msg %> 
+                            </div>
+                        <% } %>
+
+                        <div class="imagePerfil-div">
+                            <label for="image">Foto de perfil</label>
+                            <input type="file" name="image" id="image"
+                            class="form-control <%= locals.errors && errors.image ? 'is-invalid' : null %>"
+                            value="<%= locals.oldData ? oldData.image : null %>">
+                        </div>
+                        <% if (locals.errors && errors.image) { %>
+                            <div class="text-danger" style="color: red">
+                                <%= errors.image.msg %> 
+                            </div>
+                        <% } %>
+                    </div>
+                </div>
+                <div class="determination-container1">
+                    <div class="determination-condition">
+                        <input type="checkbox" name="determination" value="true">
+                        <label for="determination">Acepto las <a href="/">Politicas de Privacidad</a> y <a href="/">Terminos y Condiciones.</a></label>
+                    </div>
+                    <div class="determination-condition">
+                        <input type="checkbox" name="newsletter" value="true">
+                        <label for="newsletter">Quiero recibir emails de promociones y noticias.</label>
+                    </div>
+                </div>
+                <div class="create-account1">
+                    <input type="submit" value="Registrarse">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="JS/script.js"></script>
+    <script src="JS/shopping-cart.js"></script>
+    <%- include('../partials/footer') %>
+</body>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('../partials/head') %>
+<link rel="stylesheet" href="/css/estiloslogin.css">
+    </head>
+
+    <body>
+        <%- include('../partials/header') %>
+            </header>
+            <main class='passw-recupero'>
+                <div class="pass-cont">
+                    <h2 class="title-pass">Recuperar contraseña</h2>
+                    <form action="/login" method="POST" class="form-pass">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Ingresa tu E-mail" required>
+                        <button class="button-pass" type="submit">Enviar</button>
+                    </form>
+
+                </div>
+
+            </main>
+            <%- include('../partials/footer') %>
+    </body>
+
+</html>
