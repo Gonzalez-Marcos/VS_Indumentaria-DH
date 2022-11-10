@@ -24,6 +24,20 @@ const controller = {
         });
         
 	},
+    search: async (req,res) => {
+        let productSearch = '%' + req.body.productSearch + '%';
+        const products = await Products.findAll({
+            where: {
+                name: {[Op.like]: productSearch}
+            },
+            include: [
+                {association: 'images'},
+                {association: 'colours'},
+                {association: 'sizes'}
+            ]
+        });
+        res.render('products/search', {products});
+    },
 	productDetail: async (req, res) => {
         const productId = req.params.id;
         const promProduct =  await Products.findByPk(productId, { include: ['category', 'images', 'colours', 'sizes'] });
@@ -64,7 +78,7 @@ const controller = {
             ProductSize.bulkCreate(productSizes);
 
             Images.create({
-                name: req.file.filename,
+                name: req.file?.filename,
                 ProductId: productCreated.id
             });
 

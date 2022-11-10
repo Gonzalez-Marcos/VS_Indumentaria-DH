@@ -12,14 +12,16 @@
     <strong class="logo"><a class="title_vs" href="/"><i>VS Indumentaria</i></a></strong>
 
     <!--search -->
-    <label class="open-search" for="open-search">
-      <i class="fas fa-search"></i>
-      <input class="input-open-search" id="open-search" type="checkbox" name="menu" />
-      <div class="search">
-        <button class="button-search"><i class="fas fa-search"></i></button>
-        <input type="text" placeholder="Encontrá lo que buscás" class="input-search" />
-      </div>
-    </label>
+    <form action="/products/search" method="POST">
+      <label class="open-search" for="open-search">
+        <i class="fas fa-search"></i>
+        <input class="input-open-search" id="open-search" type="checkbox" name="menu" />
+        <div class="search">
+          <button type="submit" class="button-search"><i class="fas fa-search"></i></button>
+          <input type="text" name="productSearch" id="productSearch" placeholder="Encontrá lo que buscás" class="input-search" />
+        </div>
+      </label>
+    </form>
     <!-- // search -->
     <nav class="nav-content">
       <!-- nav -->
