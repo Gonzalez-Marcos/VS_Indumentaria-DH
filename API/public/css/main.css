@@ -485,6 +485,7 @@ main {
     position: relative;
     height: 62%;
     background-color: #eee;
+    padding: 120px;
 }
 
 .product-image img {
