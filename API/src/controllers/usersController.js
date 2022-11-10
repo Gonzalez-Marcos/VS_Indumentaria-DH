@@ -103,7 +103,8 @@ const controller = {
 
             req.session.userLogged = {
                 id: userInDb.id,
-                email: userInDb.email
+                email: userInDb.email,
+                image: userInDb.image
             };
 
             return res.redirect('/');

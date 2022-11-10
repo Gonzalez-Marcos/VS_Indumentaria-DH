@@ -11,7 +11,7 @@ const productsCreateMiddleware = require('../middleWares/productsCreateMiddlewar
 
 
 
-router.get('/productCart', productsController.productCart);
+//router.get('/productCart', productsController.productCart);
 
 
 router.get('/', productsController.listProducts);

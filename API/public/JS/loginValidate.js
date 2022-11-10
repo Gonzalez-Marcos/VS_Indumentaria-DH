@@ -64,12 +64,6 @@ const expresiones = {
                 document.getElementById('formulario_mensajeExito').classList.remove('formulario_mensajeExitoActivo');
             }, 5000);
             
-            
-            document.querySelectorAll('.formulario_grupoCorrecto').forEach((icono) => {
-                icono.classList.remove('formulario_grupoCorrecto');
-                
-            });
-            
         }
         
         

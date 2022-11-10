@@ -181,12 +181,6 @@ formulario.addEventListener('submit', (e) =>{
         
         
         
-    } else {
-        document.getElementById('formulario_mensaje').classList.add('formulario_mensajeActivo')
-        setTimeout(() => {
-            
-            document.getElementById('formulario_mensaje').classList.remove('formulario_mensajeActivo');
-        }, 6000);
     }
     
     formulario.submit();

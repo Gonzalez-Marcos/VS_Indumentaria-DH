@@ -28,9 +28,14 @@
           <label class="open-menu-login-account" for="open-menu-login-account">
 
             <input class="input-menu" id="open-menu-login-account" type="checkbox" name="menu" />
+            <%if(!locals.isLogged){%>
 
-            <i class="fas fa-user-circle"></i> <span class="item-arrow"></span> 
-            <!-- modificar esto    <ul class="logged">
+            <i class="fas fa-user-circle"></i> <span class="item-arrow"></span>
+            <%}else{%>
+            <img src="/images/users/<%= locals.userLogged.image%>" alt="" style="width: 40px;border-radius: 20px;">
+            <%}%>
+      
+           <!-- <ul class="logged">
               <li class="logged-li"><a>
                   <h4>Hi <=locals.userLogged.email %>
                   </h4>
