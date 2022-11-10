@@ -18,7 +18,7 @@ router.get('/', productsController.listProducts);
 
 //para mostrar la vista del create
 router.get('/create', productsController.create);
-router.post('/serach', productsController.search);
+router.post('/search', productsController.search);
 
 //para cargar los datos del nuevo producto
 router.post('/create', productUploadFile.single('image'), productsCreateMiddleware, productsController.store);

@@ -420,13 +420,21 @@ main {
     font-size: 1.3rem;
     padding: 50px;
 }
-
+.rute-section {
+    padding-left: 20px;
+    font-size: 20px;
+}
+.title-section {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 10px;
+}
 .products {
     /* border: 3px solid green; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 2fr 2fr;
-    gap: 110px 10px;
+    gap: 1px 10px;
 }
 
 .product {

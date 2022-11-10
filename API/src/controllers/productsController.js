@@ -36,7 +36,7 @@ const controller = {
                 {association: 'sizes'}
             ]
         });
-        res.render('products/search', {products});
+        res.render('products/search', {productSearch: req.body.productSearch, products});
     },
 	productDetail: async (req, res) => {
         const productId = req.params.id;
