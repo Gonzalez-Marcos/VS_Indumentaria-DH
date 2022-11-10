@@ -39,11 +39,17 @@
                 <ul class="login-list">
                   <% if (locals.isLogged) { %>
 
-                    <li class="login-list-item"><a href="/users/logout">logout</a></li>
+                    <li class="login-list-item"><a href="/products/create">Crear producto</a></li>
                     <li class="login-list-item"><a href="http://localhost:3000/">dashboard</a></li>
+                    <li class="login-list-item"><a href="/users/logout">Cerrar sesión</a></li>
+
+
+                   
+                    
+
                     <% } else { %>
-                      <li class="login-list-item"><a href="/users/login">My account</a></li>
-                      <li class="login-list-item"><a href="/users/register">Create account</a></li>
+                      <li class="login-list-item"><a href="/users/login">Mi cuenta </a></li>
+                      <li class="login-list-item"><a href="/users/register">Registrarse</a></li>
                       <% } %>
               <!-- </li>
             </ul> -->
@@ -68,12 +74,14 @@
             <button id="closeButton">
               <i class="fas fa-times-circle"></i>
             </button>
-            <h3>Cart</h3>
+            <h3>Mi carrito</h3>
           </div>
           <ul id="buyItems">
-            <h4 class="empty">Carrito de compras vacio</h4>
+
+            <h4 class="empty">El carrito está vacio</h4>
           </ul>
-          <button class="btn checkout hidden"></button>
+          <button class="btn checkout hidden"><a class="href-cart" href="/products/">Vaciar carrito</a></button>
+
         </div>
       </div>
       </ul>

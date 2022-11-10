@@ -14,54 +14,93 @@
                     <div class="titulo-crear-producto">
                         <h2>Crear Producto</h2>
                         <div class="icons-productos">
-                            <div>
-                                <i class="fas fa-socks"> </i>
-                                <i class="fas fa-socks"> </i>
-                                <i class="fas fa-socks"> </i>
-                            </div>
+
                         </div>
                     </div>
                     <div class="producto-container">
-                        <form action="/products/create" method="POST" enctype="multipart/form-data">
+                        <ul class="errores"></ul>
+                        <form class="product-create" id="product-create" action="/products/create" method="POST" enctype="multipart/form-data">
                             <div class="nombre"><label for="name">Nombre</label><br>
-                                <input type="text" name="name" id="name">
+                                <input type="text" name="name" id="name" >
                             </div>
+                            <% if (locals.errors && errors.name) { %>
+                                <div class="form-create text-danger" style="color: red">
+                                    <%= errors.name.msg %> 
+                                </div>
+                            <% } %>
+
                             <div class="imagenes-producto"><label for="image">Imagenes</label><br>
-                                <input type="file" name="image" id="image">
+                                <input type="file" name="image" id="image" >
                             </div>
+                            <% if (locals.errors && errors.image) { %>
+                                <div class="form-create text-danger" style="color: red">
+                                    <%= errors.image.msg %> 
+                                </div>
+                            <% } %>
+
                             <div class="precio"><label for="price">Precio</label><br>
                                 <input type="number" name="price" id="price">
                             </div>
+
+                            <% if (locals.errors && errors.price) { %>
+                                <div class="form-create text-danger" style="color: red">
+                                    <%= errors.price.msg %> 
+                                </div>
+                            <% } %>
+
                             <div class="categoria">
                                 <label for="category">Categoria </label><br>
                                 <select class="select-categoria" name="category" id="category">
                                     <% categories.forEach(category => { %> 
-                                        <option value="<%= category.id %> "> <%= category.name %> </option>    
+                                        <option class="category" value="<%= category.id %> "> <%= category.name %> </option>    
                                     <% }); %>
                                 </select>
                             </div>
+                            <% if (locals.errors && errors.category) { %>
+                                <div class="form-create text-danger" style="color: red">
+                                    <%= errors.category.msg %> 
+                                </div>
+                            <% } %>
+
                             <div class="title-color"><label for="colour">Colores Disponibles</label></div>
                             <div class="color-container">
                                 <% colours.forEach(colour => { %> 
-                                <span><input type="checkbox" name="colour" id="colour" value="<%= colour.id %>"> <%= colour.name %>  </span>
+                                <span id="colour"><input type="checkbox" name="colour[]" id="colour" value="<%= colour.id %>"> <%= colour.name %>  </span>
                                 <% }); %>
-                            </div><br>
+                            </div>
+                            <% if (locals.errors && errors.colour) { %>
+                                <div class="form-create text-danger" style="color: red">
+                                    <%= errors.colour.msg %> 
+                                </div>
+                            <% } %><br>
+
                             <div class="title-talles"><label for="size">Talle</label></div><br>
                             <div class="talles-container">
                                 <% sizes.forEach(size => { %> 
-                                    <span><input type="checkbox" name="size" id="size" value="<%= size.id %> "> <%= size.name %>  </span>    
+                                    <span id="sizes"><input type="checkbox" name="size[]" id="size" value="<%= size.id %> "> <%= size.name %>  </span>    
                                 <% }); %>
 
                             </div>
+                            <% if (locals.errors && errors.size) { %>
+                                <div class="form-create text-danger" style="color: red">
+                                    <%= errors.size.msg %> 
+                                </div>
+                            <% } %>
+
                             <div class="descripcion-producto">
                                 <div class="title-description">
                                     <label for="description">Descripcion del Producto</label>
                                 </div>
-                                <div>
+                                <div id="description">
                                     <textarea name="description" id="description" cols="30" rows="10"
                                         placeholder="¡Escribe aqui la descripcion!"></textarea>
                                 </div>
                             </div>
+                            <% if (locals.errors && errors.description) { %>
+                                <div class="form-create text-danger" style="color: red">
+                                    <%= errors.description.msg %> 
+                                </div>
+                            <% } %>
                             <div class="button-agregar-producto">
                                 <input type="submit" value="AGREGAR PRODUCTO">
                             </div>
@@ -70,8 +109,9 @@
                 </div>
             </main>
 
-            <script src="JS/script.js"></script>
-            <script src="JS/shopping-cart.js"></script>
+            <script src="/JS/productCreateValidation.js"></script>
+            <script src="/JS/script.js"></script>
+            <script src="/JS/shopping-cart.js"></script>
             <%- include('../partials/footer') %>
     </body>
 

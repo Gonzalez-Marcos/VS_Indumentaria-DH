@@ -24,20 +24,20 @@
                         <label for="category">Categoria </label><br>
                         <select class="select-categoria" name="category" id="category">
                             <% categories.forEach(category => { %> 
-                                <option value="<%= category.id %> "> <%= category.name %> </option>    
+                                <option value="<%= category.id %> " disabled selected> <%= category.name %> </option>    
                             <% }); %>
                         </select>
                     </div>
                     <div class="title-color"><label for="color">Colores Disponibles</label></div>
                     <div class="color-container">
                         <% colours.forEach(colour => { %> 
-                            <span><input type="checkbox" name="colour" id="colour" value="<%= colour.id %>"> <%= colour.name %>  </span>
+                            <span><input type="checkbox" name="colour[]" id="colour" value="<%= colour.id %>"> <%= colour.name %>  </span>
                         <% }); %>
                     </div><br>
                     <div class="title-talles"><label for="waist">Talle</label></div><br>
                     <div class="talles-container">
                         <% sizes.forEach(size => { %> 
-                            <span><input type="checkbox" name="size" id="size" value="<%= size.id %> "> <%= size.name %>  </span>    
+                            <span><input type="checkbox" name="size[]" id="size" value="<%= size.id %> "> <%= size.name %>  </span>    
                         <% }); %>
                     </div>
                     <div class="image-div">
@@ -100,8 +100,8 @@
             </div>
         </div>
     </main> -->
-    <script src="JS/script.js"></script>
-    <script src="JS/shopping-cart.js"></script>
+    <script src="/JS/script.js"></script>
+    <script src="/JS/shopping-cart.js"></script>
     <%- include('../partials/footer') %> 
 </body>
 </html>

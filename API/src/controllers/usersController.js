@@ -1,8 +1,12 @@
-// const fs = require('fs');
-// const path = require('path');
+const fs = require('fs');
+const path = require('path');
 const bcryptsjs = require('bcryptjs');
 const {validationResult} = require('express-validator');
 const User = require('../models/User');
+
+const db = require('../database/models');
+
+const sequelize = db.sequelize;
 
 
 const controller = {
@@ -11,37 +15,41 @@ const controller = {
         return res.render('users/register');
     },
 
-    processRegister: (req, res) => {
-        const resultValidation = validationResult(req);
+    processRegister:async (req, res) => {
+        try {
+            const errors = validationResult(req);
 
-        if(resultValidation.errors.length > 0) {
-            return res.render('users/register', {
-                errors: resultValidation.mapped(),
-                oldData: req.body
-            });
+            if (!errors.isEmpty()) {
+                const oldData = req.body;
+                // fs.unlinkSync(path.join(__dirname, '../../../public/images/users/' + req.file?.filename))
+
+                return res.render("users/register", { errors: errors.mapped(), oldData })
+            }
+
+            const userInDb = await db.User.findOne({
+                where: { email: req.body.email }
+            })
+
+            if (userInDb) {
+                const oldData = req.body;
+                // fs.unlinkSync(path.join(__dirname, '../../public/images/users/' + req.file?.filename))
+                return res.render("users/register", { errors: { email: { msg: 'Usuario ya registrado' } }, oldData })
+            }
+
+            const newUser = await db.User.create({
+                name: req.body.name,
+                last_name: req.body.last_name,
+                email: req.body.email,
+                password: bcryptsjs.hashSync(req.body.password, 10),
+                image: req.file.filename
+            })
+
+            return res.redirect('login')
+
+        } catch (error) {
+            console.log(`Fallo en proceso de registro: ${error}`);
+            return res.send(error)
         }
-        const userInDB = User.findByField('email', req.body.email);
-        if(userInDB){
-            return res.render('users/register', {
-                errors: {
-                    email: {
-                        msg: 'Este email ya se encuentra registrado'
-                    }
-                    },
-                oldData: req.body
-            });
-        }
-
-        const userToCreate = {
-            ...req.body,
-            password: bcryptsjs.hashSync(req.body.password, 10),
-            confirm_password: bcryptsjs.hashSync(req.body.confirm_password, 10), 
-            image: req.file.filename
-        }
-
-        const userCreate = User.create(userToCreate);
-
-        return res.redirect('./login');
     },
 
     login: (req, res) => {
@@ -53,53 +61,80 @@ const controller = {
         return res.render('users/contacto');
     },
 
-    loginProcess: (req, res) => {
+    loginProcess: async (req, res) => {
+        try {
+            const errors = validationResult(req);
 
-        const userToLogin = User.findByField('email', req.body.email);
-        if(userToLogin) {
+            if (!errors.isEmpty()) {
 
-            const isCorrectPassword = bcryptsjs.compareSync(req.body.password, userToLogin.password);
+                return res.render("users/login", { errors: errors.mapped() });
+            }
 
-           if(isCorrectPassword){
+            const bodyInForm = {
+                email: req.body.email,
+                password: req.body.password
+            }
 
-            delete userToLogin.password;
-            req.session.userLogged = userToLogin;
 
-            if(req.body.remember_user){
-                res.cookie('userEmail', req.body.email, {maxAge: (1000 * 60) * 2});
+            const userInDb = await db.User.findOne({
+                where: {
+                    email: bodyInForm.email
+                }
+            })
+
+            if (!userInDb) {
+                const oldData = req.body;
+                return res.render("users/login", { errors: { email: { msg: "(*) El usuario ingresado no está registrado" } }, oldData });
+            }
+
+            const testPassword =  bcryptsjs.compareSync(bodyInForm.password, userInDb.password);
+
+            if (!testPassword) {
+
+                return res.render("users/login", { errors: { password: { msg: "(*) Contraseña incorrecta" } } });
+            }
+
+            if (req.body.remember_user) {
+                res.cookie('rememberNTF', {
+                    id: userInDb.id,
+                    email: userInDb.email
+                });
+            }
+
+            req.session.userLogged = {
+                id: userInDb.id,
+                email: userInDb.email
             };
 
-            return res.redirect('./userProfile')
-           }
-           return res.render('users/login', {
-            errors: {
-                email: {
-                    msg: 'Las credenciales son inválidas'
-                }
-            }
-        })
-        }
+            return res.redirect('/');
 
-        return res.render('users/login', {
-            errors: {
-                email: {
-                    msg: 'Email no registrado'
-                }
-            }
-        })
+        } catch (error) {
+            console.log(`Falle en proceso de login: ${error}`);
+            return res.send("There was an unexpected error")
+        }
     },
     
 //ahi debe conectarse con la base de datos
-    profile: (req, res) => {
-        return res.render('users/userProfile', {
-            user: req.session.userLogged,
-        });
+    profile: async (req, res) => {
+        try {
+            let user = await db.User.findOne({
+                where:{
+                    email: req.session.userLogged.email
+                }
+            });
+            // return res.send(user);
+            res.render('users/userProfile',{user});
+            
+        } catch (error) {
+            console.log("Falle en userController.userInfo: " + error); 
+            return res.json(error);
+        }
     },
 
     logout: (req, res) => {
         res.clearCookie('userEmail');
         req.session.destroy();
-        return res.redirect('/');
+        return res.redirect('login');
     }
 }
 
