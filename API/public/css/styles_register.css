@@ -8,6 +8,9 @@
 .register-container1 {
     padding: 70px 5px 50px;
     background-color: black;
+    margin: 20px 0;
+    border-radius: 50px;
+    border: none;
 }
 
 .data-account-container1 {
@@ -73,6 +76,10 @@ div.personal-information-container1 label,
 .determination-container1 label,
 .determination-container1 label a {
     color: white;
+    font-weight: 700;
+    /* display: block; */
+    cursor: pointer;
+    
 }
 
 div.personal-information-container1 input,
@@ -80,17 +87,11 @@ div.personal-information-container1 select,
 .account-container1 input,
 .account-container1 select {
     width: 100%;
+    border: 3px solid transparent;
     border-radius: 5px;
-    height: 30px;
-    padding: 6px 12px;
-}
-
-.create-account1 input{
-    border-radius: 25px;
     height: 35px;
-    background-color: grey;
-    width: 100%;
-    color: white;
+    padding: 6px 12px;
+    transition: .3s ease all;
 }
 
 .create-account1 {
@@ -102,7 +103,7 @@ div.personal-information-container1 select,
 .account-container1 .imagePerfil-div input{
     width: 100%;
     border-radius: 5px;
-    height: 30px;
+    height: 40px;
     padding: 6px 12px;
     color: black;
     background: white;
@@ -116,8 +117,9 @@ div.personal-information-container1 select,
         padding-left: 50px;
     }
     .determination-container1 {
-        max-width: 380px;
-        margin: auto;
+        /* max-width: 380px;
+        margin: auto; */
+        text-align: center;
     }
 }
 
@@ -131,6 +133,7 @@ div.personal-information-container1 select,
     }
     div.data-account-container1 div {
         padding: 10px 5px;
+        position: relative;
     }
 }
 

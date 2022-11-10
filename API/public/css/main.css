@@ -13,6 +13,10 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 /* container of my account and shopping cart */
+.href-cart{
+	color: white;
+}
+
 .navbar-top > div {
     margin-right: 10px;
     display: flex;

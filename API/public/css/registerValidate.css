@@ -1,0 +1,100 @@
+.formulario_btn{
+    border: none;
+    border-radius: 25px;
+    height: 35px;
+    background-color: grey;
+    width: 100%;
+    color: white;
+    transition: .1s ease all;
+}
+
+.formulario_btn:hover{
+    box-shadow: 3px 0px 30px rgba(226, 224, 224, 0.5);
+}
+
+/*Estilos para validacion*/
+.formulario_grupo-input{
+    position: relative;
+}
+
+
+.formulario_input:focus {
+    border: 3px solid #0075ff;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4
+    );
+}
+
+.formulario_inputError{
+    font-size: 16px;
+    margin-bottom: 0;
+    display: none;
+    color: #bb2929;
+}
+
+.formulario_inputError-activo{
+    display: block;
+}
+
+i.formulario_validacionEstado {
+    position: absolute;
+    bottom: 20px;
+    right: 50px;
+    z-index: 100;
+    font-size: 16px;
+    /* color: black; */
+    opacity: 0;
+}
+
+.formulario_checkbox{
+    margin-right: 20px;
+    text-align: center;
+}
+
+.formulario_mensaje,
+.formulario_mensajeExito {
+    text-align: center;
+}
+
+.formulario_mensaje {
+    height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.formulario_mensajeActivo{
+    display: block;
+}
+
+.formulario_mensajeExito {
+    font-size: 16px;
+	color: #119200;
+	display: none;
+}
+
+.formulario_mensajeExitoActivo{
+    display: block;
+}
+
+/*------------ Activando validaciones----------------*/
+.formulario_grupoCorrecto .formulario_validacionEstado {
+    color: #1ed12d;
+	opacity: 1;
+}
+
+.formulario_grupoIncorrecto .label_incorrecto {
+    color: #bb2929;
+}
+
+.formulario_grupoIncorrecto .formulario_validacionEstado {
+    color: #bb2929;
+	opacity: 1;
+}
+
+.formulario_grupoIncorrecto .formulario_input {
+    border: 4px solid #bb2929;
+}
+

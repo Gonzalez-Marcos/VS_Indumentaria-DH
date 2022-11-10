@@ -6,11 +6,25 @@
     --fuente:"Quicksand", sans-serif;
 
 }
+.formulario{
+    padding: 50px;
+    background-color:black;
+    margin: 0;
+    border-radius: 50px;
+    border: none;
+    
+}
+
+
 .contenedor-login{
     padding: 30px;
     margin: 0 auto;
     max-width:  1200px;
     width: 95%;
+}
+.contenedor-formulario .img-login-messi {
+    background-image: none;
+    display: none;
 }
 /*ESTYLOS DE RECUPERO DE PSW*/
 .pass-cont {
@@ -51,6 +65,22 @@
     background: white;
     color: black;
 }
+/*------------Validaciones--------------*/
+.is-valid {
+    color: #198754;
+  }
+  
+  .is-invalid {
+    color: red
+;
+  }
+  
+  .alert-warning{
+    color:red;
+    /* background-color: #F8D7DA; */
+    text-align: center;
+    border-radius: 10px;
+  }
 
 @media(min-width:768px){
     .contenedor-formulario {
@@ -65,11 +95,13 @@
 }
 
 .contenedor-formulario .img-login-messi {
+    display: block;
     background-image: url(/images/messi_login.jpg);
     background-position: center center;
     background-size: cover;
     flex: 0 0 calc(45%);
     position: relative;
+    /* width: 100%; */
 }
 .contenedor-formulario .img-login-messi::before {
     content: '';
@@ -84,6 +116,9 @@
     padding: 50px;
     background-color:black;
     margin: 0;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    border: none;
     
 }
 .texto-formulario h2, p, .input label, .contraseña-olvidada a, .recordar-contraseña a{
@@ -111,10 +146,10 @@
     font-size: 18px;
     border-top: 1px grey;
 }
-.input{
+.input-0{
     margin: 10px 0;
 }
-.input .input-0{
+.formulario_input{
     width: 100%;
     padding: 15px;
     border-radius:5px;

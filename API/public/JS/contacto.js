@@ -23,11 +23,11 @@ function validatePhone(){
     var phone = document.getElementById('contact-phone').value;
 
     if(phone.length == 0){
-        phoneError.innerHTML = 'Requiere ingresar su teléfono';
+        phoneError.innerHTML = 'Ingrese un teléfono';
         return false;
     }
     if(phone.length !== 10){
-        phoneError.innerHTML = 'El número de teléfono debe tener minimos 10 digitos';
+        phoneError.innerHTML = 'Debe tener minimos 10 digitos';
         return false;
     }
     if(!phone.match(/^[0-9]{10}$/)){
@@ -55,7 +55,7 @@ function validateEmail(){
 
 function validateMessage(){
     var message = document.getElementById('contact-message').value;
-    var required = 30;
+    var required = 20;
     var left = required - message.length;
 
     if(left > 0){

@@ -3,7 +3,7 @@ const usersController = require('../controllers/usersController');
 
 //Middlewares
 const uploadFile = require('../middlewares/multerMiddleware');
-const validationsMiddleware = require('../middlewares/validationsMiddleware');
+const validationsRegisterMiddleware = require('../middlewares/validationsRegisterMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 const logMiddleWare = require('../middlewares/logDBMiddleWare'); //Ruta de middleWares para DB
@@ -18,7 +18,7 @@ router.get('/login', guestMiddleware, usersController.login);
 router.get('/contacto', usersController.contacto);
 
 //Procesar login
-router.post('/login', validationsMiddleware, usersController.loginProcess);
+router.post('/login', usersController.loginProcess);
 
 //Formulario de Perfil
 //ahi debe conectarse con la base de datos
@@ -31,7 +31,7 @@ router.get('/logout/', usersController.logout);
 router.get('/register', guestMiddleware, usersController.register);
 
 //Procesar registro
-router.post('/register', uploadFile.single('image'), validationsMiddleware, usersController.processRegister);
+router.post('/register', uploadFile.single('image'), validationsRegisterMiddleware, usersController.processRegister);
 
 // router.get('/pass', passwController.passw);
 

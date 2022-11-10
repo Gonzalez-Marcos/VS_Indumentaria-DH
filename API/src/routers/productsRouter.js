@@ -5,10 +5,12 @@ const router = express.Router();
 
 //Aca importamos todos los metodos de products
 const productsController = require('../controllers/productsController');
-const productUploadFile = require('../middlewares/multerProductsMiddleware');
+
+const productUploadFile = require('../middleWares/multerProductsMiddleware');
+const productsCreateMiddleware = require('../middleWares/productsCreateMiddleware');
 
 
-// router.get('/productCart', productsController.productCart);
+router.get('/productCart', productsController.productCart);
 
 router.get('/', productsController.listProducts);
 
@@ -16,7 +18,7 @@ router.get('/', productsController.listProducts);
 router.get('/create', productsController.create);
 
 //para cargar los datos del nuevo producto
-router.post('/create', productUploadFile.single('image'), productsController.store);
+router.post('/create', productUploadFile.single('image'), productsCreateMiddleware, productsController.store);
 
 //ruta para ver el detalle de un producto segun id
 router.get('/:id/', productsController.productDetail);

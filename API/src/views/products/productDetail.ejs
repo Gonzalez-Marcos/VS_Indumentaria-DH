@@ -1,91 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head') %> 
-</head>
-<body>
-    <%- include('../partials/header') %> 
-    </header>
+<%- include('../partials/head') %>
+    </head>
 
-     <!-- card productDetail -->
-    <section class="cont-productDetail">
-        <div class="container-proDet">
-            <% if (productPk) { %>
-            <div class="imgBx">
-                <img src="/images/products/<%= productPk.images[0].name%>"> 
-            </div>
-            <div class="details">
-                <div class="content">
-                    <h2><%= productPk.name %> <br>
-                        <span>Categories/<%= productPk.category.name %> </span>
-                    </h2>
-                    <h4 class="productName">Colores disponibles: </h4>
-                    <% productPk.colours.forEach(colour => {%>
-                        <h4 class="productName"><%= colour.name %></h4>
-                    <%}); %> 
-                    <h4 class="productName">Talles disponibles: </h4>
-                    <% productPk.sizes.forEach(size => {%>
-                        <h4 class="productName"><%= size.name %></h4>
-                    <%}); %> 
-                    <p><%= productPk.description %> </p>
-                    <p class="product-colors">Available Colors:
+    <body>
+        <%- include('../partials/header') %>
+            </header>
+
+            <!-- card productDetail -->
+            <section class="cont-productDetail">
+                <div class="container-proDet">
+                    <% if (productPk) { %>
+                        <div class="imgBx">
+                            <img src="/images/products/<%= productPk.images[0].name%>">
+                        </div>
+                        <div class="details">
+                            <div class="content-detail">
+                                <h2>
+                                    <%= productPk.name %> <br>
+                                        <span>Categoria/<%= productPk.category.name %> </span>
+                                </h2>
+                                <h4 class="productName">Colores disponibles: </h4>
+                                <% productPk.colours.forEach(colour=> {%>
+                                    <h4 class="productName">
+                                        <%= colour.name %>
+                                    </h4>
+                                    <%}); %>
+                                        <h4 class="productName">Talles disponibles: </h4>
+                                        <% productPk.sizes.forEach(size=> {%>
+                                            <h4 class="productName">
+                                                <%= size.name %>
+                                            </h4>
+                                            <%}); %>
+                                                <p>
+                                                    <%= productPk.description %>
+                                                </p>
+                                                <!-- <p class="product-colors">Available Colors:
                         <span class="black active" data-color-primary="#000" data-color-sec="#212121" data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto.png?raw=true"></span>
                         <span class="red" data-color-primary="#7E021C" data-color-sec="#bd072d" data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto_red_black.png?raw=true"></span>
                         <span class="orange" data-color-primary="#CE5B39" data-color-sec="#F18557" data-pic="https://github.com/anuzbvbmaniac/Responsive-Product-Card---CSS-ONLY/blob/master/assets/img/jordan_proto_orange_black.png?raw=true"></span>
-                    </p>
-                    <h3>$ <%= productPk.price %> </h3>
-                    <button>Probador Virtual</button>
-                    <button>Buy Now</button>
-                    <button><a href="/products/edit/<%= productPk.id %>">EDITAR</a></button>
-                    <form action="/products/delete/<%= productPk.id %>?_method=DELETE" method="POST">
-                        <button type="submit">ELIMINAR</button>
-                    </form>
-                </div>
-            </div>
-            <% } %>
-        </div>
-    </section>
+                    </p> -->
+                                                <h3>$ <%= productPk.price %>
+                                                </h3>
 
-    <!-- card products -->
-    <h3>Ultimos productos navegados</h3>
+                                                <div class="button-profile">
 
-    <section class="main-section">
-        <div class="product-container">
-            <div class="products">
-                <% allProducts.forEach(product => { %> 
-                <% if (product.category.name == 'visit') {%> 
-                <div class="product">
-                   <!--esto esta relacionado con js-->
-                    <div class="product-under">
-                        <figure class="product-image">
-                            <% if (product) { %> 
-                                <img src="/images/products/<%= product.images[0].name%>">
-                            <% } %> 
-                            <div class="product-over">
-                                <button class="btn btn-small addToCart" data-product-id="3">
-                                    <i class="fas fa-cart-plus"></i>Add to cart
-                                </button>
-                                <a href="/products/<%= product.id %> " class="btn btn-small">More Info</a>
+                                                    <% if (!locals.isLogged) { %>
+                                                        <button class="agregarCart btn btn-small addToCart " data-product-id="3">
+                                                            <i class="fas fa-cart-plus"></i>Agregar al carrito
+                                                        </button>
+                                                        <!-- <button>Agregar al carrito</button> -->
+                                                        <% } else { %>
+
+                                                            <form class="form-button-detail"
+                                                                action="/products/delete/<%= productPk.id %>?_method=DELETE"
+                                                                method="POST">
+                                                                <button><a class="href-editar"
+                                                                        href="/products/edit/<%= productPk.id %>">EDITAR</a></button>
+                                                                <button type="submit">ELIMINAR</button>
+                                                                <% } %>
+
+                                                            </form>
+                                                </div>
                             </div>
-                        </figure>
-                        <div class="product-summary">
-                            <h4 class="productName"><%= product.name %> </h4>
-                            <p style="color: #000;">
-                                <%= product.description %> 
-                            </p>
-                            <h6 class="price">
-                                $<span class="priceValue"><%= product.price %> </span>
-                            </h6>
                         </div>
+                        <% } %>
+                </div>
+            </section>
+
+            <!-- card products -->
+            <h3>Ultimos productos navegados</h3>
+
+            <section class="main-section">
+                <div class="product-container">
+                    <div class="products">
+                        <% allProducts.forEach(product=> { %>
+                            <% if (product.category.name=='visit' ) {%>
+                                <div class="product">
+                                    <!--esto esta relacionado con js-->
+                                    <div class="product-under">
+                                        <figure class="product-image">
+                                            <% if (product) { %>
+                                                <img src="/images/products/<%= product.images[0].name%>">
+                                                <% } %>
+                                                    <div class="product-over">
+                                                        <button class="btn btn-small addToCart" data-product-id="3">
+                                                            <i class="fas fa-cart-plus"></i>Add to cart
+                                                        </button>
+                                                        <a href="/products/<%= product.id %> "
+                                                            class="btn btn-small">More Info</a>
+                                                    </div>
+                                        </figure>
+                                        <div class="product-summary">
+                                            <h4 class="productName">
+                                                <%= product.name %>
+                                            </h4>
+                                            <p style="color: #000;">
+                                                <%= product.description %>
+                                            </p>
+                                            <h6 class="price">
+                                                $<span class="priceValue">
+                                                    <%= product.price %>
+                                                </span>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <%} %>
+                                    <% }); %>
                     </div>
                 </div>
-                <%} %>
-                <% }); %>
-            </div>
-        </div>
-    </section>
-    <script src="JS/script.js"></script>
-    <script src="JS/shopping-cart.js"></script>
-    <%- include('../partials/footer') %> 
-</body>
+            </section>
+            <script src="/JS/script.js"></script>
+            <script src="/JS/shopping-cart.js"></script>
+            <%- include('../partials/footer') %>
+    </body>
+
 </html>
-    

@@ -1,5 +1,5 @@
 let productsInCart = JSON.parse(localStorage.getItem('shoppingCart'));
-if(!productsInCart){
+if(productsInCart){
 	productsInCart = [];
 }
 const parentElement = document.querySelector('#buyItems');
@@ -40,13 +40,13 @@ const updateShoppingCartHTML = function () {  // 3
 	}
 	else {
 		document.querySelector('.checkout').classList.add('hidden');
-		parentElement.innerHTML = '<h4 class="empty">Your shopping cart is empty</h4>';
+		parentElement.innerHTML = '<h4 class="empty">El carrito se encuentra vacio</h4>';
 		cartSumPrice.innerHTML = '';
 	}
 }
 
 function updateProductsInCart(product) { // 2
-	for (let i = 0; i < productsInCart.length; i++) {
+	for (let i = 0; i > productsInCart.length; i++) {
 		if (productsInCart[i].id == product.id) {
 			productsInCart[i].count += 1;
 			productsInCart[i].price = productsInCart[i].basePrice * productsInCart[i].count;
