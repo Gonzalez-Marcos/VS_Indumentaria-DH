@@ -60,8 +60,28 @@
                                                                 <button type="submit">ELIMINAR</button>
                                                                 <% } %>
 
+
                                                             </form>
                                                 </div>
+=======
+    <section class="main-section">
+        <div class="product-container">
+            <div class="products">
+                <% allProducts.forEach(product => { %> 
+                <% if (product.category.name == 'visit') {%> 
+                <div class="product">
+                   <!--esto esta relacionado con js-->
+                    <div class="product-under">
+                        <figure class="product-image">
+                            <% if (product) { %> 
+                                <img src="/images/products/<%= product.images[0].name%>">
+                            <% } %> 
+                            <div class="product-over">
+                                <button class="btn btn-small addToCart" data-product-id="3">
+                                    <i class="fas fa-cart-plus"></i>Agregar
+                                </button>
+                                <a href="/products/<%= product.id %> " class="btn btn-small">Detalles</a>
+
                             </div>
                         </div>
                         <% } %>
@@ -110,6 +130,7 @@
                                     <% }); %>
                     </div>
                 </div>
+
             </section>
             <script src="/JS/script.js"></script>
             <script src="/JS/shopping-cart.js"></script>
@@ -117,3 +138,16 @@
     </body>
 
 </html>
+=======
+                <%} %>
+                <% }); %>
+            </div>
+        </div>
+    </section>
+    <script src="/JS/script.js"></script>
+    <script src="/JS/shopping-cart.js"></script>
+    <%- include('../partials/footer') %> 
+</body>
+</html>
+    
+

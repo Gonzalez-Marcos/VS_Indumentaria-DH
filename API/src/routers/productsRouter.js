@@ -10,7 +10,9 @@ const productUploadFile = require('../middleWares/multerProductsMiddleware');
 const productsCreateMiddleware = require('../middleWares/productsCreateMiddleware');
 
 
+
 router.get('/productCart', productsController.productCart);
+
 
 router.get('/', productsController.listProducts);
 

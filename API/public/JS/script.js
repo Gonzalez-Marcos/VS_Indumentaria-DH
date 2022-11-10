@@ -8,8 +8,8 @@ const responsiveNavbar = (function () {
 		else {
 			navbar.className = "navbar";
 		}
-	});
-});
+	})
+})
 
 if (document.getElementById('hearderSlide')) {
 	$('#hearderSlide').multislider();

@@ -1027,13 +1027,18 @@ article div.main-article {
     margin-bottom: 4px;
 }
 
-/* tamaño para dispositivo movil */
-@media (max-width: 500px) {
-    .banner_publicidad {
+
+  /* tamaño para dispositivo movil, en este caso sera para que no aparesca en ese tamaño */
+@media (max-width: 600px) {
+    .banner_publicidad{
+
         display: none;
     }
 
     .container-sub {
+        display: none;
+    }
+    .chat-bar-collapsible{
         display: none;
     }
 }

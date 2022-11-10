@@ -203,7 +203,7 @@ input[type="search"]::-webkit-search-results-decoration {
     color: #dd3333;
     margin-top: 10px;
     text-align: left;
-    padding: 5px;
+    padding: 90px;
     font-size: 1rem;
 }
 .searchbar form {

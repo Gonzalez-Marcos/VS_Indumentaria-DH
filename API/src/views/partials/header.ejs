@@ -29,19 +29,24 @@
 
             <input class="input-menu" id="open-menu-login-account" type="checkbox" name="menu" />
 
-            <i class="fas fa-user-circle"></i> <span class="item-arrow"></span>
-
-            <!-- <ul class="logged">
+            <i class="fas fa-user-circle"></i> <span class="item-arrow"></span> 
+            <!-- modificar esto    <ul class="logged">
               <li class="logged-li"><a>
-                  <h4>Hi <locals.userLogged.name_user %>
+                  <h4>Hi <=locals.userLogged.email %>
                   </h4>
                 </a> -->
-
                 <!-- submenu -->
                 <ul class="login-list">
                   <% if (locals.isLogged) { %>
+
                     <li class="login-list-item"><a href="/products/create">Crear producto</a></li>
+                    <li class="login-list-item"><a href="http://localhost:3000/">dashboard</a></li>
                     <li class="login-list-item"><a href="/users/logout">Cerrar sesión</a></li>
+
+
+                   
+                    
+
                     <% } else { %>
                       <li class="login-list-item"><a href="/users/login">Mi cuenta </a></li>
                       <li class="login-list-item"><a href="/users/register">Registrarse</a></li>
@@ -72,9 +77,11 @@
             <h3>Mi carrito</h3>
           </div>
           <ul id="buyItems">
+
             <h4 class="empty">El carrito está vacio</h4>
           </ul>
           <button class="btn checkout hidden"><a class="href-cart" href="/products/">Vaciar carrito</a></button>
+
         </div>
       </div>
       </ul>
@@ -86,7 +93,7 @@
     <nav class="all-category-nav">
       <label class="open-menu-all" for="open-menu-all">
         <input class="input-menu-all" id="open-menu-all" type="checkbox" name="menu-open" />
-        <span class="all-navigator"><i class="fas fa-bars"></i> <span>Category</span> <i class="fas fa-angle-down"></i>
+        <span class="all-navigator"><i class="fas fa-bars"></i> <span>Categorias</span> <i class="fas fa-angle-down"></i>
           <i class="fas fa-angle-up"></i>
         </span>
 
@@ -96,7 +103,7 @@
                 class="fas fa-angle-right"></i></a>
           </li>
           <!--fin para productos-->
-          <li class="all-category-list-item"><a href="/products/productCart" class="all-category-list-link">Calzado<i
+          <li class="all-category-list-item"><a href="/products/" class="all-category-list-link">Calzado<i
                 class="fas fa-angle-right"></i></a>
             <div class="category-second-list">
               <ul class="category-second-list-ul">
@@ -108,7 +115,7 @@
               <div class="img-product-menu"><img src="/images/category-zap-logo.jpg"></div>
             </div>
           </li>
-          <li class="all-category-list-item"><a href="/products/productCart" class="all-category-list-link">Indumentaria<i
+          <li class="all-category-list-item"><a href="/products/" class="all-category-list-link">Indumentaria<i
                 class="fas fa-angle-right"></i></a>
             <div class="category-second-list">
               <ul class="category-second-list-ul">

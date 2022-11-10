@@ -131,9 +131,6 @@ const controller = {
             Products.destroy({where: { id: productId}});
             res.redirect('/products/');
         });
-    },
-    productCart: (req, res) => {
-        res.render('products/productCart');
     }
 };
 

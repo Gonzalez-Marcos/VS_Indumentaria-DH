@@ -5,19 +5,9 @@
 
     <body>
         <%- include('../partials/header') %>
-            </header>
-
-        <!-- slide -->
-        <%- include('../partials/carousel') %> 
         </header>
-        <!-- // slide -->
 
-        <!-- img publicidad -->
-        <section>
-            <img class="banner_publicidad" src="/images/banner-ofertas.jpg">
-        </section>
 
-        <h3>Lista de productos</h3>
         <section class="main-section">
             <div class="product-container">
                 <div class="products">
@@ -29,9 +19,9 @@
                             <% } %>
                             <div class="product-over">
                                 <button class="btn btn-small addToCart" data-product-id="3">
-                                    <i class="fas fa-cart-plus"></i>Add to cart
+                                    <i class="fas fa-cart-plus"></i>Agregar
                                 </button>
-                                <a href="/products/<%= product.id %>" class="btn btn-small">More Info</a>
+                                <a href="/products/<%= product.id %>" class="btn btn-small">Detalles</a>
                             </div>
                         </figure>
                         <div class="product-summary">
@@ -49,24 +39,12 @@
                                 <h4 class="productName"><%= size.name %></h4>
                             <%}); %> 
                         </div>
-
                     </div>
+                    
                     <% }); %> 
                 </div>
             </div>
         </section>
-        <!-- Subscribe Button -->
-        <div class="container-sub">
-            <input type="radio" id="hide">
-            <div class="box">
-                <label for="hide"><i class="fas fa-times"></i></label>
-                <div class="right">
-                    <div class="text-1">VS Indumentaria</div>
-                    <div class="text-2">Descuentos del 20% en tu primera compra</div>
-                    <a href="" target="_blank">Subscribe</a>
-                </div>
-            </div>
-        </div>
 
 
         <script src="/JS/script.js"></script>
