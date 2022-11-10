@@ -551,7 +551,6 @@ div.cont-productDetail {
 }
 
 .container-proDet .imgBx:before {
-    content: 'NIKE';
     position: absolute;
     top: 0px;
     left: 24px;
