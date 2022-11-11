@@ -15,7 +15,7 @@
             <div class="producto-container">
                 <form action="/products/edit/<%=product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                     <div class="nombre"><label for="name">Nombre</label><br>
-                        <input type="text" name="name" id="name" placeholder=" <%= product.name %>">
+                        <input type="text" name="name" id="name" value=" <%= product.name %>">
                     </div>
                     <div class="precio"><label for="price">Precio</label><br>
                         <input type="number" name="price" id="price" placeholder=" <%= product.price %>  ">
