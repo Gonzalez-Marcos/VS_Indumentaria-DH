@@ -10,6 +10,14 @@ const mainRouters = require('./routers/mainRouter');
 const productRouters = require('./routers/productsRouter');
 const userRouters = require('./routers/usersRouter');
 
+//RUTAS DE API//
+
+// Routing Api
+const userApiRouters = require('./routers/api/apiUserRouter');
+const productApiRouters = require('./routers/api/apiProductRouter');
+const categoryApiRouters = require('./routers/api/apiCategoryRouter');
+
+
 const app = express();
 
 app.use(session({
@@ -35,6 +43,11 @@ app.use('/', mainRouters);
 app.use('/products', productRouters);
 
 app.use('/users', userRouters);
+
+// Routing Api
+app.use('/api', userApiRouters);
+app.use('/api', productApiRouters);
+app.use('/api', categoryApiRouters);
 
 app.listen (8080, () => {
     console.log('Servidor iniciado en: http://localhost:8080');

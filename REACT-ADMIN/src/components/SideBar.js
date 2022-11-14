@@ -1,62 +1,75 @@
 import React from 'react';
-import image from '../assets/images/logo-VS.png';
+import { Link } from 'react-router-dom';
+import image from '../assets/images/logo-DH.png';
 
-function SideBar(){
-    return(
+function SideBar() {
+    return (
         <React.Fragment>
             {/*<!-- Sidebar -->*/}
-            <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar" style={{
+     backgroundColor: "black"}}>
 
                 {/*<!-- Sidebar - Brand -->*/}
-                <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+                {/* <Link className="sidebar-brand d-flex align-items-center justify-content-center" to="http://localhost:8080/">
                     <div className="sidebar-brand-icon">
-                        <img className="w-100" src={image} alt="VS Indumentaria"/>
+                        
+                        <img className="w-100" src={image} alt="Digital House"/>
+                        
                     </div>
+                </Link> */}
+                <a href="http://Localhost:8080/" className="brand-link">
+                    <img
+                        src={image}
+                        alt={"Admin Logo"}
+                         className="w-100"
+                        style={{ opacity: ".8", width: 50 + "px" }}
+                    />
+                    <span className="brand-text font-weight-light" style={ {color: "white", textAlign: "center" }}>VS indumentaria</span>
                 </a>
 
                 {/*<!-- Divider -->*/}
-                <hr className="sidebar-divider my-0"/>
+                <hr className="sidebar-divider my-0" />
 
-                {/*<!-- Nav Item - HOME -->*/}
+                {/*<!-- Nav Item - Dashboard -->*/}
                 <li className="nav-item active">
-                    <a className="nav-link" href="/">
+                    <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Volver al Home</span></a>
+                        <span>Dashboard - VS Indumentaria</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
-                <hr className="sidebar-divider"/>
+                <hr className="sidebar-divider" />
 
                 {/*<!-- Heading -->*/}
-                <div className="sidebar-heading">Categorias</div>
+                <div className="sidebar-heading" style={{ fontSize: 1.5 + "rem"}}>Menú</div>
 
-                {/*<!-- Nav Item - Productos -->*/}
+                {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
-                    <a className="nav-link collapsed" href="/index.html">
+                    <Link className="nav-link collapsed" to="/totales">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Productos</span>
-                    </a>
+                        <span>Totales</span>
+                    </Link>
                 </li>
 
-                {/*<!-- Nav Item - Usuarios Admin -->*/}
+                {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
-                    <a className="nav-link" href="/">
+                    <Link className="nav-link" to="/allCategorias">
                         <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Usuarios Admin.</span></a>
+                        <span>Último producto y Categorías</span></Link>
                 </li>
 
-                {/*<!-- Nav Item - Informes -->*/}
+                {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item">
-                    <a className="nav-link" href="/">
+                    <a className="nav-link" href="/productos">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Informes</span></a>
+                        <span>Lista de productos</span></a>
                 </li>
 
                 {/*<!-- Divider -->*/}
-                <hr className="sidebar-divider d-none d-md-block"/>
+                <hr className="sidebar-divider d-none d-md-block" />
             </ul>
             {/*<!-- End of Sidebar -->*/}
-            
+
         </React.Fragment>
     )
 }

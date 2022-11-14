@@ -347,56 +347,6 @@ ALTER TABLE `users`
 
 -- Indices de la tabla `categories`
 --
-ALTER TABLE `categories`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `colours`
---
-ALTER TABLE `colours`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `images`
---
-ALTER TABLE `images`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `products`
---
-ALTER TABLE `products`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `products_category_id_foreign` (`CategoryId`);
-
---
--- Indices de la tabla `product_colour`
---
-ALTER TABLE `product_colour`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `product_colour_product_id_foreign` (`ProductId`),
-  ADD KEY `product_colour_colour_id_foreign` (`ColourId`);
-
---
--- Indices de la tabla `product_size`
---
-ALTER TABLE `product_size`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `product_size_product_id_foreign` (`ProductId`),
-  ADD KEY `product_size_size_id_foreign` (`SizeId`);
-
---
--- Indices de la tabla `sizes`
---
-ALTER TABLE `sizes`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
 
@@ -480,6 +430,4 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-
 
